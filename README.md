@@ -4,6 +4,8 @@
 
 Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]! Aqui você encontrará informações sobre nossa equipe e nossos projetos.
 
+# ✨ Contribuidores:
+---
 ## 🔨 **Tech Lead** 
 
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
