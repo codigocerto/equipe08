@@ -4,7 +4,7 @@
 
 Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]! Aqui você encontrará informações sobre nossa equipe e nossos projetos.
 
-## 🎯 Tecnologias utilizadas
+# 🎯 Tecnologias utilizadas
 
 - **Front-end:** React, Styled-Component, TypeScript
 - **Back-end:** Node.js, Express.js
@@ -14,7 +14,6 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 - **Ferramentas de Design UX/UI:** Figma
 - **QA (Controle de Qualidade):** Jest, Cypress
 ---
-
 # ✨ Contribuidores:
 
 ## 🔨 **Tech Lead** 
