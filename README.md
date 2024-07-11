@@ -5,7 +5,7 @@
 Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]! Aqui você encontrará informações sobre nossa equipe e nossos projetos.
 
 # ✨ Contribuidores:
----
+
 ## 🔨 **Tech Lead** 
 
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
@@ -39,6 +39,7 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
 |---|---|---|---|
 | Yuri Cordeiro | UX | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuri-cordeiroo/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YuuriCordeiro) |
+---
 
 
 
