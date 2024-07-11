@@ -4,6 +4,17 @@
 
 Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]! Aqui você encontrará informações sobre nossa equipe e nossos projetos.
 
+## 🎯 Tecnologias utilizadas
+
+- **Front-end:** React, Styled-Component, TypeScript
+- **Back-end:** Node.js, Express.js
+- **Banco de Dados:** MySQL
+- **Controle de Versão:** Git
+- **Gerenciamento de Dependências:** npm
+- **Ferramentas de Design UX/UI:** Figma
+- **QA (Controle de Qualidade):** Jest, Cypress
+---
+
 # ✨ Contribuidores:
 
 ## 🔨 **Tech Lead** 
@@ -32,7 +43,7 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
 |---|---|---|---|
-| Claudio Oliveira | Backend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Claudi0-Oliveira) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Claudi0-Oliveira) |
+| Claudio Oliveira | Fullstack | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Claudi0-Oliveira) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Claudi0-Oliveira) |
 
 ## ✔️ **Equipe de UX** 
 
