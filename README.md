@@ -50,7 +50,7 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 |---|---|---|---|
 | Yuri Cordeiro | UX | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuri-cordeiroo/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YuuriCordeiro) |
 ---
-## Passos para configuração do fluxo de trabalho
+# 📁 Passos para configuração do fluxo de trabalho
 ```bash
 # Fork do repositório e clone
 git clone https://github.com/seu-usuario/equipe07.git
@@ -86,6 +86,26 @@ git push origin feature/uxui-nome-da-feature
 Sincronize seu fork regularmente para evitar conflitos.
 Sempre trabalhe na branch de desenvolvimento (develop, backend, frontend...) e crie sub-branches para features específicas.
 ```
+# 📞 Contato
 
+Para mais informações, siga-nos nas redes sociais ou entre em contato conosco diretamente:
+
+<div align="center">
+ <a href="codigocertocoders@gmail.com">
+    <img src="https://img.shields.io/badge/Email-red?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge"/>
+  </a>
+
+  <a href="https://www.linkedin.com/company/codigocerto/">
+    <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a> 
+
+  <a href="https://www.instagram.com/codigocertocoders/">
+    <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram Badge"/>
+  </a>
+
+  <a href="https://chat.whatsapp.com/CDJL6tRT5apLRXW5PWqYLe">
+    <img src="https://img.shields.io/badge/WhatsApp-green?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Badge"/>
+  </a>
+</div>
 
 
