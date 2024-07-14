@@ -86,6 +86,7 @@ git push origin feature/uxui-nome-da-feature
 Sincronize seu fork regularmente para evitar conflitos.
 Sempre trabalhe na branch de desenvolvimento (develop, backend, frontend...) e crie sub-branches para features específicas.
 ```
+---
 # 📞 Contato
 
 Para mais informações, siga-nos nas redes sociais ou entre em contato conosco diretamente:
