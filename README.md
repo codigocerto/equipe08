@@ -50,6 +50,42 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 |---|---|---|---|
 | Yuri Cordeiro | UX | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuri-cordeiroo/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YuuriCordeiro) |
 ---
+## Passos para configuração do fluxo de trabalho
+```bash
+# Fork do repositório e clone
+git clone https://github.com/seu-usuario/equipe07.git
+cd equipe07
+
+# Configurar upstream
+git remote add upstream https://github.com/codigocerto/equipe07.git
+
+# Sincronizar com develop
+git fetch upstream
+git checkout -b develop --track upstream/develop
+git pull upstream develop
+
+# Criar e configurar branches
+git checkout develop
+git checkout -b uxui   # ou frontend, backend, database, qa
+
+# Trabalhar em uma feature
+git checkout uxui     # ou frontend, backend, database, qa
+git checkout -b feature/uxui-nome-da-feature
+
+# Implementar mudanças
+git add .
+git commit -m "Descrição clara do que foi feito"
+git push origin feature/uxui-nome-da-feature
+
+# Criar um Pull Request para a branch
+1. Vá para o repositório forkado no GitHub.
+2. Clique em Compare & pull request.
+3. Preencha a descrição para o pull request e crie o PR para a sua branch (frontend, backend, database ...) no repositório principal.
+
+# manter o fork sincronizado
+Sincronize seu fork regularmente para evitar conflitos.
+Sempre trabalhe na branch de desenvolvimento (develop, backend, frontend...) e crie sub-branches para features específicas.
+```
 
 
 
