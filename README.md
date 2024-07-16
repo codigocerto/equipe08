@@ -53,11 +53,11 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 # 📁 Passos para configuração do fluxo de trabalho
 ```bash
 # Fork do repositório e clone
-git clone https://github.com/seu-usuario/equipe07.git
-cd equipe07
+git clone https://github.com/seu-usuario/equipe08.git
+cd equipe08
 
 # Configurar upstream
-git remote add upstream https://github.com/codigocerto/equipe07.git
+git remote add upstream https://github.com/codigocerto/equipe08.git
 
 # Sincronizar com develop
 git fetch upstream
