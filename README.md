@@ -12,45 +12,50 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 - **Controle de Versão:** Git
 - **Gerenciamento de Dependências:** npm
 - **Ferramentas de Design UX/UI:** Figma
-- **QA (Controle de Qualidade):** Jest, Cypress
+- **QA (Controle de Qualidade):** Jest Cypress
+
 ---
+
 # ✨ Contribuidores:
 
-## 🔨 **Tech Lead** 
+## 🔨 **Tech Lead**
 
-| **Nome** | **Posição** | **LinkedIn** | **GitHub** |
-|---|---|---|---|
-| Kayo Ennrique | Tech Lead | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kayoennrique/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kayoennrique) |
+| **Nome**      | **Posição** | **LinkedIn**                                                                                                                                             | **GitHub**                                                                                                                            |
+| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Kayo Ennrique | Tech Lead   | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kayoennrique/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kayoennrique) |
 
-## 📚 **Frontend** 
+## 📚 **Frontend**
 
-| **Nome** | **Posição** | **LinkedIn** | **GitHub** |
-|---|---|---|---|
-| Camila Cirne | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/camila-cirne/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/milacirne) |
-| Vinicius Santos | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vsantus/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/vsantus) |
-| Catarine Gonçalves | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/catarinegoncalves/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CatarineGoncalves) |
-| Thomas Edson | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thomas-edson-dev/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/developer-thomas) |
+| **Nome**           | **Posição** | **LinkedIn**                                                                                                                                                  | **GitHub**                                                                                                                                 |
+| ------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Camila Cirne       | Frontend    | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/camila-cirne/)      | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/milacirne)         |
+| Vinicius Santos    | Frontend    | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vsantus/)           | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/vsantus)       |
+| Catarine Gonçalves | Frontend    | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/catarinegoncalves/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CatarineGoncalves) |
+| Thomas Edson       | Frontend    | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thomas-edson-dev/)  | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/developer-thomas)  |
 
-## 💻 **Backend** 
+## 💻 **Backend**
 
-| **Nome** | **Posição** | **LinkedIn** | **GitHub** |
-|---|---|---|---|
-| Alexandre Cabral | Backend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexandrecabraldev/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alexandrecabraldev) |
-| Paula Borges | Backend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paulagmborges/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/paulagmborges) |
+| **Nome**         | **Posição** | **LinkedIn**                                                                                                                                                   | **GitHub**                                                                                                                                  |
+| ---------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Alexandre Cabral | Backend     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alexandrecabraldev/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alexandrecabraldev) |
+| Paula Borges     | Backend     | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paulagmborges/)      | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/paulagmborges)      |
 
-## 🔧 **Fullstack** 
+## 🔧 **Fullstack**
 
-| **Nome** | **Posição** | **LinkedIn** | **GitHub** |
-|---|---|---|---|
-| Claudio Oliveira | Fullstack | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Claudi0-Oliveira) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Claudi0-Oliveira) |
+| **Nome**         | **Posição** | **LinkedIn**                                                                                                                                                | **GitHub**                                                                                                                                |
+| ---------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Claudio Oliveira | Fullstack   | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Claudi0-Oliveira) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Claudi0-Oliveira) |
 
-## ✔️ **Equipe de UX** 
+## ✔️ **Equipe de UX**
 
-| **Nome** | **Posição** | **LinkedIn** | **GitHub** |
-|---|---|---|---|
-| Yuri Cordeiro | UX | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuri-cordeiroo/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YuuriCordeiro) |
+| **Nome**      | **Posição** | **LinkedIn**                                                                                                                                               | **GitHub**                                                                                                                             |
+| ------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Yuri Cordeiro | UX          | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yuri-cordeiroo/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YuuriCordeiro) |
+
 ---
+
 # 📁 Passos para configuração do fluxo de trabalho
+
 ```bash
 # Fork do repositório e clone
 git clone https://github.com/seu-usuario/equipe08.git
@@ -86,7 +91,9 @@ git push origin feature/uxui-nome-da-feature
 Sincronize seu fork regularmente para evitar conflitos.
 Sempre trabalhe na branch de desenvolvimento (develop, backend, frontend...) e crie sub-branches para features específicas.
 ```
+
 ---
+
 # 📞 Contato
 
 Para mais informações, siga-nos nas redes sociais ou entre em contato conosco diretamente:
@@ -98,7 +105,7 @@ Para mais informações, siga-nos nas redes sociais ou entre em contato conosco 
 
   <a href="https://www.linkedin.com/company/codigocerto/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
-  </a> 
+  </a>
 
   <a href="https://www.instagram.com/codigocertocoders/">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram Badge"/>
@@ -108,5 +115,3 @@ Para mais informações, siga-nos nas redes sociais ou entre em contato conosco 
     <img src="https://img.shields.io/badge/WhatsApp-green?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Badge"/>
   </a>
 </div>
-
-
