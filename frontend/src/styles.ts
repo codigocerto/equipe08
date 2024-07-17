@@ -9,6 +9,10 @@ export const colors = {
   gray3: '#2D2D2D'
 }
 
+export const breakpoints = {
+  desktop: '1024px'
+}
+
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;

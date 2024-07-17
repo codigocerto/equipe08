@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
+import { breakpoints } from '../../styles'
 
 export const Footer = styled.footer`
   background-color: ${colors.black};
   padding: 80px 0 42px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    padding: 16px 0 12px;
+  }
 `
 
 export const MainContainer = styled.div`
@@ -12,6 +17,10 @@ export const MainContainer = styled.div`
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 85%;
+  }
 `
 
 export const ContentContainer = styled.div`
@@ -24,6 +33,19 @@ export const ContentContainer = styled.div`
   img {
     height: 73px;
     width: 100px;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    position: relative;
+    flex-direction: column;
+    padding: 0;
+    border-top: none;
+    border-bottom: none;
+    height: auto;
   }
 `
 
@@ -40,12 +62,30 @@ export const ContactColumn = styled.div`
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      font-size: 18px;
+    }
   }
 
   p, li {
     font-weight: 400;
     font-size: 18px;
     line-height: 36px;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 32px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 15px 0 5px;
+    border-top: 1px solid ${colors.gray3};
+    border-bottom: 1px solid ${colors.gray3};
   }
 `
 
@@ -54,10 +94,20 @@ export const InfoColumn = styled(ContactColumn)`
 
   h3 {
     margin-bottom: 32px;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      margin-bottom: 4px;
+  }
   }
 
   a {
     color: ${colors.gray2};
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    border-top: none;
+    border-bottom: 1px solid ${colors.gray3};
+    padding-bottom: 16px;
   }
 `
 
@@ -66,8 +116,18 @@ export const SocialMedia = styled.ul`
 
   i {
     color: ${colors.gray2};
-    font-size: 36px;
-    margin-right: 48px;
+    font-size: 43px;
+    margin-right: 44px;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      margin-right: 12px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    position: absolute;
+    top: 5%;
+    right: 4px;
   }
 `
 
@@ -77,4 +137,10 @@ export const Copyright = styled.p`
   font-size: 16px;
   line-height: 19.36px;
   margin-top: 32px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 10px;
+    line-height: 12.1px;
+    margin-top: 15px;
+  }
 `
