@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.14.10",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "mysql2": "^3.10.3",
     "typescript": "^5.5.3"

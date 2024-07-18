@@ -24,3 +24,6 @@ dist-ssr
 *.sln
 *.sw?
 id_ed25519
+
+# Ignore .env file containing sensitive information
+.env
