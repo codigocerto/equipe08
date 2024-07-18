@@ -1,5 +1,8 @@
 import styled from 'styled-components'
+
 import { colors } from '../../styles'
+import { breakpoints } from '../../styles'
+
 import hero from '../../assets/images/hero.png'
 
 export const Hero = styled.div`
@@ -13,6 +16,10 @@ export const Hero = styled.div`
   h1, h2 {
     color: ${colors.white};
   }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    height: 682px;
+  }
 `
 
 export const Title = styled.h1`
@@ -20,6 +27,17 @@ export const Title = styled.h1`
   font-weight: 600;
   line-height: 77.45px;
   margin-bottom: 16px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 32px;
+    line-height: 38.73px;
+    text-align: center;
+    margin: 0 14px 16px;
+
+    span {
+      display: block;
+    }
+  }
 `
 
 export const SubTitle = styled.h2`
@@ -27,4 +45,11 @@ export const SubTitle = styled.h2`
   font-weight: 400;
   line-height: 20.05px;
   margin-bottom: 32px;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 12px;
+    line-height: 14.52px;
+    text-align: center;
+    margin: 0 4px 60px;
+  }
 `

@@ -1,10 +1,6 @@
-import { ReactNode } from 'react'
 import { Button as ButtonStyle } from './styles'
+import { Props } from './interface'
 
-export interface Props {
-  children: ReactNode
-  isHeroButton?: boolean
-}
 
 const Button = ({ children, isHeroButton = false } : Props) => {
   return (
