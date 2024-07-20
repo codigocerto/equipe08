@@ -25,7 +25,7 @@ const createUser = async(user: User) => {
         throw new Error('error'); 
     } finally {
     connection.release();
-  }
-}
+  };
+};
 export { createUser};
 
