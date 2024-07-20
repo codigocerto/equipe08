@@ -1,4 +1,4 @@
-import { createUser} from '../services/userRegisterService';
+import { createUser,checkIfEmailExists} from '../services/userRegisterService';
 import { User } from '../models/userModel';
 import { Request, Response } from 'express';
 
@@ -8,9 +8,14 @@ const registerUser = async(req:Request, res:Response) => {
   
   const user: User = { name, email, phone, password };
   if (!name || !email || !phone || !password) {
-    return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
+    return res.status(400).json({ error: 'All fields are mandatory.' });
   }
   try {
+    const emailExists = await checkIfEmailExists(email);
+    
+    if (emailExists) {
+      return res.status(409).json({ message: 'User already registered' });
+    }
     const newUser = await createUser(user);
     res.status(201).json(newUser);
   } catch (error) {

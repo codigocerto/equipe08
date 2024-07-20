@@ -29,3 +29,17 @@ const createUser = async(user: User) => {
 };
 export { createUser};
 
+const checkIfEmailExists = async (email: string): Promise<boolean> => {
+    try {
+      const [rows] = await pool.promise().query(
+        'SELECT * FROM users WHERE email = ?',
+        [email]
+      );
+
+      return (rows as any[]).length > 0;
+    } catch (error) {
+      console.error('Error checking email:', error);
+      throw new Error('Error checking email');
+    }
+  };
+export{checkIfEmailExists};
