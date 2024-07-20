@@ -27,7 +27,6 @@ const createUser = async(user: User) => {
     connection.release();
   };
 };
-export { createUser};
 
 const checkIfEmailExists = async (email: string): Promise<boolean> => {
     try {
@@ -35,11 +34,14 @@ const checkIfEmailExists = async (email: string): Promise<boolean> => {
         'SELECT * FROM users WHERE email = ?',
         [email]
       );
-
+      
       return (rows as any[]).length > 0;
     } catch (error) {
       console.error('Error checking email:', error);
       throw new Error('Error checking email');
-    }
+    };
   };
-export{checkIfEmailExists};
+export{
+  createUser,
+  checkIfEmailExists   
+};
