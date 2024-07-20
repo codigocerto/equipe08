@@ -8,7 +8,7 @@ dotenv.config();
 const poolOptions: PoolOptions = {
   host: process.env.DB_HOST || 'localhost',     // Endereço do servidor MySQL
   user: process.env.DB_USER || 'root',          // Usuário do banco de dados
-  password: process.env.DB_PASSWORD || '',      // Senha do banco de dados
+  password: process.env.DB_PASSWORD || 'root',      // Senha do banco de dados
   database: process.env.DB_DATABASE || 'meu_banco_de_dados', // Nome do banco de dados a ser utilizado
   waitForConnections: true,                     // Esperar por conexões disponíveis no pool
   connectionLimit: 10,                          // Número máximo de conexões no pool
