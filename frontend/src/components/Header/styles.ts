@@ -41,9 +41,9 @@ export const NavBar = styled.nav`
   }
 
   a:last-child {
-    color: ${colors.red1};
+    color: ${colors.red};
     padding: 12px 24px;
-    border: 1px solid ${colors.red1};
+    border: 1px solid ${colors.red};
     border-radius: 8px;
   }
 

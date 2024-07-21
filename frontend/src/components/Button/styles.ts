@@ -5,7 +5,7 @@ import { breakpoints } from '../../styles'
 import { Props } from './interface'
 
 export const Button = styled.button<Props>`
-  background-color: ${colors.red1};
+  background-color: ${colors.red};
   color: ${colors.white};
   border: none;
   border-radius: 8px;
@@ -21,7 +21,6 @@ export const Button = styled.button<Props>`
   }
 
   @media (max-width: ${breakpoints.desktop}) {
-    border: ${(props) => props.$isHeroButton ? `1px solid ${colors.red2}` : 'none'};
     padding: ${(props) => props.$isHeroButton ? '12px 24px' : '16px 32px'};
     font-size: ${(props) => props.$isHeroButton ? '16px' : '18px'};
     line-height: ${(props) => props.$isHeroButton ? '19.36px' : '24px'};

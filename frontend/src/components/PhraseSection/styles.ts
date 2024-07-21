@@ -9,7 +9,7 @@ export const Container = styled.div`
   padding: 120px 0;
   margin: 0 auto;
 
-  h2 {
+  h1 {
     font-size: 96px;
     font-weight: 600;
     line-height: 116.18px;

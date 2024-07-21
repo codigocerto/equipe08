@@ -117,6 +117,7 @@ export const SocialMedia = styled.ul`
 
     @media (max-width: ${breakpoints.desktop}) {
       margin-right: 12px;
+      font-size: 36px;
     }
   }
 
