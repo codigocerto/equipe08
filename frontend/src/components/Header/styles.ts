@@ -21,6 +21,11 @@ export const ContentContainer = styled.div`
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+
+  img {
+    height: 98px;
+    width: 134px;
+  }
 `
 
 export const NavBar = styled.nav`
@@ -36,15 +41,15 @@ export const NavBar = styled.nav`
   }
 
   a:last-child {
-    color: ${colors.red1};
+    color: ${colors.red};
     padding: 12px 24px;
-    border: 1px solid ${colors.red1};
+    border: 1px solid ${colors.red};
     border-radius: 8px;
   }
 
   @media (max-width: ${breakpoints.desktop}) {
       display: none;
-    }
+  }
 `
 
 export const Hamburguer = styled.div`
