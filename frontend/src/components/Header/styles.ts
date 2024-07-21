@@ -21,6 +21,11 @@ export const ContentContainer = styled.div`
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
+
+  img {
+    height: 98px;
+    width: 134px;
+  }
 `
 
 export const NavBar = styled.nav`
@@ -44,7 +49,7 @@ export const NavBar = styled.nav`
 
   @media (max-width: ${breakpoints.desktop}) {
       display: none;
-    }
+  }
 `
 
 export const Hamburguer = styled.div`

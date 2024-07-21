@@ -7,7 +7,7 @@ export const Footer = styled.footer`
   padding: 80px 0 42px;
 
   @media (max-width: ${breakpoints.desktop}) {
-    padding: 16px 0 12px;
+    padding: 16px 32px 12px;
   }
 `
 
@@ -17,10 +17,6 @@ export const MainContainer = styled.div`
   max-width: 1160px;
   width: 100%;
   margin: 0 auto;
-
-  @media (max-width: ${breakpoints.desktop}) {
-    max-width: 85%;
-  }
 `
 
 export const ContentContainer = styled.div`
