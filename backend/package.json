@@ -1,8 +1,26 @@
 {
+  "name": "equipe08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.ts",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/node": "^20.14.10",
+    "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
+    "express": "^4.19.2",
     "mysql2": "^3.10.3",
     "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4"
   }
 }
