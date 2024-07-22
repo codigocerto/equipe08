@@ -1,13 +1,15 @@
-import Home from "./pages/Home"
-import { GlobalStyle } from "./styles"
+import { GlobalStyle } from "./styles";
+import Trails from "./pages/Trails";
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Home />
+
+      <Trails></Trails>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;

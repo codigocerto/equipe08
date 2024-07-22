@@ -1,6 +1,6 @@
+
 import { Button as ButtonStyle } from './styles'
 import { Props } from './interface'
-
 
 const Button = ({ children, $isHeroButton = false } : Props) => {
   return (
@@ -8,4 +8,4 @@ const Button = ({ children, $isHeroButton = false } : Props) => {
   )
 }
 
-export default Button
+export default Button;
