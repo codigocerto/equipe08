@@ -1,19 +1,13 @@
-import Header from "../../components/Header"
-import Hero from "../../components/Hero"
-import InfosSection from "../../components/InfosSection"
-import PhraseSection from "../../components/PhraseSection"
-import Footer from "../../components/Footer"
+import Hero from "../../components/Hero";
+import InfosSection from "../../components/InfosSection";
 
 const Home = () => {
   return (
     <>
-      <Header/>
       <Hero />
       <InfosSection />
-      <PhraseSection />
-      <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
