@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { remCalc } from '../../utils/remCalc'
+
 import { colors } from '../../styles'
 import { breakpoints } from '../../styles'
 
@@ -11,28 +13,29 @@ export const Hero = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 255px 0;
+  padding: ${remCalc(200)} 0 ${remCalc(220)};
 
   h1, h2 {
     color: ${colors.white};
   }
 
   @media (max-width: ${breakpoints.desktop}) {
-    height: 682px;
+    
+    padding: ${remCalc(224)} 0 ${remCalc(280)};
   }
 `
 
 export const Title = styled.h1`
-  font-size: 64px;
+  font-size: ${remCalc(48)};
   font-weight: 600;
-  line-height: 77.45px;
-  margin-bottom: 16px;
+  line-height: ${remCalc(72)};
+  margin-bottom: ${remCalc(16)};
 
   @media (max-width: ${breakpoints.desktop}) {
-    font-size: 32px;
-    line-height: 38.73px;
+    font-size: ${remCalc(32)};
+    line-height: ${remCalc(40)};
     text-align: center;
-    margin: 0 14px 16px;
+    margin: 0 ${remCalc(14)} ${remCalc(16)};
 
     span {
       display: block;
@@ -41,15 +44,15 @@ export const Title = styled.h1`
 `
 
 export const SubTitle = styled.h2`
-  font-size: 24px;
+  font-size: ${remCalc(22)};
   font-weight: 400;
-  line-height: 20.05px;
-  margin-bottom: 32px;
+  line-height: ${remCalc(24)};
+  margin-bottom: ${remCalc(32)};
 
   @media (max-width: ${breakpoints.desktop}) {
-    font-size: 12px;
-    line-height: 14.52px;
+    font-size: ${remCalc(12)};
+    line-height: ${remCalc(16)};
     text-align: center;
-    margin: 0 4px 60px;
+    margin: 0 ${remCalc(4)} ${remCalc(56)};
   }
 `

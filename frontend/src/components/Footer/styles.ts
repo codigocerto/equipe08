@@ -1,37 +1,40 @@
 import styled from 'styled-components'
+
+import { remCalc } from '../../utils/remCalc'
+
 import { colors } from '../../styles'
 import { breakpoints } from '../../styles'
 
 export const Footer = styled.footer`
   background-color: ${colors.black};
-  padding: 80px 0 42px;
+  padding: ${remCalc(80)} 0 ${remCalc(42)};
 
   @media (max-width: ${breakpoints.desktop}) {
-    padding: 16px 32px 12px;
+    padding: ${remCalc(16)} ${remCalc(32)} ${remCalc(12)};
   }
 `
 
 export const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 1160px;
+  max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
 `
 
 export const ContentContainer = styled.div`
   display: flex;
-  height: 265px;
-  padding: 32px 0;
-  border-top: 2px solid ${colors.gray3};
-  border-bottom: 2px solid ${colors.gray3};
+  height: ${remCalc(265)};
+  padding: ${remCalc(32)} 0;
+  border-top: ${remCalc(2)} solid ${colors.gray3};
+  border-bottom: ${remCalc(2)} solid ${colors.gray3};
 
   img {
-    height: 73px;
-    width: 100px;
+    height: ${remCalc(73)};
+    width: ${remCalc(100)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      margin-bottom: 16px;
+      margin-bottom: ${remCalc(16)};
     }
   }
 
@@ -50,38 +53,38 @@ export const ContactColumn = styled.div`
   justify-content: space-between;
   flex-direction: column;
   color: ${colors.gray2};
-  margin-top: 22px;
-  margin-left: 200px;
+  margin-top: ${remCalc(22)};
+  margin-left: ${remCalc(200)};
 
   h3 {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: ${remCalc(24)};
+    line-height: ${remCalc(32)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      font-size: 18px;
+      font-size: ${remCalc(18)};
     }
   }
 
   p, li {
     font-weight: 400;
-    font-size: 18px;
-    line-height: 36px;
+    font-size: ${remCalc(18)};
+    line-height: ${remCalc(36)};
 
     @media (max-width: ${breakpoints.desktop}) {
       font-weight: 500;
-      font-size: 12px;
-      line-height: 32px;
+      font-size: ${remCalc(12)};
+      line-height: ${remCalc(32)};
     }
   }
 
   @media (max-width: ${breakpoints.desktop}) {
     margin-top: 0;
     margin-left: 0;
-    padding: 15px 0 5px;
-    border-top: 1px solid ${colors.gray3};
-    border-bottom: 1px solid ${colors.gray3};
+    padding: ${remCalc(15)} 0 ${remCalc(5)};
+    border-top: ${remCalc(1)} solid ${colors.gray3};
+    border-bottom: ${remCalc(1)} solid ${colors.gray3};
   }
 `
 
@@ -89,10 +92,10 @@ export const InfoColumn = styled(ContactColumn)`
   display: revert;
 
   h3 {
-    margin-bottom: 32px;
+    margin-bottom: ${remCalc(32)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      margin-bottom: 4px;
+      margin-bottom: ${remCalc(4)};
   }
   }
 
@@ -102,8 +105,8 @@ export const InfoColumn = styled(ContactColumn)`
 
   @media (max-width: ${breakpoints.desktop}) {
     border-top: none;
-    border-bottom: 1px solid ${colors.gray3};
-    padding-bottom: 16px;
+    border-bottom: ${remCalc(1)} solid ${colors.gray3};
+    padding-bottom: ${remCalc(16)};
   }
 `
 
@@ -112,32 +115,32 @@ export const SocialMedia = styled.ul`
 
   i {
     color: ${colors.gray2};
-    font-size: 43px;
-    margin-right: 44px;
+    font-size: ${remCalc(43)};
+    margin-right: ${remCalc(44)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      margin-right: 12px;
-      font-size: 36px;
+      margin-right: ${remCalc(12)};
+      font-size: ${remCalc(36)};
     }
   }
 
   @media (max-width: ${breakpoints.desktop}) {
     position: absolute;
     top: 5%;
-    right: 4px;
+    right: ${remCalc(4)};
   }
 `
 
 export const Copyright = styled.p`
   color: ${colors.gray2};
   font-weight: 400;
-  font-size: 16px;
-  line-height: 19.36px;
-  margin-top: 32px;
+  font-size: ${remCalc(16)};
+  line-height: ${remCalc(19.36)};
+  margin-top: ${remCalc(32)};
 
   @media (max-width: ${breakpoints.desktop}) {
-    font-size: 10px;
-    line-height: 12.1px;
-    margin-top: 15px;
+    font-size: ${remCalc(10)};
+    line-height: ${remCalc(12.1)};
+    margin-top: ${remCalc(15)};
   }
 `

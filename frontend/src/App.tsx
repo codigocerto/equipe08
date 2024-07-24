@@ -1,20 +1,17 @@
-import { GlobalStyle } from "./styles";
-import Header from "./components/Header";
-import Trails from "./pages/Trails";
-import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import PhraseSection from "./components/PhraseSection";
+import { GlobalStyle } from './styles'
+import Header from './components/Header'
+import Home from './pages/Home'
+import Footer from './components/Footer'
+
 function App() {
   return (
     <>
-      <Header></Header>
       <GlobalStyle />
-      <Home></Home>
-      <Trails></Trails>
-      <PhraseSection></PhraseSection>
-      <Footer></Footer>
+      <Header />
+      <Home />
+      <Footer />
     </>
   );
 }
 
-export default App;
+export default App
