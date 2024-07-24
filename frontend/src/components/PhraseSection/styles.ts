@@ -1,22 +1,26 @@
 import styled from 'styled-components'
+
+import { remCalc } from '../../utils/remCalc'
+
 import { breakpoints } from '../../styles'
 
 export const Container = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  max-width: 1160px;
+  max-width: ${remCalc(1160)};
   width: 100%;
-  padding: 120px 0;
+  padding: ${remCalc(40)} 0 ${remCalc(100)};
   margin: 0 auto;
 
   h1 {
-    font-size: 96px;
+    font-size: ${remCalc(56)};
     font-weight: 600;
-    line-height: 116.18px;
+    line-height: ${remCalc(80)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      font-size: 40px;
-      line-height: 48.41px;
+      font-size: ${remCalc(32)};
+      line-height: ${remCalc(42)};
       align-self: flex-start;
     }
   }
@@ -26,10 +30,11 @@ export const Container = styled.div`
   }
   
   img {
+    height: ${remCalc(160)};
+
     @media (max-width: ${breakpoints.desktop}) {
-      height: 146px;
-      width: 200px;
-      margin-top: 32px;
+      height: ${remCalc(100)};
+      margin-top: ${remCalc(32)};
       text-align: right;
       align-self: flex-end;
     }
@@ -38,6 +43,6 @@ export const Container = styled.div`
   @media (max-width: ${breakpoints.desktop}) {
     display: flex;
     flex-direction: column;
-    padding: 48px 32px 32px;
+    padding: ${remCalc(32)};
   }
 `

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import logo from '../../assets/images/logo.png'
+import login from '../../assets/images/icons/login.png'
 import closeButton from '../../assets/images/close-button.png'
 
 
@@ -12,11 +13,14 @@ const Header = () => {
   return (
     <S.Header>
       <S.ContentContainer>
-        <img src={logo}/>
+        <S.Logo src={logo} alt='Logo'/>
         <S.NavBar>
           <a href='#contato'>Contato</a>
           <a href='#trilhas'>Trilhas</a>
-          <a href='#participeagora'>Participe agora</a>
+          <a href='#participeagora'>
+            <img src={login} />
+            Login
+          </a>
         </S.NavBar>
         { isMenuOpen ? (
           <S.CloseButton src={closeButton} onClick={() => setIsMenuOpen(false)}/>

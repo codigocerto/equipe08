@@ -1,3 +1,4 @@
+import React from "react";
 import TrailCard from "../../components/TrailCard";
 import * as S from "./styles";
 import { items } from "./data/trailsData";

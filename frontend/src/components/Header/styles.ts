@@ -1,15 +1,17 @@
 import styled from 'styled-components'
 
+import { remCalc } from '../../utils/remCalc'
+
 import { colors } from '../../styles'
 import { breakpoints } from '../../styles'
 
 
 export const Header = styled.header`
   background-color: ${colors.black};
-  padding: 32px 0;
+  padding: ${remCalc(24)} 0;
 
   @media (max-width: ${breakpoints.desktop}) {
-    padding: 32px;
+    padding: ${remCalc(16)} ${remCalc(32)};
     position: relative;
   }
 `
@@ -18,13 +20,16 @@ export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1160px;
+  max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
+`
 
-  img {
-    height: 98px;
-    width: 134px;
+export const Logo = styled.img`
+  height: ${remCalc(80)};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    height: ${remCalc(56)};
   }
 `
 
@@ -33,18 +38,25 @@ export const NavBar = styled.nav`
   align-items: center;
 
   a {
-    margin-left: 60px;
+    margin-left: ${remCalc(48)};
     color: ${colors.white};
-    font-size: 24px;
+    font-size: ${remCalc(18)};
     font-weight: 400;
-    line-height: 32px;
+    line-height: ${remCalc(32)};
   }
 
   a:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: ${colors.red};
-    padding: 12px 24px;
-    border: 1px solid ${colors.red};
-    border-radius: 8px;
+    padding: ${remCalc(8)} ${remCalc(16)};
+    border: ${remCalc(1)} solid ${colors.red};
+    border-radius: ${remCalc(8)};
+
+    img {
+      margin-right: ${remCalc(10)};
+    }
   }
 
   @media (max-width: ${breakpoints.desktop}) {
@@ -53,15 +65,15 @@ export const NavBar = styled.nav`
 `
 
 export const Hamburguer = styled.div`
-  width: 48px;
+  width: ${remCalc(32)};
 
   span {
-    height: 6px;
+    height: ${remCalc(2)};
     display: block;
     width: 100%;
     background-color: ${colors.white};
-    border-radius: 8px;
-    margin-bottom: 8px;
+    border-radius: ${remCalc(4)};
+    margin-bottom: ${remCalc(6)};
   }
 
     @media (min-width: ${breakpoints.desktop}) {
@@ -73,42 +85,44 @@ export const NavMobile = styled.nav`
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.05);
   width: 100%;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: ${remCalc(8)};
+  border-bottom-left-radius: ${remCalc(8)};
   max-height: 0;
-  transition: max-height 0.8s ease-out, padding 0.3s ease-out;
+  transition: max-height 2s ease-out, padding 0.5s ease-out;
+  pointer-events: none;
 
   a {
-    background-color: rgba(0, 0, 0, 0.4);
+    
     color: ${colors.white};
-    padding: 12px 0;
-    margin-bottom: 8px;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 18px;
+    padding: ${remCalc(8)} 0;
+    margin-bottom: ${remCalc(8)};
+    font-size: ${remCalc(14)};
+    font-weight: 400;
+    line-height: ${remCalc(18)};
     text-align: center;
     display: block;
     opacity: 0;
-    transition: opacity 0.3s ease-out, transform 0.9s ease-out;
-    transform: translateY(-10px);
+    transition: all .6s ease-out;
+    transform: translateY(${remCalc(-5)});
   }
 
   a:first-child {
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius: ${remCalc(8)};
+    border-top-left-radius: ${remCalc(8)};
   }
 
   a:last-child {
     margin-bottom: 0;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: ${remCalc(8)};
+    border-bottom-left-radius: ${remCalc(8)};
   }
 
   &.is-open {
-    max-height: 216px;
-    padding: 12px;
+    max-height: ${remCalc(216)};
+    padding: ${remCalc(2)};
+    pointer-events: auto;
 
     a {
       opacity: 1; 
@@ -118,6 +132,7 @@ export const NavMobile = styled.nav`
 `
 
 export const CloseButton = styled.img`
+  height: ${remCalc(40)};
   @media (min-width: ${breakpoints.desktop}) {
       display: none;
     }
