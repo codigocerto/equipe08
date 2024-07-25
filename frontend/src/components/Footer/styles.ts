@@ -7,7 +7,7 @@ import { breakpoints } from '../../styles'
 
 export const Footer = styled.footer`
   background-color: ${colors.black};
-  padding: ${remCalc(80)} 0 ${remCalc(42)};
+  padding: ${remCalc(32)} 0 ${remCalc(16)};
 
   @media (max-width: ${breakpoints.desktop}) {
     padding: ${remCalc(16)} ${remCalc(32)} ${remCalc(12)};
@@ -24,16 +24,18 @@ export const MainContainer = styled.div`
 
 export const ContentContainer = styled.div`
   display: flex;
-  height: ${remCalc(265)};
-  padding: ${remCalc(32)} 0;
+  height: ${remCalc(224)};
+  padding: ${remCalc(16)} 0;
   border-top: ${remCalc(2)} solid ${colors.gray3};
   border-bottom: ${remCalc(2)} solid ${colors.gray3};
 
   img {
-    height: ${remCalc(73)};
+    height:  ${remCalc(72)};
     width: ${remCalc(100)};
 
     @media (max-width: ${breakpoints.desktop}) {
+      height:  ${remCalc(56)};
+      width: ${remCalc(84)};
       margin-bottom: ${remCalc(16)};
     }
   }
@@ -59,7 +61,7 @@ export const ContactColumn = styled.div`
   h3 {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: ${remCalc(24)};
+    font-size: ${remCalc(20)};
     line-height: ${remCalc(32)};
 
     @media (max-width: ${breakpoints.desktop}) {
@@ -69,7 +71,7 @@ export const ContactColumn = styled.div`
 
   p, li {
     font-weight: 400;
-    font-size: ${remCalc(18)};
+    font-size: ${remCalc(14)};
     line-height: ${remCalc(36)};
 
     @media (max-width: ${breakpoints.desktop}) {
@@ -82,7 +84,7 @@ export const ContactColumn = styled.div`
   @media (max-width: ${breakpoints.desktop}) {
     margin-top: 0;
     margin-left: 0;
-    padding: ${remCalc(15)} 0 ${remCalc(5)};
+    padding: ${remCalc(8)} 0 ${remCalc(8)};
     border-top: ${remCalc(1)} solid ${colors.gray3};
     border-bottom: ${remCalc(1)} solid ${colors.gray3};
   }
@@ -96,7 +98,7 @@ export const InfoColumn = styled(ContactColumn)`
 
     @media (max-width: ${breakpoints.desktop}) {
       margin-bottom: ${remCalc(4)};
-  }
+    }
   }
 
   a {
@@ -106,7 +108,7 @@ export const InfoColumn = styled(ContactColumn)`
   @media (max-width: ${breakpoints.desktop}) {
     border-top: none;
     border-bottom: ${remCalc(1)} solid ${colors.gray3};
-    padding-bottom: ${remCalc(16)};
+    padding-bottom: ${remCalc(8)};
   }
 `
 
@@ -115,12 +117,17 @@ export const SocialMedia = styled.ul`
 
   i {
     color: ${colors.gray2};
-    font-size: ${remCalc(43)};
-    margin-right: ${remCalc(44)};
+    font-size: ${remCalc(30)};
+    margin-right: ${remCalc(32)};
+    transition: color .5s ease-out;
+
+    &:hover {
+      color: ${colors.red};
+    }
 
     @media (max-width: ${breakpoints.desktop}) {
+      font-size: ${remCalc(24)};
       margin-right: ${remCalc(12)};
-      font-size: ${remCalc(36)};
     }
   }
 
@@ -134,13 +141,13 @@ export const SocialMedia = styled.ul`
 export const Copyright = styled.p`
   color: ${colors.gray2};
   font-weight: 400;
-  font-size: ${remCalc(16)};
+  font-size: ${remCalc(14)};
   line-height: ${remCalc(19.36)};
-  margin-top: ${remCalc(32)};
+  margin-top: ${remCalc(16)};
 
   @media (max-width: ${breakpoints.desktop}) {
     font-size: ${remCalc(10)};
-    line-height: ${remCalc(12.1)};
+    line-height: ${remCalc(12)};
     margin-top: ${remCalc(15)};
   }
 `

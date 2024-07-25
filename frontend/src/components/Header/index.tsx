@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import logo from '../../assets/images/logo.png'
-import login from '../../assets/images/icons/login.png'
+
 import closeButton from '../../assets/images/close-button.png'
 
 
@@ -17,8 +17,7 @@ const Header = () => {
         <S.NavBar>
           <a href='#contato'>Contato</a>
           <a href='#trilhas'>Trilhas</a>
-          <a href='#participeagora'>
-            <img src={login} />
+          <a href='#login'>
             Login
           </a>
         </S.NavBar>

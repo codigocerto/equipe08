@@ -14,9 +14,9 @@ export const Container = styled.div`
   margin: 0 auto;
 
   h1 {
-    font-size: ${remCalc(56)};
+    font-size: ${remCalc(48)};
     font-weight: 600;
-    line-height: ${remCalc(80)};
+    line-height: ${remCalc(72)};
 
     @media (max-width: ${breakpoints.desktop}) {
       font-size: ${remCalc(32)};
@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
   
   img {
-    height: ${remCalc(160)};
+    height: ${remCalc(128)};
 
     @media (max-width: ${breakpoints.desktop}) {
       height: ${remCalc(100)};
