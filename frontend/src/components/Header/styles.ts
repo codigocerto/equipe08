@@ -1,7 +1,9 @@
-import styled from "styled-components";
-import { remCalc } from "../../utils/remCalc";
-import { colors } from "../../styles";
-import { breakpoints } from "../../styles";
+import styled from "styled-components"
+
+import { remCalc } from "../../utils/remCalc"
+
+import { colors } from "../../styles"
+import { breakpoints } from "../../styles"
 
 export const LoginIcon = styled.div`
   width: 26px;
@@ -38,17 +40,18 @@ export const LoginIcon = styled.div`
     transform: rotate(180deg);
     transition: all 0.5s ease-in-out 0.1s;
   }
-`;
+`
 
 export const Header = styled.header`
   background-color: ${colors.black};
   padding: ${remCalc(24)} 0;
+  
 
   @media (max-width: ${breakpoints.desktop}) {
     padding: ${remCalc(16)} ${remCalc(32)};
     position: relative;
   }
-`;
+`
 
 export const ContentContainer = styled.div`
   display: flex;
@@ -57,7 +60,7 @@ export const ContentContainer = styled.div`
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
-`;
+`
 
 export const Logo = styled.img`
   height: ${remCalc(80)};
@@ -65,7 +68,7 @@ export const Logo = styled.img`
   @media (max-width: ${breakpoints.desktop}) {
     height: ${remCalc(56)};
   }
-`;
+`
 
 export const NavBar = styled.nav`
   display: flex;
@@ -141,8 +144,7 @@ export const NavBar = styled.nav`
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
-`;
-
+`
 export const Hamburguer = styled.div`
   display: none;
 
@@ -159,32 +161,30 @@ export const Hamburguer = styled.div`
       margin-bottom: ${remCalc(6)};
     }
   }
-`;
+`
 
 export const NavMobile = styled.nav`
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.05);
   width: 100%;
-  border-bottom-right-radius: ${remCalc(8)};
-  border-bottom-left-radius: ${remCalc(8)};
   max-height: 0;
-  transition: max-height 2s ease-out, padding 0.5s ease-out;
+  transition: max-height .3s ease-in, padding 0.3s ease-in;
   pointer-events: none;
+  z-index: 2;
 
   a {
     color: ${colors.white};
-    padding: ${remCalc(8)} 0;
-    margin-bottom: ${remCalc(8)};
+    padding: ${remCalc(12)} 0;
     font-size: ${remCalc(14)};
     font-weight: 400;
     line-height: ${remCalc(18)};
     text-align: center;
     display: block;
     opacity: 0;
-    transition: all 0.6s ease-out;
-    transform: translateY(${remCalc(-5)});
+    transition: all 0.3s ease;
+    transform: translateY(${remCalc(-30)});
+    transition: .3s ease-in;
   }
 
   a:first-child {
@@ -199,16 +199,17 @@ export const NavMobile = styled.nav`
   }
 
   &.is-open {
-    max-height: ${remCalc(216)};
-    padding: ${remCalc(2)};
+    max-height: ${remCalc(192)};
+    padding: ${remCalc(12)} 0;
     pointer-events: auto;
 
     a {
       opacity: 1;
       transform: translateY(0);
+      transition-delay: calc(.15s * var(--i));
     }
   }
-`;
+`
 
 export const CloseButton = styled.img`
   height: ${remCalc(40)};
@@ -216,4 +217,4 @@ export const CloseButton = styled.img`
   @media (min-width: ${breakpoints.desktop}) {
     display: none;
   }
-`;
+`
