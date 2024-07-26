@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors, breakpoints } from "../../styles";
+import { remCalc } from "../../utils/remCalc";
 
 export const Container = styled.section`
   width: 100%;
@@ -12,24 +13,27 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 12px auto 33px auto;
-
+  margin: ${remCalc(12)} auto ${remCalc(33)} auto;
   h1 {
-    font-size: 64px;
+    font-size: ${remCalc(64)};
 
     &::before {
       content: " ";
       display: inline-block;
       background-color: ${colors.red};
-      width: 2px;
-      height: 18px;
-      margin-right: 8px;
+      width: ${remCalc(2)};
+      height: ${remCalc(18)};
+      margin-right: ${remCalc(8)};
     }
   }
 
   @media (min-width: ${breakpoints.mobile}) {
+    width: 90%;
+    margin: 0 auto;
     h1 {
-      font-size: 24px;
+      font-size: ${remCalc(24)};
+      margin-top: ${remCalc(12)};
+      margin-bottom: ${remCalc(12)};
     }
   }
 
@@ -38,19 +42,19 @@ export const Title = styled.div`
   }
 
   @media (min-width: ${breakpoints.desktop}) {
-    margin: 80px auto;
+    margin: ${remCalc(80)} auto;
     width: 80%;
 
     h1 {
-      font-size: 64px;
+      font-size: ${remCalc(64)};
 
       &::before {
         content: " ";
         display: inline-block;
         background-color: ${colors.red};
-        width: 8px;
-        height: 47px;
-        margin-right: 8px;
+        width: ${remCalc(8)};
+        height: ${remCalc(47)};
+        margin-right: ${remCalc(8)};
       }
     }
   }
