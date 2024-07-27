@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <TrailCarrosel></TrailCarrosel>
+      <TrailCarrosel />
       <InfosSection />
       <PhraseSection />
     </>
