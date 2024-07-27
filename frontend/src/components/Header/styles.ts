@@ -1,13 +1,44 @@
-import styled from 'styled-components'
+import styled from "styled-components";
+import { remCalc } from "../../utils/remCalc";
+import { colors } from "../../styles";
+import { breakpoints } from "../../styles";
 
-import { remCalc } from '../../utils/remCalc'
+export const LoginIcon = styled.div`
+  width: 26px;
+  height: 25px;
+  border: 2px solid ${colors.red};
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: ${remCalc(10)};
+  transition: all 0.5s ease-in-out 0.1s;
 
-import { colors } from '../../styles'
-import { breakpoints } from '../../styles'
+  &::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 2px solid ${colors.red};
+    border-radius: 50%;
+    position: absolute;
+    top: 3.5px;
+    transition: all 0.5s ease-in-out 0.1s;
+  }
 
-import login from '../../assets/images/icons/login.svg'
-import loginWhite from '../../assets/images/icons/login-white.svg'
-
+  &::after {
+    content: "";
+    width: 14px;
+    height: 5px;
+    border: 2px solid ${colors.red};
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    bottom: 1px;
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out 0.1s;
+  }
+`;
 
 export const Header = styled.header`
   background-color: ${colors.black};
@@ -17,7 +48,7 @@ export const Header = styled.header`
     padding: ${remCalc(16)} ${remCalc(32)};
     position: relative;
   }
-`
+`;
 
 export const ContentContainer = styled.div`
   display: flex;
@@ -26,7 +57,7 @@ export const ContentContainer = styled.div`
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
-`
+`;
 
 export const Logo = styled.img`
   height: ${remCalc(80)};
@@ -34,7 +65,7 @@ export const Logo = styled.img`
   @media (max-width: ${breakpoints.desktop}) {
     height: ${remCalc(56)};
   }
-`
+`;
 
 export const NavBar = styled.nav`
   display: flex;
@@ -48,7 +79,7 @@ export const NavBar = styled.nav`
     line-height: ${remCalc(32)};
     position: relative;
     padding: 0 10px;
-    transition: color 0.6s ease-out; 
+    transition: color 0.6s ease-out;
 
     &:nth-of-type(1),
     &:nth-of-type(2) {
@@ -63,11 +94,11 @@ export const NavBar = styled.nav`
         transition: 0.6s ease-out;
         border-radius: ${remCalc(6)};
       }
-  
+
       &:hover {
         color: ${colors.red};
       }
-  
+
       &:hover:after {
         width: 100%;
       }
@@ -82,24 +113,27 @@ export const NavBar = styled.nav`
     padding: ${remCalc(6)} ${remCalc(12)};
     border: ${remCalc(2)} solid ${colors.red};
     border-radius: ${remCalc(8)};
-    transition: all 0.5s ease-out;
-
-    &::before {
-      content: '';
-      background: url(${login}) no-repeat center center;
-      display: inline-block;
-      width: ${remCalc(32)};
-      height: ${remCalc(32)};
-      margin-right: ${remCalc(10)};
-      transition: all 0.5s ease-out; 
-    }
+    transition: all 0.5s ease-in-out 0.1s;
 
     &:hover {
       color: ${colors.white};
       border-color: ${colors.white};
+      transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
 
-      &::before {
-        background: url(${loginWhite}) no-repeat center center;
+      ${LoginIcon} {
+        border: 2px solid ${colors.white};
+        transition: all 0.5s ease-in-out 0.1s;
+
+        &::before {
+          border: 2px solid ${colors.white};
+          transition: all 0.5s ease-in-out 0.1s;
+        }
+
+        &::after {
+          border: 2px solid ${colors.white};
+          border-top: none;
+          transition: all 0.5s ease-in-out 0.1s;
+        }
       }
     }
   }
@@ -107,7 +141,7 @@ export const NavBar = styled.nav`
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
-`
+`;
 
 export const Hamburguer = styled.div`
   display: none;
@@ -125,7 +159,7 @@ export const Hamburguer = styled.div`
       margin-bottom: ${remCalc(6)};
     }
   }
-`
+`;
 
 export const NavMobile = styled.nav`
   position: absolute;
@@ -140,7 +174,6 @@ export const NavMobile = styled.nav`
   pointer-events: none;
 
   a {
-    
     color: ${colors.white};
     padding: ${remCalc(8)} 0;
     margin-bottom: ${remCalc(8)};
@@ -150,7 +183,7 @@ export const NavMobile = styled.nav`
     text-align: center;
     display: block;
     opacity: 0;
-    transition: all .6s ease-out;
+    transition: all 0.6s ease-out;
     transform: translateY(${remCalc(-5)});
   }
 
@@ -171,16 +204,16 @@ export const NavMobile = styled.nav`
     pointer-events: auto;
 
     a {
-      opacity: 1; 
+      opacity: 1;
       transform: translateY(0);
     }
   }
-`
+`;
 
 export const CloseButton = styled.img`
   height: ${remCalc(40)};
 
   @media (min-width: ${breakpoints.desktop}) {
-      display: none;
-    }
-`
+    display: none;
+  }
+`;
