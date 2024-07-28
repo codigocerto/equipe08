@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 import logo from '../../assets/images/logo.png'
 
 import * as S from './styles'
@@ -9,7 +7,7 @@ const Footer = () => {
     <S.Footer>
       <S.MainContainer>
         <S.ContentContainer>
-          <Link to='/'><img src={logo}/></Link>
+          <img src={logo}/>
           <S.ContactColumn>
             <h3>Contato</h3>
             <p>codigocertocoders@gmail.com</p>
@@ -24,7 +22,7 @@ const Footer = () => {
             <h3>Informações</h3>
             <ul>
               <li><a href="#contato">Contato</a></li>
-              <li><Link to='/trilhas'>Trilhas</Link></li>
+              <li><a href="#trilhas">Trilhas</a></li>
             </ul>
           </S.InfoColumn>
         </S.ContentContainer>

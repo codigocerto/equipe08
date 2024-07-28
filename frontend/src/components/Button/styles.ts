@@ -12,7 +12,7 @@ export const Button = styled.button<Props>`
   color: ${colors.white};
   border: none;
   border-radius: 8px;
-  padding: ${(props) => props.$isHeroButton ? `${remCalc(8)} ${remCalc(32)}` : `${remCalc(16)} ${remCalc(32)}`};
+  padding: ${(props) => props.$isHeroButton ? `${remCalc(8)} ${remCalc(24)}` : `${remCalc(16)} ${remCalc(32)}`};
   font-size: ${(props) => props.$isHeroButton ? `${remCalc(18)}` : `${remCalc(18)}`};
   font-weight: ${(props) => props.$isHeroButton ? '600' : '700'};
   line-height: ${(props) => props.$isHeroButton ? `${remCalc(38)}` : `${remCalc(24)}`};

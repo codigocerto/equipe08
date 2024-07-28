@@ -165,6 +165,7 @@ export const Hamburguer = styled.div`
 
 export const NavMobile = styled.nav`
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
   top: 100%;
   right: 0;
   width: 100%;
