@@ -13,15 +13,16 @@ export const Hero = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${remCalc(200)} 0 ${remCalc(220)};
+  margin-top: ${remCalc(128)};
+  padding: ${remCalc(200)} ${remCalc(220)};
 
   h1, h2 {
     color: ${colors.white};
   }
 
   @media (max-width: ${breakpoints.desktop}) {
-    
     padding: ${remCalc(224)} 0 ${remCalc(280)};
+    margin-top: 0;
   }
 `
 

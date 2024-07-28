@@ -43,8 +43,12 @@ export const LoginIcon = styled.div`
 `
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: ${colors.black};
   padding: ${remCalc(24)} 0;
+  z-index: 3;
   
 
   @media (max-width: ${breakpoints.desktop}) {
