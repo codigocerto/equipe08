@@ -21,6 +21,12 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "cz-conventional-changelog": "^3.3.0",
     "nodemon": "^3.1.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
