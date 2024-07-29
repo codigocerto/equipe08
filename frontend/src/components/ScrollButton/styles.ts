@@ -1,15 +1,14 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import { remCalc } from '../../utils/remCalc'
+import { remCalc } from "../../utils/remCalc";
 
-import { colors } from '../../styles'
-import { breakpoints } from '../../styles'
+import { colors } from "../../styles";
+import { breakpoints } from "../../styles";
 
-import { Props } from './interface'
+import { Props } from "./interface";
 
 export const ScrollButton = styled.button<Props>`
-
-  i { 
+  i {
     position: fixed;
     bottom: ${remCalc(20)};
     right: ${remCalc(20)};
@@ -19,14 +18,14 @@ export const ScrollButton = styled.button<Props>`
     cursor: pointer;
     padding: ${remCalc(8)};
     border-radius: ${remCalc(5)};
-    opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+    opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
     transition: opacity 0.2s ease;
-    pointer-events: ${({ isVisible }) => (isVisible ? 'all' : 'none')};
+    pointer-events: ${({ $isVisible }) => ($isVisible ? "all" : "none")};
     z-index: 3;
 
     &:hover {
       background-color: ${colors.red};
-      transition: all .5s ease;
+      transition: all 0.5s ease;
     }
 
     @media (max-width: ${breakpoints.desktop}) {
@@ -34,5 +33,4 @@ export const ScrollButton = styled.button<Props>`
       font-size: ${remCalc(20)};
     }
   }
-
-`
+`;

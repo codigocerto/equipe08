@@ -1,3 +1,3 @@
 export interface Props {
-  isVisible: boolean;
+  $isVisible: boolean;
 }
