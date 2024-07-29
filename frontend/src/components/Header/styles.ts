@@ -86,7 +86,7 @@ export const NavBar = styled.nav`
     line-height: ${remCalc(32)};
     position: relative;
     padding: 0 10px;
-    transition: color 0.6s ease-out;
+    transition: color 0.6s ease-out; 
 
     &:nth-of-type(1),
     &:nth-of-type(2) {
@@ -101,11 +101,11 @@ export const NavBar = styled.nav`
         transition: 0.6s ease-out;
         border-radius: ${remCalc(6)};
       }
-
+  
       &:hover {
         color: ${colors.red};
       }
-
+  
       &:hover:after {
         width: 100%;
       }
@@ -120,27 +120,24 @@ export const NavBar = styled.nav`
     padding: ${remCalc(6)} ${remCalc(12)};
     border: ${remCalc(2)} solid ${colors.red};
     border-radius: ${remCalc(8)};
-    transition: all 0.5s ease-in-out 0.1s;
+    transition: all 0.5s ease-out;
+
+    &::before {
+      content: '';
+      background: url(${login}) no-repeat center center;
+      display: inline-block;
+      width: ${remCalc(32)};
+      height: ${remCalc(32)};
+      margin-right: ${remCalc(10)};
+      transition: all 0.5s ease-out; 
+    }
 
     &:hover {
       color: ${colors.white};
       border-color: ${colors.white};
-      transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
 
-      ${LoginIcon} {
-        border: 2px solid ${colors.white};
-        transition: all 0.5s ease-in-out 0.1s;
-
-        &::before {
-          border: 2px solid ${colors.white};
-          transition: all 0.5s ease-in-out 0.1s;
-        }
-
-        &::after {
-          border: 2px solid ${colors.white};
-          border-top: none;
-          transition: all 0.5s ease-in-out 0.1s;
-        }
+      &::before {
+        background: url(${loginWhite}) no-repeat center center;
       }
     }
   }
@@ -149,6 +146,7 @@ export const NavBar = styled.nav`
     display: none;
   }
 `
+
 export const Hamburguer = styled.div`
   display: none;
 
@@ -179,6 +177,7 @@ export const NavMobile = styled.nav`
   z-index: 2;
 
   a {
+    
     color: ${colors.white};
     padding: ${remCalc(12)} 0;
     font-size: ${remCalc(14)};
@@ -209,7 +208,7 @@ export const NavMobile = styled.nav`
     pointer-events: auto;
 
     a {
-      opacity: 1;
+      opacity: 1; 
       transform: translateY(0);
       transition-delay: calc(.15s * var(--i));
     }

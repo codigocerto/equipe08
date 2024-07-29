@@ -1,3 +1,4 @@
+
 import { useState } from "react"
 
 import logo from "../../assets/images/logo.png"
@@ -12,14 +13,11 @@ const Header = () => {
   return (
     <S.Header>
       <S.ContentContainer>
-        <S.Logo src={logo} alt="Logo" />
+        <S.Logo src={logo} alt='Logo'/>
         <S.NavBar>
-          <a href="#contato">Contato</a>
-          <a href="#trilhas">Trilhas</a>
-          <a href="#login">
-            <S.LoginIcon></S.LoginIcon>
-            Login
-          </a>
+          <a href='#contato'>Contato</a>
+          <a href='#trilhas'>Trilhas</a>
+          <a href='#login'>Login</a>
         </S.NavBar>
         {isMenuOpen ? (
           <S.CloseButton src={closeButton} onClick={() => setIsMenuOpen(!isMenuOpen)} />
@@ -30,7 +28,7 @@ const Header = () => {
             <span />
             <span />
           </S.Hamburguer>
-        )}
+        }        
       </S.ContentContainer>
       <S.NavMobile 
         className={isMenuOpen ? "is-open" : ""}
