@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, breakpoints } from "../../styles";
+import { breakpoints } from "../../styles";
 
 
 export const Container = styled.dialog `

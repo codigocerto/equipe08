@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-import logo from '../../assets/images/logo.png'
-import closeButton from '../../assets/images/close-button.png'
+import logo from "../../assets/images/logo.png";
 
-import * as S from './styles'
+import closeButton from "../../assets/images/close-button.png";
+
+import * as S from "./styles";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

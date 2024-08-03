@@ -10,6 +10,7 @@ export const colors = {
   gray3: "#2D2D2D",
 };
 
+
 export const breakpoints = {
   mobile: "320px",
   tablet: "768px",
