@@ -8,9 +8,7 @@ const Login = () => {
         <L.Container>
             <L.MaskView>
                 <Tabs/>
-
             </L.MaskView>
-
         </L.Container>
 
 

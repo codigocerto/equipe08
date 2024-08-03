@@ -54,19 +54,19 @@ export const Content = styled.div`
   }
 
   h1 {
-    font-size: ${remCalc(40)};
+    font-size: 16px;
     font-weight: 600;
     line-height: ${remCalc(80)};
     color: ${colors.white};
 
     @media (max-width: ${breakpoints.desktop}) {
-      font-size: ${remCalc(24)};
+      font-size: 16px;
       line-height: ${remCalc(29)};
     }
   }
 
   p {
-    font-size: ${remCalc(20)};
+    font-size: 16px;
     font-weight: 400;
     line-height: ${remCalc(36)};
     color: ${colors.gray1};
@@ -74,7 +74,7 @@ export const Content = styled.div`
     max-width: ${remCalc(585)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      font-size: ${remCalc(12)};
+      font-size: 16px;
       line-height: ${remCalc(24)};
       margin-top: ${remCalc(12)};
     }

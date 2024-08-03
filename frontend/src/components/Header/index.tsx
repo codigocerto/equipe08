@@ -1,9 +1,7 @@
 import { useState } from 'react'
 
 import logo from '../../assets/images/logo.png'
-
 import closeButton from '../../assets/images/close-button.png'
-
 
 import * as S from './styles'
 

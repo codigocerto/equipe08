@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import * as T from './styles';
 import FirstTab from '../Tabs/firstTab';
 import SecondTab from '../Tabs/secondTab';

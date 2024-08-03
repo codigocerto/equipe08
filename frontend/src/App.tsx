@@ -1,6 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Login from "./pages/Login/index";
+import Home from "./pages/Home";
 import { GlobalStyle } from "./styles";
 
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header/>
-      <Login />
+      <Home/> 
       <Footer/>
     </>
   );
