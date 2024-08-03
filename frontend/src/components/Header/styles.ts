@@ -63,6 +63,7 @@ export const ContentContainer = styled.div`
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
+  padding:1em;
 `;
 
 export const Logo = styled.img`
@@ -73,12 +74,55 @@ export const Logo = styled.img`
   }
 `;
 
+
+
+
+export const Button = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: ${colors.red};
+  padding: ${remCalc(6)} ${remCalc(12)};
+  border: ${remCalc(2)} solid ${colors.red};
+  border-radius: ${remCalc(8)};
+  text-decoration: none; /* Remove o sublinhado padrão de links */
+  transition: all 0.5s ease-out;
+  font-size: ${remCalc(18)};
+  font-weight: 400;
+
+  background: transparent;
+
+  &::before {
+    content: "";
+    background: url(${login}) no-repeat center center;
+    display: inline-block;
+    width: ${remCalc(32)};
+    height: ${remCalc(32)};
+    margin-right: ${remCalc(10)};
+    transition: all 0.5s ease-out;
+  }
+
+  &:hover {
+    color: ${colors.white};
+    border-color: ${colors.white};
+
+    &::before {
+      background: url(${loginWhite}) no-repeat center center;
+    }
+  }
+  
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
 export const NavBar = styled.nav`
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 30vw;
 
   a {
-    margin-left: ${remCalc(48)};
     color: ${colors.white};
     font-size: ${remCalc(18)};
     font-weight: 400;
@@ -139,6 +183,10 @@ export const NavBar = styled.nav`
         background: url(${loginWhite}) no-repeat center center;
       }
     }
+  }
+
+  @media (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.desktop}) {
+    width: 40vw;
   }
 
   @media (max-width: ${breakpoints.tablet}) {

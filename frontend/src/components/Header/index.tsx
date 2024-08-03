@@ -3,12 +3,14 @@ import { useState } from "react";
 import logo from "../../assets/images/logo.png";
 
 import closeButton from "../../assets/images/close-button.png";
+import Modal from './../Modal/index';
 
 import * as S from "./styles";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const[openModal, setOpenModal] = useState(false);
+ 
   return (
     <S.Header>
       <S.ContentContainer>
@@ -16,8 +18,11 @@ const Header = () => {
         <S.NavBar>
           <a href="#contato">Contato</a>
           <a href="#trilhas">Trilhas</a>
-          <a href="#login">Login</a>
+          <S.Button onClick={() => setOpenModal(true)}>Login</S.Button>
+          <Modal isOpen={openModal}/>
         </S.NavBar>
+
+
         {isMenuOpen ? (
           <S.CloseButton src={closeButton} onClick={() => setIsMenuOpen(!isMenuOpen)} />
         ) : (
@@ -31,11 +36,11 @@ const Header = () => {
       </S.ContentContainer>
       <S.NavMobile className={isMenuOpen ? "is-open" : ""}>
         <a
-          href="#participeagora"
+          href="#Login"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           style={{ "--i": "1" } as React.CSSProperties}
         >
-          Participe agora
+          Login
         </a>
         <a href="#home" onClick={() => setIsMenuOpen(!isMenuOpen)} style={{ "--i": "2" } as React.CSSProperties}>
           Home
