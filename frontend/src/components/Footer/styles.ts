@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { Link } from "../Link/styles";
+
 import { remCalc } from '../../utils/remCalc'
 
 import { colors } from '../../styles'
@@ -94,15 +96,20 @@ export const InfoColumn = styled(ContactColumn)`
   display: revert;
 
   h3 {
-    margin-bottom: ${remCalc(32)};
+    margin-bottom: ${remCalc(30)};
 
     @media (max-width: ${breakpoints.desktop}) {
       margin-bottom: ${remCalc(4)};
     }
   }
 
-  a {
+  ${Link} {
     color: ${colors.gray2};
+    transition: color .5s ease-out;
+
+    &:hover {
+      color: ${colors.red};
+    }
   }
 
   @media (max-width: ${breakpoints.desktop}) {

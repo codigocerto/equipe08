@@ -1,3 +1,5 @@
+import Link from '../Link'
+
 import logo from '../../assets/images/logo.png'
 
 import * as S from './styles'
@@ -12,17 +14,17 @@ const Footer = () => {
             <h3>Contato</h3>
             <p>codigocertocoders@gmail.com</p>
             <S.SocialMedia>
-              <li><a href=""><i className="fa-brands fa-whatsapp"></i></a></li>
-              <li><a href=""><i className="fa-brands fa-discord"></i></a></li>
-              <li><a href=""><i className="fa-brands fa-linkedin"></i></a></li>
-              <li><a href=""><i className="fa-brands fa-github"></i></a></li>
+              <li><Link href=""><i className="fa-brands fa-whatsapp"></i></Link></li>
+              <li><Link href=""><i className="fa-brands fa-discord"></i></Link></li>
+              <li><Link href=""><i className="fa-brands fa-linkedin"></i></Link></li>
+              <li><Link href=""><i className="fa-brands fa-github"></i></Link></li>
             </S.SocialMedia>
           </S.ContactColumn>
           <S.InfoColumn>
             <h3>Informações</h3>
             <ul>
-              <li><a href="#contato">Contato</a></li>
-              <li><a href="#trilhas">Trilhas</a></li>
+              <li><Link href="#contato">Contato</Link></li>
+              <li><Link href="#trilhas">Trilhas</Link></li>
             </ul>
           </S.InfoColumn>
         </S.ContentContainer>
