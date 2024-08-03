@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 export const colors = {
   red: "#E53939",
@@ -8,14 +8,13 @@ export const colors = {
   gray1: "#CCCCCC",
   gray2: "#6A6A6A",
   gray3: "#2D2D2D",
-
 };
 
 export const breakpoints = {
   mobile: "320px",
   tablet: "768px",
   desktop: "1024px",
-};
+}
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -26,4 +25,4 @@ export const GlobalStyle = createGlobalStyle`
     list-style: none;
     text-decoration: none;
   }
-`;
+`

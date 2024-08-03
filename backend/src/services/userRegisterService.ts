@@ -1,19 +1,25 @@
 import { User } from '../models/userModel';
 import { hashPassword } from './userService';
-import pool from '../config/database';
+import poolPromise from '../config/database';
+import { randomUUID } from 'crypto';
 
 const createUser = async(user: User) => {
-    const hashedPassword= await hashPassword(user.password);
-    const connection = await pool.promise().getConnection();
-    try {
-        const [result] = await connection.query(
-            'INSERT INTO users (name, email, phone, password) VALUES (?, ?, ?, ?)',
-            [user.name, user.email, user.phone, hashedPassword]
-        );
-            const insertId = (result as any).insertId;
 
+    const hashedPassword= await hashPassword(user.password);
+    const pool = await poolPromise
+    const connection = await pool.promise().getConnection();
+
+    try {
+      const randomIdUser = randomUUID()
+
+        const [result] = await connection.query(
+            'INSERT INTO users (id, name, email, phone, password) VALUES (?, ?, ?, ?, ?)',
+            [randomIdUser, user.name, user.email, user.phone, hashedPassword]
+        );
+
+            //const insertId = (result as any).insertId;
             const newUser = { 
-                id: insertId, 
+                id: randomIdUser, //insertId
                 name: user.name, 
                 email: user.email, 
                 phone: user.phone,
@@ -29,6 +35,8 @@ const createUser = async(user: User) => {
 };
 
 const checkIfEmailExists = async (email: string): Promise<boolean> => {
+    const pool = await poolPromise
+
     try {
       const [rows] = await pool.promise().query(
         'SELECT * FROM users WHERE email = ?',
@@ -36,11 +44,14 @@ const checkIfEmailExists = async (email: string): Promise<boolean> => {
       );
       
       return (rows as any[]).length > 0;
+
     } catch (error) {
+
       console.error('Error checking email:', error);
       throw new Error('Error checking email');
     };
   };
+
 export{
   createUser,
   checkIfEmailExists   
