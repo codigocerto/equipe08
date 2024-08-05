@@ -12,23 +12,31 @@ export const Tabs = styled.div`
 export const outlet = styled.div`
 `;
 
-export const ulNavbar = styled.nav`
+export const ButtonTab = styled.button`
+    background-color: transparent;
+    color: #FFF;
+    border: none;
+    width: 100%;
+    height: 3vh;
+`;
+
+export const UlNavbar = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90vw;
     background: ${colors.black2};
     border: 1px solid ${colors.black};
     border-radius: 0.5rem;
 
 
   @media (min-width: ${breakpoints.tablet}) { 
-    width: 70%;
+    width: 50vw;
     max-height: 512px;
   }
 `;
 
-export const liNavbar = styled.li`
+export const LiNavbar = styled.li`
     width: 100%;
     padding: .6rem;
     list-style: none;

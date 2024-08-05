@@ -16,23 +16,52 @@ const Tabs = () => {
 
   return (
     <>
-        <T.Tabs>
-
-          <T.ulNavbar>
-              <T.liNavbar className={tabLogin === "login" ? "active" : ""} onClick={handleLogin}>
-                  <p>Login</p>
-              </T.liNavbar>
-              <T.liNavbar className={tabLogin === "cadastro" ? "active" : ""} onClick={handleSignUp}>
-                  <p>Cadastro</p>
-              </T.liNavbar>
-          </T.ulNavbar>
-
-        </T.Tabs>
-        <T.outlet>
-            {tabLogin === "login" ? <FirstTab /> : <SecondTab />}
-        </T.outlet>
+      <T.Tabs>
+        <nav aria-label="Main Navigation">
+          <T.UlNavbar role="tablist">
+            <T.LiNavbar
+              role="presentation"
+              className={tabLogin === "login" ? "active" : ""}
+            >
+              <T.ButtonTab
+                role="tab"
+                aria-selected={tabLogin === "login"}
+                aria-controls="login-tab"
+                id="login-button"
+                onClick={handleLogin}
+              >
+                Login
+              </T.ButtonTab>
+            </T.LiNavbar>
+            <T.LiNavbar
+              role="presentation"
+              className={tabLogin === "cadastro" ? "active" : ""}
+            >
+              <T.ButtonTab
+                role="tab"
+                aria-selected={tabLogin === "cadastro"}
+                aria-controls="cadastro-tab"
+                id="cadastro-button"
+                onClick={handleSignUp}
+              >
+                Cadastro
+              </T.ButtonTab>
+            </T.LiNavbar>
+          </T.UlNavbar>
+        </nav>
+      </T.Tabs>
+      <T.outlet>
+        {tabLogin === "login" ? (
+          <div role="tabpanel" id="login-tab" aria-labelledby="login-button">
+            <FirstTab />
+          </div>
+        ) : (
+          <div role="tabpanel" id="cadastro-tab" aria-labelledby="cadastro-button">
+            <SecondTab />
+          </div>
+        )}
+      </T.outlet>
     </>
-
   );
 };
 

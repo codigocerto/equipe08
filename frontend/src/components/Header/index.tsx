@@ -19,7 +19,7 @@ const Header = () => {
           <a href="#contato">Contato</a>
           <a href="#trilhas">Trilhas</a>
           <S.Button onClick={() => setOpenModal(true)}>Login</S.Button>
-          <Modal isOpen={openModal}/>
+          <Modal isOpen={true}/>
         </S.NavBar>
 
 

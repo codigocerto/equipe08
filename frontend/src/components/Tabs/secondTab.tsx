@@ -1,4 +1,3 @@
-import react from 'react';
 import Input from "../Input";
 import logo from '../../assets/images/logo.png'
 import Button from '../Button';
@@ -14,16 +13,16 @@ const SecondTab = () => {
       </div>
       <div>
 
-        <S.h3><S.divRed>&nbsp;</S.divRed>Crie sua conta</S.h3>
-        <S.p>Crie sua conta de modo gratuito!</S.p>
-        <Input type={'text'} title={'Nome Completo'} required/>
-        <Input type={'number'} title={'Telefone para contato'} required/>
-        <Input type={'email'} title={'E-mail'} required/>
-        <Input type={'password'} title={'Senha'} required/>
-        {/* <input type={'checkbox'} title={'Lembre-me'} required/> */}
+        <S.Heading3><S.DivRed>&nbsp;</S.DivRed>Crie sua conta</S.Heading3>
+        <S.Paragraph>Crie sua conta de modo gratuito!</S.Paragraph>
+        <Input type={'text'} title={'Nome Completo'} required aria-label="Insira seu nome completo"/>
+        <Input type={'number'} title={'Telefone para contato'} required aria-label="Telefone para contato"/>
+        <Input type={'email'} title={'E-mail'} required aria-label="Insira o endereço de e-mail"/>
+        <Input type={'password'} title={'Senha'} required aria-label="Senha"/>
         <Button $isHeroButton>Acessar Conta</Button>
       </div>
     </S.SecondTab>
+  
   );
 };
 export default SecondTab;

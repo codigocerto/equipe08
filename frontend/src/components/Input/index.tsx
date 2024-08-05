@@ -14,7 +14,6 @@ const Input = (props: Props) => {
                     </I.Label>
                 }
                 
-                
                 <I.Input {...props}/>
             </label>
         </>

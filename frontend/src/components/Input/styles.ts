@@ -6,7 +6,8 @@ export const Label = styled.div `
     color: ${colors.gray1};
     margin-bottom: 0.5em;   
     margin-top: 0.5em;   
-
+    width: 100%
+    background: blue;
 `
 
 export const Input = styled.input `
@@ -21,7 +22,13 @@ export const Input = styled.input `
 
     @media (min-width: ${breakpoints.tablet}) {
         width: 25vw;
-
-        
     }
 `
+
+export const CheckboxInput = styled.input.attrs({ type: 'checkbox' })`
+    background-color: ${colors.black2};
+    border: 1px solid #000;
+    
+
+
+`;
