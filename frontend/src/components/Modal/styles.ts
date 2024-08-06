@@ -10,6 +10,9 @@ export const Modal = styled.div`
     right: 0;
     z-index: 1000;
     background-color: #29292982;
+
+
+    
 `
 
 export const flexContainer = styled.div`

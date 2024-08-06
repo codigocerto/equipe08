@@ -74,7 +74,11 @@ export const Logo = styled.img`
   }
 `;
 
-
+export const ButtonMobile = styled.button`
+      @media (min-width: ${breakpoints.tablet}) {
+        display: none;
+      }
+` 
 
 
 export const Button = styled.button`
