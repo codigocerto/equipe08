@@ -20,15 +20,9 @@ export const Input = styled.input `
     margin-bottom: 1.2em;
     color: ${colors.gray1};
 
-    @media (min-width: ${breakpoints.tablet}) {
-        width: 25vw;
-    }
 `
 
 export const CheckboxInput = styled.input.attrs({ type: 'checkbox' })`
     background-color: ${colors.black2};
     border: 1px solid #000;
-    
-
-
 `;

@@ -101,7 +101,6 @@ export const Button = styled.button`
 
   &::before {
     content: "";
-    background: url(${login}) no-repeat center center;
     display: inline-block;
     width: ${remCalc(32)};
     height: ${remCalc(32)};
@@ -114,7 +113,6 @@ export const Button = styled.button`
     border-color: ${colors.white};
 
     &::before {
-      background: url(${loginWhite}) no-repeat center center;
     }
   }
   

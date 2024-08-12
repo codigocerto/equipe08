@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import * as T from './styles';
-import FirstTab from '../LoginRegister/firstTab';
-import SecondTab from '../LoginRegister/secondTab';
+import * as S from './styles';
+import FirstTab from './../LoginRegister/firstTab'
+import SecondTab from './../LoginRegister/secondTab';
 
 const Tabs = () => {
   const [tabLogin, setTabLogin] = useState('login');
@@ -16,14 +16,14 @@ const Tabs = () => {
 
   return (
     <>
-      <T.Tabs>
+      <S.Tabs>
         <nav aria-label="Main Navigation">
-          <T.UlNavbar role="tablist">
-            <T.LiNavbar
+          <S.UlNavbar role="tablist">
+            <S.LiNavbar
               role="presentation"
               className={tabLogin === "login" ? "active" : ""}
             >
-              <T.ButtonTab
+              <S.ButtonTab
                 role="tab"
                 aria-selected={tabLogin === "login"}
                 aria-controls="login-tab"
@@ -31,13 +31,13 @@ const Tabs = () => {
                 onClick={handleLogin}
               >
                 Login
-              </T.ButtonTab>
-            </T.LiNavbar>
-            <T.LiNavbar
+              </S.ButtonTab>
+            </S.LiNavbar>
+            <S.LiNavbar
               role="presentation"
               className={tabLogin === "cadastro" ? "active" : ""}
             >
-              <T.ButtonTab
+              <S.ButtonTab
                 role="tab"
                 aria-selected={tabLogin === "cadastro"}
                 aria-controls="cadastro-tab"
@@ -45,12 +45,12 @@ const Tabs = () => {
                 onClick={handleSignUp}
               >
                 Cadastro
-              </T.ButtonTab>
-            </T.LiNavbar>
-          </T.UlNavbar>
+              </S.ButtonTab>
+            </S.LiNavbar>
+          </S.UlNavbar>
         </nav>
-      </T.Tabs>
-      <T.outlet>
+      </S.Tabs>
+      <S.outlet>
         {tabLogin === "login" ? (
           <div role="tabpanel" id="login-tab" aria-labelledby="login-button">
             <FirstTab />
@@ -60,7 +60,7 @@ const Tabs = () => {
             <SecondTab />
           </div>
         )}
-      </T.outlet>
+      </S.outlet>
     </>
   );
 };

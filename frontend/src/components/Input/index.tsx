@@ -1,4 +1,4 @@
-import * as I from './styles';
+import * as S from './styles';
 
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
 };
@@ -9,12 +9,12 @@ const Input = (props: Props) => {
         <>
             <label>
                 {props.title &&
-                    <I.Label>
+                    <S.Label>
                         {props.title} {props.required}
-                    </I.Label>
+                    </S.Label>
                 }
                 
-                <I.Input {...props}/>
+                <S.Input {...props}/>
             </label>
         </>
 
