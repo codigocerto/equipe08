@@ -1,8 +1,11 @@
 import { useState } from "react";
 
+
+import Link from "../Link";
+
 import logo from "../../assets/images/logo.png";
 import closeButton from "../../assets/images/close-button.png";
-import Modal from './../Modal/index';
+import Modal from './../Modal/index'
 
 import * as S from "./styles";
 
@@ -22,15 +25,24 @@ const Header = () => {
     setOpenModal(false);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <S.Header>
       <S.ContentContainer>
-        <S.Logo src={logo} alt="Logo" />
+        <S.Logo src={logo} alt="Codigo Certo Logo" onClick={scrollToTop} />
         <S.NavBar>
-          <a href="#contato">Contato</a>
-          <a href="#trilhas">Trilhas</a>
-          <S.Button onClick={handleOpenModal}>Login</S.Button>
-          <Modal isOpen={openModal}  />
+          <Link href="#contato">Contato</Link>
+          <Link href="#trilhas">Trilhas</Link>
+          <Link href="#login">
+            <S.LoginIcon />
+            Login
+          </Link>
         </S.NavBar>
 
         {isMenuOpen ? (
@@ -45,19 +57,23 @@ const Header = () => {
         )}
       </S.ContentContainer>
       <S.NavMobile className={isMenuOpen ? "is-open" : ""}>
-        <S.ButtonMobile onClick={handleOpenModal} style={{ "--i": "1" } as React.CSSProperties}>
-          Login
-        </S.ButtonMobile>
-        <Modal isOpen={openModal} />
-        <a href="#home" onClick={handleMenuToggle} style={{ "--i": "2" } as React.CSSProperties}>
+
+        <Link
+          href="#participeagora"
+          onClick={() => setIsMenuOpen(false)}
+          style={{ "--i": "1" } as React.CSSProperties}
+        >
+          Participe agora
+        </Link>
+        <Link href="#home" onClick={() => setIsMenuOpen(false)} style={{ "--i": "2" } as React.CSSProperties}>
           Home
-        </a>
-        <a href="#trilhas" onClick={handleMenuToggle} style={{ "--i": "3" } as React.CSSProperties}>
+        </Link>
+        <Link href="#trilhas" onClick={() => setIsMenuOpen(false)} style={{ "--i": "3" } as React.CSSProperties}>
           Trilhas
-        </a>
-        <a href="#contato" onClick={handleMenuToggle} style={{ "--i": "4" } as React.CSSProperties}>
+        </Link>
+        <Link href="#contato" onClick={() => setIsMenuOpen(false)} style={{ "--i": "4" } as React.CSSProperties}>
           Contato
-        </a>
+        </Link>
       </S.NavMobile>
     </S.Header>
   );

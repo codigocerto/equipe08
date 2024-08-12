@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import * as T from './styles';
-import FirstTab from './../Tabs/firstTab';
-import SecondTab from './../Tabs/secondTab';
+import FirstTab from '../LoginRegister/firstTab';
+import SecondTab from '../LoginRegister/secondTab';
 
 const Tabs = () => {
   const [tabLogin, setTabLogin] = useState('login');
