@@ -3,6 +3,7 @@ import ScrollButton from "../../components/ScrollButton";
 import InfosSection from "../../components/InfosSection";
 import PhraseSection from "../../components/PhraseSection";
 import Trails from "../Trails";
+import Typography from "../../components/Typography";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <InfosSection />
       <Trails />
       <PhraseSection />
+      <Typography />
     </>
   );
 };

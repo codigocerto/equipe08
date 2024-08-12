@@ -1,8 +1,12 @@
-import { Heading } from "./styles"
+import { Heading, Paragraph, Span } from "./styles"
 
 const Typography = () => {
     return (
-        <Heading level={2} size="large" color="white">TESTE</Heading>
+        <div>
+            <Heading level={1} size="large" color="red">Heading</Heading>
+            <Paragraph size="medium" color="gray3">Paragraph</Paragraph>
+            <Span size="small" color="gray1">Span</Span>
+        </div>
     )
 }
 

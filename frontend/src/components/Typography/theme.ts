@@ -1,10 +1,7 @@
+import { colors } from "../../styles"
+
 export const theme = {
-    colors: {
-      white: '#eee',
-      black: '#111',
-      gray: '#333',
-      lightGray: 'CCC'
-    },
+    colors: colors,
     sizes: {
       xsmall: '1rem',
       small: '1.2rem',
