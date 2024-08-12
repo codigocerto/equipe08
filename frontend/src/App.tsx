@@ -10,14 +10,13 @@ import Modal from './components/Modal'
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <GlobalStyle />
-    //   <Header />
-    //   <AppRoutes />
-    //   <Footer />
-    // </BrowserRouter>
-
-    <Modal />
+    <BrowserRouter>
+      <GlobalStyle />
+      {/* <Modal /> */}
+        <Header />
+        <AppRoutes />
+        <Footer />
+    </BrowserRouter>
   );
 }
 

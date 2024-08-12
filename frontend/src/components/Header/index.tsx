@@ -39,17 +39,16 @@ const Header = () => {
         <S.NavBar>
           <Link href="#contato">Contato</Link>
           <Link href="#trilhas">Trilhas</Link>
-          <Link href="#login">
+          {/* <Link href="#login">
             <S.LoginIcon />
             Login
-          </Link>
+          </Link> */}
         </S.NavBar>
 
         {isMenuOpen ? (
           <S.CloseButton src={closeButton} onClick={handleMenuToggle} />
         ) : (
           <S.Hamburguer onClick={handleMenuToggle}>
-            <span />
             <span />
             <span />
             <span />
