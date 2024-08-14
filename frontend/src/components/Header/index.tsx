@@ -1,14 +1,29 @@
 import { useState } from "react";
 
+
 import Link from "../Link";
 
 import logo from "../../assets/images/logo.png";
 import closeButton from "../../assets/images/close-button.png";
+import Modal from './../Modal/index'
 
 import * as S from "./styles";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleOpenModal = () => {
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -24,16 +39,16 @@ const Header = () => {
         <S.NavBar>
           <Link href="#contato">Contato</Link>
           <Link href="#trilhas">Trilhas</Link>
-          <Link href="#login">
+          {/* <Link href="#login">
             <S.LoginIcon />
             Login
-          </Link>
+          </Link> */}
         </S.NavBar>
+
         {isMenuOpen ? (
-          <S.CloseButton src={closeButton} onClick={() => setIsMenuOpen(!isMenuOpen)} />
+          <S.CloseButton src={closeButton} onClick={handleMenuToggle} />
         ) : (
-          <S.Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <span />
+          <S.Hamburguer onClick={handleMenuToggle}>
             <span />
             <span />
             <span />
@@ -41,6 +56,7 @@ const Header = () => {
         )}
       </S.ContentContainer>
       <S.NavMobile className={isMenuOpen ? "is-open" : ""}>
+
         <Link
           href="#participeagora"
           onClick={() => setIsMenuOpen(false)}
