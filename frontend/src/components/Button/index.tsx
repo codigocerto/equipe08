@@ -1,11 +1,13 @@
+import { ButtonProps } from "./interface";
+import * as S from "./styles";
 
-import { Button as ButtonStyle } from './styles'
-import { Props } from './interface'
-
-const Button = ({ children, $isHeroButton = false } : Props) => {
+const Button = ({ icon, textbutton, ...rest }: ButtonProps) => {
   return (
-    <ButtonStyle $isHeroButton={$isHeroButton}>{children}</ButtonStyle>
-  )
-}
+    <S.Button {...rest}>
+      {textbutton}
+      {icon && <S.Icon>{icon}</S.Icon>}
+    </S.Button>
+  );
+};
 
 export default Button;

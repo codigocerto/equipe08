@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { colors, breakpoints } from "../../styles";
-import * as S from "../Button/styles";
+import Button from "../Button";
+import { remCalc } from "../../utils/remCalc";
 
 export const Main = styled.div<{ $isDark: boolean | undefined }>`
   color: ${(props) => (props.$isDark ? `${colors.gray1}` : `${colors.black}`)};
@@ -57,10 +58,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  ${S.Button} {
-    width: 208px;
-  }
-
   @media (min-width: ${breakpoints.mobile}) {
     width: 100%;
     margin: 0 auto;
@@ -108,10 +105,6 @@ export const Content = styled.div`
     p {
       margin-top: 20px;
     }
-
-    ${S.Button} {
-      align-self: flex-end;
-    }
   }
 
   @media (min-width: ${breakpoints.desktop}) {
@@ -139,6 +132,72 @@ export const Content = styled.div`
       font-size: 18px;
       max-width: 476px;
     }
+  }
+`;
+
+export const Btn = styled(Button)`
+  width: 208px;
+  align-self: flex-end;
+
+  background-color: ${colors.red};
+  color: ${colors.white};
+  border: none;
+  border-radius: 8px;
+  padding: ${remCalc(16)} ${remCalc(32)};
+  font-size: ${(props) => (props.textbutton ? `${remCalc(18)}` : `${remCalc(18)}`)};
+  font-weight: 700;
+  line-height: ${remCalc(24)};
+  text-transform: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: ${colors.red};
+    filter: brightness(1.3);
+    z-index: -1;
+    transition: top 0.5s ease-in-out;
+    color: black;
+  }
+
+  &::before {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  &::after {
+    top: 100%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &:hover::before {
+    top: 0;
+    color: black;
+  }
+
+  &:hover::after {
+    top: 50%;
+    color: black;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    padding: ${remCalc(12)} ${remCalc(24)};
+    font-size: ${(props) => (props.textbutton ? `${remCalc(16)}` : `${remCalc(14)}`)};
+    line-height: ${remCalc(18)};
   }
 `;
 

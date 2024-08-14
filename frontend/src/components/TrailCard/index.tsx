@@ -1,5 +1,5 @@
 import * as S from "./styles";
-import Button from "../Button";
+
 import { TrailCardPropInterface } from "./TrailCardPropInterface";
 
 const TrailCard = ({ img, title, subtitle, $isDark }: TrailCardPropInterface) => {
@@ -12,12 +12,7 @@ const TrailCard = ({ img, title, subtitle, $isDark }: TrailCardPropInterface) =>
             <h1>{title}</h1>
             <p>{subtitle}</p>
           </div>
-          <Button>
-            MAIS SOBRE
-            <span>
-              <i className="fa fa-arrow-right"></i>
-            </span>
-          </Button>
+          <S.Btn icon={<i className="fa fa-arrow-right"></i>} textbutton="MAIS SOBRE" />
         </S.Content>
       </S.Container>
       <S.BlackRetangle $isDark={$isDark}></S.BlackRetangle>
