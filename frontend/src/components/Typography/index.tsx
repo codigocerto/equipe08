@@ -1,13 +1,33 @@
-import { Heading, Paragraph, Span } from "./styles"
+import React, { ElementType } from "react";
+import { TypographyProps } from "./interface";
+import * as S from './styles';
+import { StyleSheetManager } from "styled-components";
 
-const Typography = () => {
-    return (
-        <div>
-            <Heading level={1} size="large" color="red">Heading</Heading>
-            <Paragraph size="medium" color="gray3">Paragraph</Paragraph>
-            <Span size="small" color="gray1">Span</Span>
-        </div>
-    )
-}
+const Typography: React.FC<TypographyProps> = ({
+  children,
+  size,
+  color,
+  fontweight,
+  textdecoration,
+  as,
+  ...rest
+}) => {
+  const Element = as as ElementType;
 
-export default Typography
+  return (
+    <StyleSheetManager shouldForwardProp={(prop) => prop !== "fontweight"}>
+      <S.Text
+        as={Element}
+        size={size}
+        color={color}
+        fontweight={fontweight}
+        textdecoration={textdecoration}
+        {...rest}
+      >
+        {children}
+      </S.Text>
+    </StyleSheetManager>
+  );
+};
+
+export default Typography;
