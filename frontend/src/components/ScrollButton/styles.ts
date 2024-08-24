@@ -1,13 +1,13 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
-import { remCalc } from "../../utils/remCalc";
+import { remCalc } from "../../utils/remCalc"
 
-import { colors } from "../../styles";
-import { breakpoints } from "../../styles";
+import { colors } from "../../styles"
+import { breakpoints } from "../../styles"
 
-import { Props } from "./interface";
+import { ScrollButtonProps } from "./interface"
 
-export const ScrollButton = styled.button<Props>`
+export const ScrollButton = styled.button<ScrollButtonProps>`
   i {
     position: fixed;
     bottom: ${remCalc(20)};
@@ -33,4 +33,4 @@ export const ScrollButton = styled.button<Props>`
       font-size: ${remCalc(20)};
     }
   }
-`;
+`

@@ -6,7 +6,7 @@ import { Item } from "./data/Item.interface";
 
 const Trails = () => {
   return (
-    <S.Container>
+    <S.Container id="trails">
       <S.Title>
         <h1>Nossas Trilhas</h1>
       </S.Title>

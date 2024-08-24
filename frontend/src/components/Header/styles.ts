@@ -53,7 +53,6 @@ export const Header = styled.header`
 
   @media (max-width: ${breakpoints.desktop}) {
     padding: ${remCalc(16)} ${remCalc(32)};
-    position: relative;
   }
 `
 
@@ -73,6 +72,7 @@ export const Logo = styled.img`
 
   @media (max-width: ${breakpoints.desktop}) {
     height: ${remCalc(56)};
+    width: ${remCalc(77)};
     cursor: auto;
   }
 `
@@ -82,7 +82,6 @@ export const ButtonMobile = styled.button`
         display: none;
       }
 ` 
-
 
 export const Button = styled.button`
   display: inline-flex;
@@ -96,7 +95,6 @@ export const Button = styled.button`
   transition: all 0.5s ease-out;
   font-size: ${remCalc(18)};
   font-weight: 400;
-
   background: transparent;
 
   &::before {
@@ -161,39 +159,6 @@ export const NavBar = styled.nav`
     }    
   }
 
-  ${Link}:last-child {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${colors.red};
-    padding: ${remCalc(6)} ${remCalc(12)};
-    border: ${remCalc(2)} solid ${colors.red};
-    border-radius: ${remCalc(8)};
-    transition: all 0.5s ease-in-out 0.1s;
-
-    &:hover {
-      color: ${colors.white};
-      border-color: ${colors.white};
-      transition: color 0.5s ease-in-out, border-color 0.5s ease-in-out;
-
-      ${LoginIcon} {
-        border: 2px solid ${colors.white};
-        transition: all 0.5s ease-in-out 0.1s;
-
-        &::before {
-          border: 2px solid ${colors.white};
-          transition: all 0.4s ease-in-out 0.1s;
-        }
-
-        &::after {
-          border: 2px solid ${colors.white};
-          border-top: none;
-          transition: all 0.4s ease-in-out 0.1s;
-        }
-      }
-    } 
-  }
-
   @media (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.desktop}) {
     width: 40vw;
   }
@@ -208,14 +173,14 @@ export const Hamburguer = styled.div`
 
   @media (max-width: ${breakpoints.tablet}) {
     display: block;
-    width: ${remCalc(32)};
+    width: ${remCalc(36)};
 
     span {
-      height: ${remCalc(2)};
+      height: ${remCalc(4)};
       display: block;
       width: 100%;
       background-color: ${colors.white};
-      border-radius: ${remCalc(4)};
+      border-radius: ${remCalc(8)};
       margin-bottom: ${remCalc(6)};
     }
   }
@@ -223,18 +188,22 @@ export const Hamburguer = styled.div`
 
 export const NavMobile = styled.nav`
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: ${colors.gray4};
   top: 100%;
   right: 0;
   width: 100%;
-  max-height: 0;
-  transition: max-height 0.3s ease-in, padding 0.3s ease-in;
+  height: 0;
+  transition: height 0.3s ease-in, padding 0.3s ease-in;
   pointer-events: none;
   z-index: 2;
+  border-bottom-left-radius: ${remCalc(8)};
+  border-bottom-right-radius: ${remCalc(8)};
 
   ${Link} {
     color: ${colors.white};
+    background-color: ${colors.gray3};
     padding: ${remCalc(12)} 0;
+    margin: ${remCalc(8)} ${remCalc(12)};
     font-size: ${remCalc(14)};
     font-weight: 400;
     line-height: ${remCalc(18)};
@@ -245,11 +214,23 @@ export const NavMobile = styled.nav`
     transform: translateY(${remCalc(-30)});
     transition: 0.3s ease-in;
     cursor: auto;
+
+    &:nth-of-type(1) {
+      margin: ${remCalc(0)} ${remCalc(12)} ${remCalc(8)};
+      border-top-left-radius: ${remCalc(8)};
+      border-top-right-radius: ${remCalc(8)};
+    }
+
+    &:last-child {
+      margin: ${remCalc(8)} ${remCalc(12)} ${remCalc(0)};
+      border-bottom-left-radius: ${remCalc(8)};
+      border-bottom-right-radius: ${remCalc(8)};
+    }
   }
 
   &.is-open {
-    max-height: ${remCalc(192)};
-    padding: ${remCalc(12)} 0;
+    height: auto;
+    padding: ${remCalc(12)} 0 ${remCalc(8)};
     pointer-events: auto;
 
     ${Link} {
@@ -261,7 +242,7 @@ export const NavMobile = styled.nav`
 `
 
 export const CloseButton = styled.img`
-  height: ${remCalc(40)};
+  height: ${remCalc(36)};
 
   @media (min-width: ${breakpoints.desktop}) {
     display: none;

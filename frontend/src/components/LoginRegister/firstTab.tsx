@@ -16,7 +16,7 @@ const FirstTab = () => {
             <S.RememberMe>Lembre-me</S.RememberMe>
           </S.Box>
 
-          <Button $isHeroButton>Acessar Conta</Button>
+          <Button>Acessar Conta</Button>
       </S.FirstTab>
 
   );

@@ -1,4 +1,4 @@
-import * as S from './styles';
+import * as S from './styles'
 import Tabs from './../Tab/index'
 
 
@@ -14,5 +14,5 @@ export default function Modal({isOpen = true}) {
         )
     } 
 
-    return null;
+    return null
 }

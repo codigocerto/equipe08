@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-
+import styled from "styled-components"
 
 export const Modal = styled.div`
     position: fixed;
@@ -10,9 +8,6 @@ export const Modal = styled.div`
     right: 0;
     z-index: 1000;
     background-color: #29292982;
-
-
-    
 `
 
 export const flexContainer = styled.div`

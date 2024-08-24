@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { ButtonProps } from "./interface";
-import { remCalc } from "../../utils/remCalc";
+import styled from "styled-components"
+import { ButtonProps } from "./interface"
+import { remCalc } from "../../utils/remCalc"
 
 export const Button = styled.button<ButtonProps>`
   text-decoration: ${(props) => props.textdecoration};

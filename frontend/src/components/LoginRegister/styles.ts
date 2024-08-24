@@ -2,16 +2,9 @@ import styled from 'styled-components'
 import { colors, breakpoints } from '../../styles'
 
 
-export const FirstTab = styled.section`
+export const FirstTab = styled.section``
 
-
-
-}`
-
-export const SecondTab = styled.section`
-    
-
-`
+export const SecondTab = styled.section``
 
 export const Box = styled.div`
     align-items: center;
@@ -54,7 +47,6 @@ export const Heading3 = styled.h3 `
     font-size: 1.875rem;
     color: ${colors.white};
     margin: 1em 0 1.3em 0;
-
 `
 
 export const Heading4 = styled.h3 `
@@ -64,7 +56,6 @@ export const Heading4 = styled.h3 `
     font-size: 1.875rem;
     color: ${colors.white};
     margin: 1em 0 0.3em 0;
-
 `
 
 

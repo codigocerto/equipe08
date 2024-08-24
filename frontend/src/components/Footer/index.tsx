@@ -23,12 +23,12 @@ const Footer = () => {
           <S.InfoColumn>
             <h3>Informações</h3>
             <ul>
-              <li><Link href="#contato">Contato</Link></li>
-              <li><Link href="#trilhas">Trilhas</Link></li>
+              <li><S.FooterLink href="#contact">Contato</S.FooterLink></li>
+              <li><S.FooterLink href="#trails">Trilhas</S.FooterLink></li>
             </ul>
           </S.InfoColumn>
         </S.ContentContainer>
-        <S.Copyright>
+        <S.Copyright as="p">
           &copy; 2024 Código Certo Coders. Todos os direitos reservados.
         </S.Copyright>
       </S.MainContainer>

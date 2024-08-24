@@ -1,12 +1,15 @@
-import styled from "styled-components";
-import hero from "../../assets/images/hero.png";
-import Button from "../Button";
+import styled from "styled-components"
 
-import { remCalc } from "../../utils/remCalc";
-import { colors } from "../../styles";
-import { breakpoints } from "../../styles";
+import hero from "../../assets/images/hero.png"
 
-export const Hero = styled.div`
+import Button from "../Button"
+import Typography from '../Typography'
+
+import { remCalc } from "../../utils/remCalc"
+import { colors } from "../../styles"
+import { breakpoints } from "../../styles"
+
+export const Hero = styled.section`
   background-image: url(${hero});
   background-size: cover;
   display: flex;
@@ -22,11 +25,11 @@ export const Hero = styled.div`
 
   @media (max-width: ${breakpoints.desktop}) {
     padding: ${remCalc(224)} 0 ${remCalc(280)};
-    margin-top: 0;
+    margin-top: ${remCalc(88)};
   }
 `;
 
-export const Title = styled.h1`
+export const Title = styled(Typography)`
   font-size: ${remCalc(48)};
   font-weight: 600;
   line-height: ${remCalc(72)};
@@ -44,17 +47,21 @@ export const Title = styled.h1`
   }
 `;
 
-export const SubTitle = styled.h2`
+export const SubTitle = styled(Typography)`
   font-size: ${remCalc(22)};
   font-weight: 400;
   line-height: ${remCalc(24)};
   margin-bottom: ${remCalc(32)};
 
   @media (max-width: ${breakpoints.desktop}) {
-    font-size: ${remCalc(12)};
-    line-height: ${remCalc(16)};
+    font-size: ${remCalc(16)};
+    line-height: ${remCalc(20)};
     text-align: center;
     margin: 0 ${remCalc(4)} ${remCalc(56)};
+
+    span {
+      display: block;
+    }
   }
 `;
 

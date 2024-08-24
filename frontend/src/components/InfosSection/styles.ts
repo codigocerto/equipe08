@@ -5,7 +5,7 @@ import { remCalc } from '../../utils/remCalc'
 import { colors } from '../../styles'
 import { breakpoints } from '../../styles'
 
-export const Section = styled.div`
+export const Section = styled.section`
   padding: ${remCalc(140)} 0 ${remCalc(70)};
 
   @media (max-width: ${breakpoints.desktop}) {

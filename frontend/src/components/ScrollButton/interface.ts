@@ -1,3 +1,3 @@
-export interface Props {
+export interface ScrollButtonProps {
   $isVisible: boolean;
 }
