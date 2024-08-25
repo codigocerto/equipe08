@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import { colors, breakpoints } from '../../styles'
+
+import Typography from '../Typography'
+
+import { colors } from '../../styles'
 
 
 export const FirstTab = styled.section``
@@ -28,11 +31,11 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
     border: 0.15em solid black;
     border-radius: 0.15em;
     transform: translateY(-0.075em);
-`;
+`
 
 
 
-export const DivRed = styled.div `
+export const DivRed = styled.div`
     height: 1.875rem;
     background: ${colors.red};
     margin-right: 5px;
@@ -40,7 +43,7 @@ export const DivRed = styled.div `
 `
 
 
-export const Heading3 = styled.h3 `
+export const Heading3 = styled(Typography)`
     display:flex;
     align-items:center;
     font-weight: 600;
@@ -49,7 +52,7 @@ export const Heading3 = styled.h3 `
     margin: 1em 0 1.3em 0;
 `
 
-export const Heading4 = styled.h3 `
+export const Heading4 = styled(Typography)`
     display:flex;
     align-items:center;
     font-weight: 600;
@@ -59,7 +62,7 @@ export const Heading4 = styled.h3 `
 `
 
 
-export const Paragraph = styled.p `
+export const Paragraph = styled(Typography)`
     font-size: 0.75rem;
     color: ${colors.gray1};
     margin-bottom: 2em;

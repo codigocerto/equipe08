@@ -72,7 +72,7 @@ export const ContactColumn = styled.div`
     }
   }
 
-  p, li {
+  li {
     font-weight: 400;
     font-size: ${remCalc(14)};
     line-height: ${remCalc(36)};
@@ -90,6 +90,29 @@ export const ContactColumn = styled.div`
     padding: ${remCalc(8)} 0 ${remCalc(8)};
     border-top: ${remCalc(1)} solid ${colors.gray3};
     border-bottom: ${remCalc(1)} solid ${colors.gray3};
+  }
+`
+
+export const ContactColumnTitle = styled(Typography)`
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: ${remCalc(20)};
+  line-height: ${remCalc(32)};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: ${remCalc(18)};
+  }
+`
+
+export const Email = styled(Typography)`
+  font-weight: 400;
+  font-size: ${remCalc(14)};
+  line-height: ${remCalc(36)};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-weight: 500;
+    font-size: ${remCalc(12)};
+    line-height: ${remCalc(32)};
   }
 `
 

@@ -11,8 +11,8 @@ const Footer = () => {
         <S.ContentContainer>
           <img src={logo}/>
           <S.ContactColumn>
-            <h3>Contato</h3>
-            <p>codigocertocoders@gmail.com</p>
+            <S.ContactColumnTitle as="h3">Contato</S.ContactColumnTitle>
+            <S.Email as="p">codigocertocoders@gmail.com</S.Email>
             <S.SocialMedia>
               <li><Link href=""><i className="fa-brands fa-whatsapp"></i></Link></li>
               <li><Link href=""><i className="fa-brands fa-discord"></i></Link></li>

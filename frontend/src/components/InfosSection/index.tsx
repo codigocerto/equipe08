@@ -7,8 +7,8 @@ const InfoSection = () => {
     <S.Section>
       <S.Container>
         <S.Content>
-          <h1><span />O que oferecemos</h1>
-          <p>Na Código Certo Coders, oferecemos uma ampla gama de recursos e oportunidades para impulsionar seu desenvolvimento pessoal e profissional na área de tecnologia. Nosso compromisso é fornecer um ambiente que favoreça o aprendizado, a colaboração e a inovação.</p>
+          <S.Title as="h1"><span />O que oferecemos</S.Title>
+          <S.Text as="p">Na Código Certo Coders, oferecemos uma ampla gama de recursos e oportunidades para impulsionar seu desenvolvimento pessoal e profissional na área de tecnologia. Nosso compromisso é fornecer um ambiente que favoreça o aprendizado, a colaboração e a inovação.</S.Text>
           <img src={computer} alt="Computer" />
         </S.Content>
       </S.Container>

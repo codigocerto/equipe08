@@ -41,7 +41,7 @@ const titles = [
 const TrailCarrosel = () => {
   return (
     <S.Main>
-      <h1>Conheça nossas trilhas</h1>
+      <S.MainTitle as="h1">Conheça nossas trilhas</S.MainTitle>
       <S.Container>
         <Swiper
           breakpoints={{
@@ -66,7 +66,7 @@ const TrailCarrosel = () => {
                 <div>
                   <img src={`/src/assets/trails/trilha-${item.id}.svg`} alt="frontend" />
                 </div>
-                <h2>{item.title}</h2>
+                <S.ContentTitle as="h2">{item.title}</S.ContentTitle>
               </S.Content>
             </SwiperSlide>
           ))}

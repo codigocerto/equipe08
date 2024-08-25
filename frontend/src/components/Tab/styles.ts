@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import { colors, breakpoints } from '../../styles';
+import styled from 'styled-components'
+import { colors } from '../../styles'
 
 export const Tabs = styled.div`
   width: 100%;
   // height: auto;
   // display: flex;
   // justify-content: center;
-`;
+`
 
 export const outlet = styled.div`
-`;
+`
 
 export const ButtonTab = styled.button`
   background-color: transparent;
@@ -19,7 +19,7 @@ export const ButtonTab = styled.button`
   height: 6vh;
   font-size: 1rem;
   font-weight: 400;
-`;
+`
 
 export const UlNavbar = styled.nav`
   display: flex;
@@ -29,7 +29,7 @@ export const UlNavbar = styled.nav`
   border: 1px solid ${colors.black};
   border-radius: 0.5rem;
   max-height: 512px;
-`;
+`
 
 export const LiNavbar = styled.li`
   width: 100%;
@@ -48,4 +48,4 @@ export const LiNavbar = styled.li`
   &.active {
     background-color: ${colors.red};
   }
-`;
+`
