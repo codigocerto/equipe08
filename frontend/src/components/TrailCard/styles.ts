@@ -1,11 +1,10 @@
-import styled from "styled-components";
-import { colors, breakpoints } from "../../styles";
-import Button from "../Button";
-import { remCalc } from "../../utils/remCalc";
+import styled from "styled-components"
+import { colors, breakpoints } from "../../styles"
+import Button from "../Button"
+import { remCalc } from "../../utils/remCalc"
 
 export const Main = styled.div<{ $isDark: boolean | undefined }>`
   color: ${(props) => (props.$isDark ? `${colors.gray1}` : `${colors.black}`)};
-
   position: relative;
   height: 100%;
 
@@ -16,7 +15,7 @@ export const Main = styled.div<{ $isDark: boolean | undefined }>`
   @media (min-width: ${breakpoints.tablet}) {
     margin-bottom: 120px;
   }
-`;
+`
 
 export const Container = styled.div`
   margin: 15px auto;
@@ -55,7 +54,7 @@ export const Container = styled.div`
       object-fit: cover;
     }
   }
-`;
+`
 
 export const Content = styled.div`
   @media (min-width: ${breakpoints.mobile}) {
@@ -90,6 +89,7 @@ export const Content = styled.div`
         }
       }
     }
+
     p {
       font-size: 12px;
       margin-top: 11px;
@@ -128,12 +128,13 @@ export const Content = styled.div`
         }
       }
     }
+
     p {
       font-size: 18px;
       max-width: 476px;
     }
   }
-`;
+`
 
 export const Btn = styled(Button)`
   width: 208px;
@@ -199,7 +200,7 @@ export const Btn = styled(Button)`
     font-size: ${(props) => (props.textbutton ? `${remCalc(16)}` : `${remCalc(14)}`)};
     line-height: ${remCalc(18)};
   }
-`;
+`
 
 export const BlackRetangle = styled.div<{ $isDark: boolean | undefined }>`
   background-color: ${(props) => (props.$isDark ? `${colors.black}` : `${colors.white}`)};
@@ -228,4 +229,4 @@ export const BlackRetangle = styled.div<{ $isDark: boolean | undefined }>`
     left: 25%;
     transform: translate(0%, -50%);
   }
-`;
+`

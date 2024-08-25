@@ -25,20 +25,15 @@ const Header = () => {
     setOpenModal(false);
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <S.Header>
       <S.ContentContainer>
-        <S.Logo src={logo} alt="Codigo Certo Logo" onClick={scrollToTop} />
+        <Link href="#home">
+          <S.Logo src={logo} alt="Codigo Certo Logo" />
+        </Link>
         <S.NavBar>
-          <Link href="#contato">Contato</Link>
-          <Link href="#trilhas">Trilhas</Link>
+          <Link href="#contact">Contato</Link>
+          <Link href="#trails">Trilhas</Link>
           {/* <Link href="#login">
             <S.LoginIcon />
             Login
@@ -56,21 +51,19 @@ const Header = () => {
         )}
       </S.ContentContainer>
       <S.NavMobile className={isMenuOpen ? "is-open" : ""}>
-
-        <Link
-          href="#participeagora"
-          onClick={() => setIsMenuOpen(false)}
-          style={{ "--i": "1" } as React.CSSProperties}
-        >
-          Participe agora
+        <Link href="#login" onClick={() => setIsMenuOpen(false)} style={{ "--i": "1" } as React.CSSProperties}>
+          Login
         </Link>
-        <Link href="#home" onClick={() => setIsMenuOpen(false)} style={{ "--i": "2" } as React.CSSProperties}>
+        <Link href="#register" onClick={() => setIsMenuOpen(false)} style={{ "--i": "2" } as React.CSSProperties}>
+          Cadastro
+        </Link>
+        <Link href="#home" onClick={() => setIsMenuOpen(false)} style={{ "--i": "3" } as React.CSSProperties}>
           Home
         </Link>
-        <Link href="#trilhas" onClick={() => setIsMenuOpen(false)} style={{ "--i": "3" } as React.CSSProperties}>
+        <Link href="#trails" onClick={() => setIsMenuOpen(false)} style={{ "--i": "4" } as React.CSSProperties}>
           Trilhas
         </Link>
-        <Link href="#contato" onClick={() => setIsMenuOpen(false)} style={{ "--i": "4" } as React.CSSProperties}>
+        <Link href="#contact" onClick={() => setIsMenuOpen(false)} style={{ "--i": "5" } as React.CSSProperties}>
           Contato
         </Link>
       </S.NavMobile>

@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
+import { remCalc } from "./utils/remCalc"
+
 export const colors = {
   red: "#E53939",
   white: "#FFF",
@@ -9,6 +11,7 @@ export const colors = {
   gray1: "#CCCCCC",
   gray2: "#6A6A6A",
   gray3: "#2D2D2D",
+  gray4: "#333232",
 }
 
 export const breakpoints = {
@@ -25,5 +28,14 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+  }
+
+  html {
+    scroll-padding-top: ${remCalc(126)};
+    scroll-behavior: smooth;
+
+    @media (max-width: ${breakpoints.desktop}) {
+      scroll-padding-top: ${remCalc(88)};
+    }
   }
 `

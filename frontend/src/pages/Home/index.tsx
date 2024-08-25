@@ -6,13 +6,13 @@ import Trails from "../Trails";
 
 const Home = () => {
   return (
-    <>
+    <div id="home">
       <Hero />
       <ScrollButton />
       <InfosSection />
       <Trails />
       <PhraseSection />
-    </>
+    </div>
   );
 };
 

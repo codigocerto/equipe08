@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-import { Link } from "../Link/styles";
+import Link from '../Link'
+import Typography from '../Typography'
 
 import { remCalc } from '../../utils/remCalc'
 
@@ -103,19 +104,19 @@ export const InfoColumn = styled(ContactColumn)`
     }
   }
 
-  ${Link} {
-    color: ${colors.gray2};
-    transition: color .5s ease-out;
-
-    &:hover {
-      color: ${colors.red};
-    }
-  }
-
   @media (max-width: ${breakpoints.desktop}) {
     border-top: none;
     border-bottom: ${remCalc(1)} solid ${colors.gray3};
     padding-bottom: ${remCalc(8)};
+  }
+`
+
+export const FooterLink = styled(Link)`
+  color: ${colors.gray2};
+  transition: color .5s ease-out;
+
+  &:hover {
+    color: ${colors.red};
   }
 `
 
@@ -145,7 +146,7 @@ export const SocialMedia = styled.ul`
   }
 `
 
-export const Copyright = styled.p`
+export const Copyright = styled(Typography)`
   color: ${colors.gray2};
   font-weight: 400;
   font-size: ${remCalc(14)};

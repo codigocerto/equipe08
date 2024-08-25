@@ -4,7 +4,7 @@ import * as S from './styles';
 
 
 const SecondTab = () => {
- return (
+  return (
 
     <S.SecondTab>        
         <S.Heading4><S.DivRed>&nbsp;</S.DivRed>Crie sua conta</S.Heading4>
@@ -13,7 +13,7 @@ const SecondTab = () => {
         <Input type={'number'} title={'Telefone para contato'} required aria-label="Telefone para contato"/>
         <Input type={'email'} title={'E-mail'} required aria-label="Insira o endereço de e-mail"/>
         <Input type={'password'} title={'Senha'} required aria-label="Senha"/>
-        <Button $isHeroButton>Acessar Conta</Button>
+        <Button>Acessar Conta</Button>
     </S.SecondTab>
   
   );

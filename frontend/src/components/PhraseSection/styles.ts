@@ -4,7 +4,7 @@ import { remCalc } from '../../utils/remCalc'
 
 import { breakpoints } from '../../styles'
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@ export const Container = styled.div`
     line-height: ${remCalc(72)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      font-size: ${remCalc(32)};
+      font-size: ${remCalc(40)};
       line-height: ${remCalc(42)};
       align-self: flex-start;
     }
@@ -33,7 +33,7 @@ export const Container = styled.div`
     height: ${remCalc(128)};
 
     @media (max-width: ${breakpoints.desktop}) {
-      height: ${remCalc(100)};
+      height: ${remCalc(146)};
       margin-top: ${remCalc(32)};
       text-align: right;
       align-self: flex-end;
