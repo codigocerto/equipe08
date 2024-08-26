@@ -15,19 +15,15 @@ export const Hero = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: ${colors.white};
   margin-top: ${remCalc(128)};
   padding: ${remCalc(200)} ${remCalc(220)};
-
-  h1,
-  h2 {
-    color: ${colors.white};
-  }
 
   @media (max-width: ${breakpoints.desktop}) {
     padding: ${remCalc(224)} 0 ${remCalc(280)};
     margin-top: ${remCalc(88)};
   }
-`;
+`
 
 export const Title = styled(Typography)`
   font-size: ${remCalc(48)};
@@ -45,7 +41,7 @@ export const Title = styled(Typography)`
       display: block;
     }
   }
-`;
+`
 
 export const SubTitle = styled(Typography)`
   font-size: ${remCalc(22)};
@@ -63,7 +59,7 @@ export const SubTitle = styled(Typography)`
       display: block;
     }
   }
-`;
+`
 
 export const Btn = styled(Button)`
   background-color: ${colors.red};
@@ -126,4 +122,4 @@ export const Btn = styled(Button)`
     font-size: ${(props) => (props.textbutton ? `${remCalc(16)}` : `${remCalc(14)}`)};
     line-height: ${remCalc(18)};
   }
-`;
+`

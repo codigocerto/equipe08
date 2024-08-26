@@ -9,8 +9,8 @@ const TrailCard = ({ img, title, subtitle, $isDark }: TrailCardPropInterface) =>
         <img src={img} alt={title} />
         <S.Content>
           <div>
-            <h1>{title}</h1>
-            <p>{subtitle}</p>
+            <S.ContentTitle as="h1">{title}</S.ContentTitle>
+            <S.ContentSubTitle as="p">{subtitle}</S.ContentSubTitle>
           </div>
           <S.Btn icon={<i className="fa fa-arrow-right"></i>} textbutton="MAIS SOBRE" />
         </S.Content>

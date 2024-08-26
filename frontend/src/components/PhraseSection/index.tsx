@@ -5,7 +5,7 @@ import * as S from './styles'
 const PhraseSection = () => {
   return (
     <S.Container>
-      <h1>Construindo o <span>amanhã, hoje.</span></h1>
+      <S.Phrase as="h1">Construindo o <span>amanhã, hoje.</span></S.Phrase>
       <img src={logo} alt="logo" />
     </S.Container>
   )

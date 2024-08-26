@@ -1,6 +1,9 @@
 import styled from "styled-components"
-import { colors, breakpoints } from "../../styles"
+
 import Button from "../Button"
+import Typography from "../Typography"
+
+import { colors, breakpoints } from "../../styles"
 import { remCalc } from "../../utils/remCalc"
 
 export const Main = styled.div<{ $isDark: boolean | undefined }>`
@@ -9,20 +12,20 @@ export const Main = styled.div<{ $isDark: boolean | undefined }>`
   height: 100%;
 
   @media (min-width: ${breakpoints.mobile}) {
-    margin-bottom: 32px;
+    margin-bottom: ${remCalc(32)};
   }
 
   @media (min-width: ${breakpoints.tablet}) {
-    margin-bottom: 120px;
+    margin-bottom: ${remCalc(120)};
   }
 `
 
 export const Container = styled.div`
-  margin: 15px auto;
+  margin: ${remCalc(15)} auto;
 
   img {
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: ${remCalc(8)};
   }
 
   @media (min-width: ${breakpoints.mobile}) {
@@ -31,7 +34,7 @@ export const Container = styled.div`
     width: 90%;
 
     img {
-      height: 370px;
+      height: ${remCalc(370)};
       object-position: bottom left;
     }
   }
@@ -41,7 +44,7 @@ export const Container = styled.div`
     flex-direction: row;
 
     img {
-      height: 340px;
+      height: ${remCalc(340)};
       width: 50%;
     }
   }
@@ -50,7 +53,7 @@ export const Container = styled.div`
     width: 100%;
 
     img {
-      height: 340px;
+      height: ${remCalc(340)};
       object-fit: cover;
     }
   }
@@ -62,48 +65,31 @@ export const Content = styled.div`
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
-    gap: 11px;
-    margin: 4px 0 11px 0;
+    gap: ${remCalc(11)};
+    margin: ${remCalc(4)} 0 ${remCalc(11)} 0;
 
     > div {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 12px;
-      margin-top: 4px;
-
-      h1 {
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
-
-        &::before {
-          content: " ";
-          background-color: ${colors.red};
-          height: 8px;
-          width: 12px;
-          display: inline-block;
-          margin-right: 8px;
-          transform: translateY(-30%);
-        }
-      }
+      gap: ${remCalc(12)};
+      margin-top: ${remCalc(4)};
     }
 
     p {
-      font-size: 12px;
-      margin-top: 11px;
-      line-height: 24px;
+      font-size: ${remCalc(12)};
+      margin-top: ${remCalc(11)};
+      line-height: ${remCalc(24)};
     }
   }
 
   @media (min-width: ${breakpoints.tablet}) {
-    margin: 0 0 0 40px;
-    gap: 20px;
+    margin: 0 0 0 ${remCalc(40)};
+    gap: ${remCalc(20)};
     justify-content: space-between;
 
     p {
-      margin-top: 20px;
+      margin-top: ${remCalc(20)};
     }
   }
 
@@ -114,36 +100,67 @@ export const Content = styled.div`
     > div {
       flex-direction: column;
       align-items: flex-start;
-
-      h1 {
-        font-size: 36px;
-
-        &::before {
-          content: " ";
-          margin-bottom: 8px;
-          background-color: ${colors.red};
-          height: 8px;
-          width: 12px;
-          display: block;
-        }
-      }
     }
 
     p {
-      font-size: 18px;
-      max-width: 476px;
+      font-size: ${remCalc(18)};
+      max-width: ${remCalc(476)};
     }
   }
 `
 
+export const ContentTitle = styled(Typography)`
+  font-size: ${remCalc(18)};
+  font-weight: 600;
+  text-align: center;
+
+  &::before {
+    content: " ";
+    background-color: ${colors.red};
+    height: ${remCalc(8)};
+    width: ${remCalc(12)};
+    display: inline-block;
+    margin-right: ${remCalc(8)};
+    transform: translateY(-30%);
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: ${remCalc(36)};
+
+    &::before {
+      content: " ";
+      margin-bottom: ${remCalc(8)};
+      background-color: ${colors.red};
+      height: ${remCalc(8)};
+      width: ${remCalc(12)};
+      display: block;
+    }
+  }
+`
+
+export const ContentSubTitle = styled(Typography)`
+  font-size: ${remCalc(12)};
+  margin-top: ${remCalc(11)};
+  line-height: ${remCalc(24)};
+
+  @media (min-width: ${breakpoints.tablet}) {
+    margin-top: ${remCalc(20)};
+  }
+
+  @media (min-width: ${breakpoints.desktop}) {
+    font-size: ${remCalc(18)};
+    max-width: ${remCalc(476)};
+  }
+`
+
 export const Btn = styled(Button)`
-  width: 208px;
+  width: ${remCalc(208)};
   align-self: flex-end;
 
   background-color: ${colors.red};
   color: ${colors.white};
   border: none;
-  border-radius: 8px;
+  border-radius: ${remCalc(8)};
   padding: ${remCalc(16)} ${remCalc(32)};
   font-size: ${(props) => (props.textbutton ? `${remCalc(18)}` : `${remCalc(18)}`)};
   font-weight: 700;
@@ -171,14 +188,14 @@ export const Btn = styled(Button)`
   }
 
   &::before {
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
+    border-top-right-radius: ${remCalc(8)};
+    border-top-left-radius: ${remCalc(8)};
   }
 
   &::after {
     top: 100%;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: ${remCalc(8)};
+    border-bottom-left-radius: ${remCalc(8)};
   }
 
   &:hover {
@@ -217,14 +234,14 @@ export const BlackRetangle = styled.div<{ $isDark: boolean | undefined }>`
 
   @media (min-width: ${breakpoints.tablet}) {
     width: 100%;
-    height: 460px;
+    height: ${remCalc(460)};
     top: 50%;
     transform: translate(0%, -50%);
   }
 
   @media (min-width: ${breakpoints.desktop}) {
     width: 100%;
-    height: 460px;
+    height: ${remCalc(460)};
     top: 50%;
     left: 25%;
     transform: translate(0%, -50%);

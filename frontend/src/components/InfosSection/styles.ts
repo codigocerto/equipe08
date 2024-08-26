@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Typography from '../Typography'
+
 import { remCalc } from '../../utils/remCalc'
 
 import { colors } from '../../styles'
@@ -53,33 +55,6 @@ export const Content = styled.div`
     }
   }
 
-  h1 {
-    font-size: ${remCalc(40)};
-    font-weight: 600;
-    line-height: ${remCalc(80)};
-    color: ${colors.white};
-
-    @media (max-width: ${breakpoints.desktop}) {
-      font-size: ${remCalc(24)};
-      line-height: ${remCalc(29)};
-    }
-  }
-
-  p {
-    font-size: ${remCalc(20)};
-    font-weight: 400;
-    line-height: ${remCalc(36)};
-    color: ${colors.gray1};
-    margin-top: ${remCalc(32)};
-    max-width: ${remCalc(585)};
-
-    @media (max-width: ${breakpoints.desktop}) {
-      font-size: ${remCalc(12)};
-      line-height: ${remCalc(24)};
-      margin-top: ${remCalc(12)};
-    }
-  }
-
   img {
     position: absolute;
     height: ${remCalc(560)};
@@ -99,4 +74,31 @@ export const Content = styled.div`
     position: static;
     padding: 0;
   }
+`
+
+export const Title = styled(Typography)`
+  font-size: ${remCalc(40)};
+  font-weight: 600;
+  line-height: ${remCalc(80)};
+  color: ${colors.white};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: ${remCalc(24)};
+    line-height: ${remCalc(29)};
+  }
+`
+
+export const Text = styled(Typography)`
+  font-size: ${remCalc(20)};
+  font-weight: 400;
+  line-height: ${remCalc(36)};
+  color: ${colors.gray1};
+  margin-top: ${remCalc(32)};
+  max-width: ${remCalc(585)};
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: ${remCalc(12)};
+    line-height: ${remCalc(24)};
+    margin-top: ${remCalc(12)};
+    }
 `

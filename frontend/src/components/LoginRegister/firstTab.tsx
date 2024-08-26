@@ -6,7 +6,7 @@ const FirstTab = () => {
   return (
 
       <S.FirstTab>        
-          <S.Heading3><S.DivRed>&nbsp;</S.DivRed>Entre em sua Conta</S.Heading3>
+          <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>Entre em sua Conta</S.Heading3>
         
             <Input type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail"/>
             <Input type={'password'} title={'Senha'} required arial-label="Senha"/>

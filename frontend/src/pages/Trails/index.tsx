@@ -1,15 +1,14 @@
-import React from "react";
-import TrailCard from "../../components/TrailCard";
-import * as S from "./styles";
-import { items } from "./data/trailsData";
-import { Item } from "./data/Item.interface";
+import TrailCard from "../../components/TrailCard"
+import * as S from "./styles"
+import { items } from "./data/trailsData"
+import { Item } from "./data/Item.interface"
 
 const Trails = () => {
   return (
     <S.Container id="trails">
-      <S.Title>
-        <h1>Nossas Trilhas</h1>
-      </S.Title>
+      <S.TitleDiv>
+        <S.Title as="h1">Nossas Trilhas</S.Title>
+      </S.TitleDiv>
       <S.CardContainer>
         {items.map((item: Item) => (
           <TrailCard
