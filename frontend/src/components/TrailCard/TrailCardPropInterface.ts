@@ -3,4 +3,5 @@ export interface TrailCardPropInterface {
   title: string;
   subtitle: string;
   $isDark: boolean | undefined;
+  showBtn: boolean;
 }
