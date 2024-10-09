@@ -9,7 +9,7 @@ const databaseName = process.env.DB_DATABASE || 'codigo_certo_db';
 
 // Configurações para criação do pool de conexão sem banco de dados específico
 const initialPoolOptions: PoolOptions = {
-  host: process.env.DB_HOST || 'localhost',
+  host: process.env.DB_HOST,
   user: process.env.DB_USER || 'root',
   password: process.env.DB_PASSWORD || 'root',
   waitForConnections: true,
