@@ -10,10 +10,10 @@ import { breakpoints } from '../../styles'
 export const Section = styled.section`
   padding: ${remCalc(40)} 0 ${remCalc(70)};
 
-  @media (max-width: ${breakpoints.desktop}) {
+  @media (max-width: ${breakpoints.tablet}) {
     position: relative;
     display: flex;
-    padding: ${remCalc(203)} 0 0;
+    padding: 0;
   }
 `
 
@@ -22,13 +22,19 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: auto;
-  height: ${remCalc(920)};
+  height: auto;
+  padding: ${remCalc(160)} ${remCalc(32)};
 
   @media (max-width: ${breakpoints.desktop}) {
-    align-items: end;
-    padding: ${remCalc(160)} ${remCalc(32)} ${remCalc(16)};
-    height: auto;
+    padding: ${remCalc(70)} ${remCalc(32)};
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: ${remCalc(100)} ${remCalc(32)};
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    padding: ${remCalc(100)} ${remCalc(12)};
   }
 `
 
@@ -47,7 +53,7 @@ export const Content = styled.div`
     background-color: ${colors.red};
     margin-right:${remCalc(8)};
 
-    @media (max-width: ${breakpoints.desktop}) {
+    @media (max-width: ${breakpoints.tablet}) {
       width: ${remCalc(2)};
       height: ${remCalc(18)};
       margin-right: ${remCalc(4)};
@@ -56,11 +62,10 @@ export const Content = styled.div`
 
   p {
     color: ${colors.red};
-    margin-top: ${remCalc(-30)}
-
+    margin-top: ${remCalc(-30)};
   }
 
-  @media (max-width: ${breakpoints.desktop}) {
+  @media (max-width: ${breakpoints.tablet}) {
     position: static;
     padding: 0;
   }
@@ -72,7 +77,7 @@ export const Title = styled(Typography)`
   line-height: ${remCalc(80)};
 
 
-  @media (max-width: ${breakpoints.desktop}) {
+  @media (max-width: ${breakpoints.tablet}) {
     font-size: ${remCalc(24)};
     line-height: ${remCalc(29)};
   }
@@ -86,6 +91,11 @@ export const FormContainer = styled.div`
   padding: ${remCalc(80)} ${remCalc(150)};
   border-radius: ${remCalc(30)};
   background-color: ${colors.gray4};
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding: ${remCalc(20)};
+    border-radius: ${remCalc(8)};
+  }
 `
 
 export const Form = styled.form`
@@ -110,6 +120,11 @@ export const InputContainer = styled.div`
   justify-content: space-between;
   gap: ${remCalc(40)};
 
+  @media (max-width: ${breakpoints.tablet}) {
+      gap: ${remCalc(20)};
+      flex-direction: column;
+    }
+
 `
 
 export const Input = styled.input`
@@ -123,6 +138,10 @@ export const Input = styled.input`
   &:focus {
     outline: none;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+      flex-direction: column;
+    }
 `
 
 export const TextArea = styled.textarea`
@@ -162,4 +181,18 @@ export const Button = styled.button`
     border: ${remCalc(1)} solid ${colors.red};
     color: ${colors.red};
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: ${remCalc(14)};
+    width: ${remCalc(200)};
+    height: ${remCalc(60)};
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    font-size: ${remCalc(14)};
+    width: ${remCalc(130)};
+    height: ${remCalc(60)};
+  }
+
+  
 `
