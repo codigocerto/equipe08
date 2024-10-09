@@ -54,6 +54,12 @@ export const Content = styled.div`
     }
   }
 
+  p {
+    color: ${colors.red};
+    margin-top: ${remCalc(-30)}
+
+  }
+
   @media (max-width: ${breakpoints.desktop}) {
     position: static;
     padding: 0;
@@ -82,7 +88,7 @@ export const FormContainer = styled.div`
   background-color: ${colors.gray4};
 `
 
-export const Form = styled.div`
+export const Form = styled.form`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -109,7 +115,7 @@ export const InputContainer = styled.div`
 export const Input = styled.input`
   width: 100%;
   padding: ${remCalc(20)};
-  margin: ${remCalc(10)} 0;
+  margin: ${remCalc(10)} 0 ${remCalc(30)} 0;
   border: none;
   border-radius: ${remCalc(8)};
   font-size: ${remCalc(16)};
@@ -122,7 +128,7 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   height: ${remCalc(250)};
   padding: ${remCalc(10)};
-  margin: ${remCalc(10)} 0;
+  margin: ${remCalc(10)} 0 ${remCalc(30)} 0;
   border: none;
   border-radius: ${remCalc(8)};
   font-size: ${remCalc(16)};
