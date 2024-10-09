@@ -1,28 +1,23 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import Typography from "../Typography"
+import Typography from "../Typography";
 
-import { remCalc } from "../../utils/remCalc"
-import { colors, breakpoints } from "../../styles"
-
+import { remCalc } from "../../utils/remCalc";
+import { colors, breakpoints } from "../../styles";
 
 export const Main = styled.section`
-  @media (min-width: ${breakpoints.mobile}) {
-    margin-left: ${remCalc(30)};
-  }
-
   @media (min-width: ${breakpoints.desktop}) {
     max-width: ${remCalc(1160)};
     margin: 0 auto;
   }
-`
+`;
 
 export const MainTitle = styled(Typography)`
   @media (min-width: ${breakpoints.mobile}) {
     font-size: ${remCalc(24)};
     margin-top: ${remCalc(12)};
     margin-bottom: ${remCalc(10)};
-  
+
     &::before {
       content: "";
       background-color: ${colors.red};
@@ -48,7 +43,7 @@ export const MainTitle = styled(Typography)`
       margin-left: 0;
     }
   }
-`
+`;
 
 export const Container = styled.div`
   display: flex;
@@ -56,13 +51,12 @@ export const Container = styled.div`
   justify-content: center;
   height: 100%;
   width: 100%;
-`
+`;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: ${remCalc(20)} ${remCalc(20)} 0 0;
 
   > div {
     img {
@@ -73,7 +67,7 @@ export const Content = styled.div`
       cursor: grab;
     }
   }
-`
+`;
 
 export const ContentTitle = styled(Typography)`
   margin: ${remCalc(16)} ${remCalc(10)};
@@ -89,4 +83,4 @@ export const ContentTitle = styled(Typography)`
     transform: translate(0%, -50%);
     margin-right: ${remCalc(8)};
   }
-`
+`;

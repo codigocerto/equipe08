@@ -1,23 +1,26 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import Typography from "../../components/Typography"
+import Typography from "../../components/Typography";
 
-import { colors, breakpoints } from "../../styles"
-import { remCalc } from "../../utils/remCalc"
-
+import { colors, breakpoints } from "../../styles";
+import { remCalc } from "../../utils/remCalc";
 
 export const Container = styled.section`
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
-`
+  @media (max-width: ${breakpoints.desktop}) {
+    align-items: end;
+    height: auto;
+  }
+`;
 
 export const TitleDiv = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
   width: 100%;
-  margin: ${remCalc(12)} auto ${remCalc(33)} auto;
+  margin: ${remCalc(32)} 0 ${remCalc(8)} ${remCalc(33)};
 
   @media (min-width: ${breakpoints.tablet}) {
     width: 90%;
@@ -27,7 +30,7 @@ export const TitleDiv = styled.div`
     margin: ${remCalc(80)} auto;
     width: 80%;
   }
-`
+`;
 
 export const Title = styled(Typography)`
   font-size: ${remCalc(64)};
@@ -57,12 +60,23 @@ export const Title = styled(Typography)`
       margin-right: ${remCalc(8)};
     }
   }
-`
+`;
+
+export const CarrouselContainer = styled.div`
+  @media (min-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`;
 
 export const CardContainer = styled.div`
+  display: none;
+
+  @media (min-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+
   @media (min-width: ${breakpoints.desktop}) {
-    /* width delimita o tamanho dos cards e o margin centraliza */
     width: 80%;
     margin: 0 auto;
   }
-`
+`;

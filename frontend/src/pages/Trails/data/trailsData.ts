@@ -1,6 +1,6 @@
 import { Item } from "./Item.interface";
 
-export const items: Item[] = [
+export const trailsData: Item[] = [
   {
     id: 1,
     title: "FrontEnd Jr",
@@ -39,15 +39,13 @@ export const items: Item[] = [
   {
     id: 6,
     title: "UX/UI Designer Jr",
-    subtitle:
-      "Este projeto tem como objetivo desenvolver a interface de usuário (UI) e a experiência do usuário (UX) de uma página inicial para a comunidade Codigo Certo Coders.",
+    subtitle: "Este projeto tem como objetivo desenvolver a interface de usuário (UI) e a experiência do usuário (UX) de uma página inicial para a comunidade Codigo Certo Coders.",
     $isDark: true,
   },
   {
     id: 7,
     title: "DevOps Jr",
-    subtitle:
-      "Este projeto tem como objetivo principal introduzir e praticar conceitos fundamentais de DevOps Jr através da implementação de um pipeline de CI/CD para uma aplicação web simples.",
+    subtitle: "Este projeto tem como objetivo principal introduzir e praticar conceitos fundamentais de DevOps Jr através da implementação de um pipeline de CI/CD para uma aplicação web simples.",
     $isDark: false,
   },
 ];

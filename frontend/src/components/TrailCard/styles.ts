@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-import Button from "../Button"
-import Typography from "../Typography"
+import Button from "../Button";
+import Typography from "../Typography";
 
-import { colors, breakpoints } from "../../styles"
-import { remCalc } from "../../utils/remCalc"
+import { colors, breakpoints } from "../../styles";
+import { remCalc } from "../../utils/remCalc";
 
 export const Main = styled.div<{ $isDark: boolean | undefined }>`
   color: ${(props) => (props.$isDark ? `${colors.gray1}` : `${colors.black}`)};
@@ -12,26 +12,27 @@ export const Main = styled.div<{ $isDark: boolean | undefined }>`
   height: 100%;
 
   @media (min-width: ${breakpoints.mobile}) {
-    margin-bottom: ${remCalc(32)};
+    margin-bottom: ${remCalc(61)};
   }
 
   @media (min-width: ${breakpoints.tablet}) {
     margin-bottom: ${remCalc(120)};
   }
-`
+`;
 
 export const Container = styled.div`
-  margin: ${remCalc(15)} auto;
-
   img {
     object-fit: cover;
     border-radius: ${remCalc(8)};
+    margin: ${remCalc(15)};
   }
 
   @media (min-width: ${breakpoints.mobile}) {
     display: flex;
-    flex-direction: column;
-    width: 90%;
+    flex-flow: column wrap;
+    align-content: center;
+    padding: 0 ${remCalc(40)} ${remCalc(30)};
+    min-height: ${remCalc(678)};
 
     img {
       height: ${remCalc(370)};
@@ -41,7 +42,9 @@ export const Container = styled.div`
 
   @media (min-width: ${breakpoints.tablet}) {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
+    // reseta o min-height do mobile
+    min-height: 0;
 
     img {
       height: ${remCalc(340)};
@@ -57,7 +60,7 @@ export const Container = styled.div`
       object-fit: cover;
     }
   }
-`
+`;
 
 export const Content = styled.div`
   @media (min-width: ${breakpoints.mobile}) {
@@ -73,7 +76,7 @@ export const Content = styled.div`
       flex-direction: column;
       align-items: flex-start;
       gap: ${remCalc(12)};
-      margin-top: ${remCalc(4)};
+      margin-top: ${remCalc(32)};
     }
 
     p {
@@ -107,7 +110,7 @@ export const Content = styled.div`
       max-width: ${remCalc(476)};
     }
   }
-`
+`;
 
 export const ContentTitle = styled(Typography)`
   font-size: ${remCalc(18)};
@@ -136,7 +139,7 @@ export const ContentTitle = styled(Typography)`
       display: block;
     }
   }
-`
+`;
 
 export const ContentSubTitle = styled(Typography)`
   font-size: ${remCalc(12)};
@@ -151,11 +154,13 @@ export const ContentSubTitle = styled(Typography)`
     font-size: ${remCalc(18)};
     max-width: ${remCalc(476)};
   }
-`
+`;
 
-export const Btn = styled(Button)`
+export const Btn = styled(Button)<{ showBtn: boolean }>`
   width: ${remCalc(208)};
   align-self: flex-end;
+
+  visibility: ${(props) => (props.showBtn ? `visible` : `hidden`)};
 
   background-color: ${colors.red};
   color: ${colors.white};
@@ -217,7 +222,7 @@ export const Btn = styled(Button)`
     font-size: ${(props) => (props.textbutton ? `${remCalc(16)}` : `${remCalc(14)}`)};
     line-height: ${remCalc(18)};
   }
-`
+`;
 
 export const BlackRetangle = styled.div<{ $isDark: boolean | undefined }>`
   background-color: ${(props) => (props.$isDark ? `${colors.black}` : `${colors.white}`)};
@@ -246,4 +251,4 @@ export const BlackRetangle = styled.div<{ $isDark: boolean | undefined }>`
     left: 25%;
     transform: translate(0%, -50%);
   }
-`
+`;
