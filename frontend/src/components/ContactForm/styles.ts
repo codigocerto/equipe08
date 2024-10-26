@@ -75,9 +75,8 @@ export const Title = styled(Typography)`
   font-weight: 600;
   line-height: ${remCalc(80)};
 
-
   @media (max-width: ${breakpoints.tablet}) {
-    font-size: ${remCalc(24)};
+    font-size: ${remCalc(29)};
     line-height: ${remCalc(29)};
   }
 `
