@@ -23,7 +23,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: ${remCalc(160)} ${remCalc(32)};
+  padding: ${remCalc(10)} ${remCalc(12)};
 
   @media (max-width: ${breakpoints.desktop}) {
     padding: ${remCalc(70)} ${remCalc(32)};
@@ -44,7 +44,6 @@ export const Content = styled.div`
   flex-direction: column;
   max-width: ${remCalc(1160)};
   width: 100%;
-  padding: ${remCalc(60)} 0;
 
   span {
     display: inline-block;
@@ -86,7 +85,7 @@ export const Title = styled(Typography)`
 export const FormContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 75%;
   margin: ${remCalc(60)} auto;
   padding: ${remCalc(80)} ${remCalc(150)};
   border-radius: ${remCalc(30)};
@@ -129,7 +128,7 @@ export const InputContainer = styled.div`
 
 export const Input = styled.input`
   width: 100%;
-  padding: ${remCalc(20)};
+  padding: ${remCalc(12)};
   margin: ${remCalc(10)} 0 ${remCalc(30)} 0;
   border: none;
   border-radius: ${remCalc(8)};
@@ -145,7 +144,7 @@ export const Input = styled.input`
 `
 
 export const TextArea = styled.textarea`
-  height: ${remCalc(250)};
+  height: ${remCalc(170)};
   padding: ${remCalc(10)};
   margin: ${remCalc(10)} 0 ${remCalc(30)} 0;
   border: none;
@@ -159,7 +158,7 @@ export const TextArea = styled.textarea`
 `
 
 export const Label = styled.label`
-  font-size: ${remCalc(14)};
+  font-size: ${remCalc(20)};
   color: ${colors.white};
 `
 
@@ -175,6 +174,7 @@ export const Button = styled.button`
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.3s ease-in-out;
+  margin: 0 auto;
   
   &:hover {
     background-color: ${colors.white};

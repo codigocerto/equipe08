@@ -13,6 +13,7 @@ export const Container = styled.section`
   width: 100%;
   padding: ${remCalc(40)} 0 ${remCalc(100)};
   margin: 0 auto;
+  margin-top: -2.75rem;
   
   img {
     height: ${remCalc(128)};
