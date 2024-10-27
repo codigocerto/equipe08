@@ -1,18 +1,19 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode, SelectHTMLAttributes } from "react";
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  textdecoration?: string;
+export type ButtonProps = {
   fontweightbutton?: string;
-  boxshadowbutton?: string;
   textbutton?: string;
   textcolor?: string;
+  textcolorhover?: string;
+  textdecoration?: string;
   bgcolor?: string;
+  hoverbgcolor?: string;
+  boxshadowbutton?: string;
   borderbutton?: string;
   paddingbutton?: string;
   widthbutton?: string;
-
-  textcolorhover?: string;
-  hoverbgcolor?: string;
+  isblock?: boolean;
   onClick?: () => void;
   icon?: ReactNode;
-}
+} & SelectHTMLAttributes<HTMLDivElement> &
+  ButtonHTMLAttributes<HTMLButtonElement>;

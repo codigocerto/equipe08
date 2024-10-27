@@ -8,7 +8,7 @@ export const Label = styled.div`
     margin-bottom: 0.5em;   
     margin-top: 0.5em;   
     width: 100%;
-    background: blue;
+    /* background: blue; */
 `
 
 export const Input = styled.input`

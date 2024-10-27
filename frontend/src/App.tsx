@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <GlobalStyle />
-      {/* <Modal /> */}
+      <Modal />
         <Header />
         <AppRoutes />
         <Footer />
