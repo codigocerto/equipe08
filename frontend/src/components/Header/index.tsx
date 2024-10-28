@@ -34,10 +34,13 @@ const Header = () => {
         <S.NavBar>
           <Link href="#contact">Contato</Link>
           <Link href="#trails">Trilhas</Link>
-          {/* <Link href="#login">
-            <S.LoginIcon />
-            Login
-          </Link> */}
+          <Link href="#login">
+            <div onClick={handleOpenModal}>
+              <S.LoginIcon />
+              Login
+            </div>
+          </Link>
+          <Modal isOpen={openModal} onClose= {handleCloseModal}/>
         </S.NavBar>
 
         {isMenuOpen ? (
