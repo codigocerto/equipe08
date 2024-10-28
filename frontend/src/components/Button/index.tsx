@@ -1,13 +1,45 @@
-import { ButtonProps } from "./interface"
-import * as S from "./styles"
+import { StyleSheetManager } from "styled-components";
 
-const Button = ({ icon, textbutton, ...rest }: ButtonProps) => {
+import * as S from "./styles";
+import { ButtonProps } from "./interface";
+
+const Button = ({
+  textbutton,
+  onClick,
+  bgcolor,
+  hoverbgcolor,
+  textcolor,
+  icon,
+  widthbutton,
+  borderbutton,
+  paddingbutton,
+  fontweightbutton,
+  boxshadowbutton,
+  textdecoration,
+  textcolorhover,
+  ...rest
+}: ButtonProps) => {
   return (
-    <S.Button {...rest}>
-      {textbutton}
-      {icon && <S.Icon>{icon}</S.Icon>}
-    </S.Button>
-  )
-}
+    <StyleSheetManager shouldForwardProp={(prop) => prop !== "bgcolor"}>
+      <S.StylizedButton
+        onClick={onClick}
+        textdecoration={textdecoration}
+        textcolor={textcolor}
+        textcolorhover={textcolorhover}
+        bgcolor={bgcolor}
+        hoverbgcolor={hoverbgcolor}
+        boxshadowbutton={boxshadowbutton}
+        borderbutton={borderbutton}
+        widthbutton={widthbutton}
+        paddingbutton={paddingbutton}
+        fontweightbutton={fontweightbutton}
+        {...rest}
+      >
+        {icon && <span>{icon}</span>}
+        {textbutton}
+      </S.StylizedButton>
+    </StyleSheetManager>
+  );
+};
 
-export default Button
+export default Button;

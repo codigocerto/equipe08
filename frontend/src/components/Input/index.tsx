@@ -1,6 +1,8 @@
 import * as S from './styles';
 
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
+    title?: string;
+    required?: boolean;
 };
 
 
