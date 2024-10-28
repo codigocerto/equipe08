@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import z from "zod"
+import z, { ZodError } from "zod"
 import { factoryDatabase } from "../factoryDatabase";
 import { InvalidCredentialError } from "../use-case/error/InvalidCredentialError";
 
@@ -34,6 +34,14 @@ export class LoginController{
                 })
             }
 
+            if (err instanceof ZodError){
+                return res.status(400).json({
+                    "error": {
+                        "message": err.errors.map(e => e.message),
+                        "field": err.errors.map(e => e.path)
+                    }
+                })
+            }
             return res.status(500).json({
                 "error": "internal server error"
             })
