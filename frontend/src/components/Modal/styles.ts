@@ -12,9 +12,10 @@ export const Modal = styled.div`
 
 export const flexContainer = styled.div`
     position: fixed;
+    width: 40vw;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-10%, -60%);
     background-color: #282A2D;
     border-radius: 0.5em;
     padding: 1em;

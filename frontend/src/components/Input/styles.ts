@@ -5,7 +5,7 @@ import { colors } from '../../styles'
 
 export const Label = styled.div`
     color: ${colors.gray1};
-    margin-bottom: 0.5em;   
+    margin-bottom: 0.3em;   
     margin-top: 0.5em;   
     width: 100%;
     /* background: blue; */
@@ -17,7 +17,7 @@ export const Input = styled.input`
     border: 1px solid #000;
     width: 100%;
     height: 5vh;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.5em;
     color: ${colors.gray1};
 `
 
