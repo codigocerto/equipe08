@@ -6,17 +6,18 @@ import AppRoutes from './routes'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Modal from './components/Modal'
+import { UserContextProvider } from './contexts/userContext'
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalStyle />
-      <Modal />
-        <Header />
-        <AppRoutes />
-        <Footer />
-    </BrowserRouter>
+    <UserContextProvider>
+      <BrowserRouter>
+        <GlobalStyle />
+          <Header />
+          <AppRoutes />
+          <Footer />
+      </BrowserRouter>
+    </UserContextProvider>
   );
 }
 
