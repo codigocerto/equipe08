@@ -13,6 +13,7 @@ export const Modal = styled.div`
 
 export const flexContainer = styled.div`
     position: fixed;
+    width: 40vw;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

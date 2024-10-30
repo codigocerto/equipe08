@@ -1,12 +1,13 @@
 import * as S from './styles'; // Certifique-se de que o caminho está correto
 import Tabs from './../Tab/index';
+import vector from '../../assets/images/Vector 11.png'
 
 interface ModalProps {
     isOpen?: boolean;
     onClose?: () => void;
 }
 
-export default function Modal({ isOpen = false, onClose } : ModalProps) {
+export default function Modal({ isOpen = false, onClose }: ModalProps) {
     const handleCloseModal = () => {
         if (onClose) {
             onClose();
@@ -17,11 +18,13 @@ export default function Modal({ isOpen = false, onClose } : ModalProps) {
         return (
             <S.Modal>
                 <S.flexContainer>
-                    <S.ButtonModal textbutton='X' onClick={handleCloseModal}/>
+                    <img src={vector} alt="" />
+                    <S.ButtonModal textbutton='X' onClick={handleCloseModal} />
                     <Tabs />
                 </S.flexContainer>
             </S.Modal>
         );
+
     }
 
     return null;
