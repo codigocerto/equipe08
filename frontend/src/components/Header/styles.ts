@@ -8,7 +8,7 @@ import { breakpoints } from "../../styles"
 
 export const LoginIcon = styled.div`
   width: 26px;
-  height: 25px;
+  height: 26px;
   border: 2px solid ${colors.red};
   border-radius: 50%;
   position: relative;
@@ -20,8 +20,8 @@ export const LoginIcon = styled.div`
 
   &::before {
     content: "";
-    width: 8px;
-    height: 8px;
+    width: calc(26px - 80%);
+    height: calc(26px - 80%);
     border: 2px solid ${colors.red};
     border-radius: 50%;
     position: absolute;
@@ -31,7 +31,7 @@ export const LoginIcon = styled.div`
 
   &::after {
     content: "";
-    width: 14px;
+    width: calc(26px - 60%);
     height: 5px;
     border: 2px solid ${colors.red};
     border-top: none;
@@ -132,7 +132,7 @@ export const NavBar = styled.nav`
     font-weight: 400;
     line-height: ${remCalc(32)};
     position: relative;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     transition: color 0.6s ease-out;
 
     &:nth-of-type(1),
@@ -156,7 +156,7 @@ export const NavBar = styled.nav`
       &:hover:after {
         width: 100%;
       }
-    }    
+    }
   }
 
   @media (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.desktop}) {

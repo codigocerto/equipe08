@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Button from '../Button'
 
 export const Modal = styled.div`
     position: fixed;
@@ -19,4 +20,21 @@ export const flexContainer = styled.div`
     background-color: #282A2D;
     border-radius: 0.5em;
     padding: 1em;
+`
+
+export const ButtonModal = styled(Button)`
+    position: relative;
+    left: 45%;
+    top: -0.5rem;
+    width: 100%;
+    background-color: transparent;
+    margin: auto;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    &:hover {
+        color: red;
+    }
 `
