@@ -1,7 +1,7 @@
 import { StyleSheetManager } from "styled-components";
 
-import * as S from "./styles";
 import { ButtonProps } from "./interface";
+import * as S from "./styles";
 
 const Button = ({
   textbutton,
@@ -20,7 +20,7 @@ const Button = ({
   ...rest
 }: ButtonProps) => {
   return (
-    <StyleSheetManager shouldForwardProp={(prop) => prop !== "bgcolor"}>
+    <StyleSheetManager shouldForwardProp={(props) => props !== "bgcolor"}>
       <S.StylizedButton
         onClick={onClick}
         textdecoration={textdecoration}
