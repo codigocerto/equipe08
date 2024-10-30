@@ -81,7 +81,7 @@ export const ButtonMobile = styled.button`
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
   }
-` 
+`
 
 export const Button = styled.button`
   display: inline-flex;
@@ -167,6 +167,21 @@ export const NavBar = styled.nav`
     display: none;
   }
 `
+
+export const DivLogin = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const LoginP = styled.div`
+    width: ${remCalc(160)};
+`
+export const ImgLogin = styled.img`
+    margin-top: ${remCalc(32)};
+    margin-left: ${remCalc(-16)};
+`
+
+
 
 export const Hamburguer = styled.div`
   display: none;

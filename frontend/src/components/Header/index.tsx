@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "../Link";
 
 import logo from "../../assets/images/logo.png";
+import vectorWhite from "../../assets/images/Vector 9.png";
 import closeButton from "../../assets/images/close-button.png";
 import Modal from './../Modal/index'
 
@@ -36,11 +37,19 @@ const Header = () => {
           <Link href="#trails">Trilhas</Link>
           <Link href="#login">
             <div onClick={handleOpenModal}>
-              <S.LoginIcon />
-              Login
+              <S.DivLogin>
+                <div>
+                  <S.LoginIcon />
+                </div>
+                <S.LoginP>
+                  Olá, faça seu login
+                  ou cadastre-se
+                </S.LoginP>
+                <S.ImgLogin src={vectorWhite} alt="vectorWhite" />
+              </S.DivLogin>
             </div>
           </Link>
-          <Modal isOpen={openModal} onClose= {handleCloseModal}/>
+          <Modal isOpen={openModal} onClose={handleCloseModal} />
         </S.NavBar>
 
         {isMenuOpen ? (

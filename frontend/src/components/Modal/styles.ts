@@ -16,7 +16,7 @@ export const flexContainer = styled.div`
     width: 40vw;
     top: 50%;
     left: 50%;
-    transform: translate(-10%, -60%);
+    transform: translate(-50%, -50%);
     background-color: #282A2D;
     border-radius: 0.5em;
     padding: 1em;
