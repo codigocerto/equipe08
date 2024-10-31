@@ -37,7 +37,7 @@ const SecondTab = () => {
     if (!formData.name) newErrors.name = "Nome é obrigatório";
     if (!formData.email) newErrors.email = "Email é obrigatório";
     if (!formData.phone) newErrors.phone = "Telefone é obrigatório";
-    if (!formData.password) newErrors.password = "Senha é obrigatória";
+    if (!formData.password || formData.password.length < 3) newErrors.password = "Senha é obrigatória e deve possuir no mínimo 3 caracteres";
     return newErrors;
   }
 
@@ -62,14 +62,14 @@ const SecondTab = () => {
       <form method="post" onSubmit={handlesubmit}>
         <S.Paragraph as="p">Crie sua conta de modo gratuito!</S.Paragraph>
         <Input value={formData.name} onChange={handleChange} type={'text'} name="name" title={'Nome Completo'} required aria-label="Insira seu nome completo" />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <S.P>{errors.name}</S.P>}
         <Input value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={'Telefone para contato'} required aria-label="Telefone para contato" />
-        {errors.phone && <p>{errors.phone}</p>}
+        {errors.phone && <S.P>{errors.phone}</S.P>}
         <Input value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <S.P>{errors.email}</S.P>}
         <Input value={formData.password} onChange={handleChange} type={'password'} name="password" title={'Senha'} required aria-label="Senha" />
-        {errors.password && <p>{errors.password}</p>}
-        <S.ButtonFirstTab textbutton="Acessar Conta" />
+        {errors.password && <S.P>{errors.password}</S.P>}
+        <S.ButtonFirstTab textbutton="Acessar Conta"/>
       </form>
     </S.SecondTab>
 

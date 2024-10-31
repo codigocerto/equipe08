@@ -26,7 +26,13 @@ export const ButtonFirstTab = styled(Button)`
     }
 `
 
-export const SecondTab = styled.section``
+export const P = styled.p`
+    color: ${colors.red};
+    padding-bottom: 1em;
+`
+
+export const SecondTab = styled.section`
+`
 
 export const Box = styled.div`
     align-items: center;

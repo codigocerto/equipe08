@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 import Link from "../Link";
@@ -26,6 +26,19 @@ const Header = () => {
     setOpenModal(false);
   };
 
+  const token = window.localStorage.getItem('@Auth:userToken');
+  const [userToken, setUserToken] = useState<string>('');
+
+  useEffect(() => {
+    if (token) {
+      const payload = token ? token.split('.')[1] : ''; // Pega a segunda parte do token
+      const userTokenObj = JSON.parse(atob(payload)); // Decodifica de Base64 para JSON
+      setUserToken(userTokenObj.name || ''); // Aqui estão suas informações
+    } else {
+      console.log('Token não encontrado');
+    }
+  }, [token]);
+
   return (
     <S.Header>
       <S.ContentContainer>
@@ -41,11 +54,11 @@ const Header = () => {
                 <div>
                   <S.LoginIcon />
                 </div>
-                <S.LoginP>
-                  Olá, faça seu login
-                  ou cadastre-se
-                </S.LoginP>
-                <S.ImgLogin src={vectorWhite} alt="vectorWhite" />
+                <S.LoginDivContextUsers>
+                  {!token ? <S.Span>Olá, faça seu login ou cadastre-se<S.ImgLogin src={vectorWhite} alt="vectorWhite" /></S.Span>
+                  :
+                  <S.Span>Olá {userToken}, minha conta<S.ImgLogin src={vectorWhite} alt="vectorWhite"/></S.Span>}
+                </S.LoginDivContextUsers>
               </S.DivLogin>
             </div>
           </Link>

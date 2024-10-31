@@ -59,7 +59,7 @@ export const Header = styled.header`
 export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
@@ -173,12 +173,21 @@ export const DivLogin = styled.div`
     align-items: center;
 `
 
-export const LoginP = styled.div`
+export const LoginDivContextUsers = styled.div`
     width: ${remCalc(160)};
+    display: flex;
+    flex-direction: column;
+`
+export const Span = styled.span`
+    line-height: 1.3rem ;
+    letter-spacing: -0.05rem;
 `
 export const ImgLogin = styled.img`
-    margin-top: ${remCalc(32)};
-    margin-left: ${remCalc(-16)};
+    width: ${remCalc(14)};
+    height: ${remCalc(7)};
+    margin-left: 5px;
+    /* margin-top: ${remCalc(32)};
+    margin-left: ${remCalc(-16)}; */
 `
 
 

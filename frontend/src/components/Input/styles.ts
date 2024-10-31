@@ -19,6 +19,7 @@ export const Input = styled.input`
     height: 5vh;
     margin-bottom: 0.5em;
     color: ${colors.gray1};
+    padding: 0 0.3rem;
 `
 
 export const CheckboxInput = styled.input.attrs({ type: 'checkbox' })`
