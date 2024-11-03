@@ -174,11 +174,14 @@ export const DivLogin = styled.div`
 `
 
 export const LoginP = styled.div`
-    width: ${remCalc(160)};
+    width: ${remCalc(144)};
+    font-size: ${remCalc(15)};
+    line-height: ${remCalc(18)};
 `
 export const ImgLogin = styled.img`
-    margin-top: ${remCalc(32)};
-    margin-left: ${remCalc(-16)};
+    width: ${remCalc(14)};
+    margin-top: ${remCalc(24)};
+    margin-left: ${remCalc(-24)};
 `
 
 

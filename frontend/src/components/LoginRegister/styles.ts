@@ -12,13 +12,13 @@ export const FirstTab = styled.section`
 export const ButtonFirstTab = styled(Button)`
     margin-top: 1.5em;
     width: 100%;
-    height: 3.125rem;
-    font-size: 1.125rem;
+    height: 3.125em;
+    font-size: 1.125em;
     font-weight: 600;
     background-color: ${colors.red};
     color: ${colors.white};
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 0.3125em;
     cursor: pointer;
     transition: background-color 0.3s;
     &:hover {
@@ -32,7 +32,7 @@ export const Box = styled.div`
     align-items: center;
     display: flex;
     color: ${colors.white};
-    margin-bottom: 1em;
+    margin: 5px 5px;
 `
 
 export const RememberMe = styled.label`
@@ -52,21 +52,40 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
     transform: translateY(-0.075em);
 `
 
-
-
-export const DivRed = styled.div`
-    height: 1.875rem;
-    background: ${colors.red};
-    margin-right: 5px;
-    
+export const InputComIcone = styled.div`
+  position: relative;
 `
 
+export const Icone = styled.div`
+  position: absolute;
+  top: 1.000em;
+  left: 0.5125em;
+  cursor: pointer;
+`;
+
+export const DivRed = styled.div`
+    height: 1.875em;
+    background: ${colors.red};
+    margin-right: 5px;
+`
+
+export const Input = styled.input`
+  padding: 10px 30px 10px 35px;
+  font-size: 16px;
+  /* border: 1px solid #ccc; */
+  border: 1px solid #000000;
+  border-radius: 4px;
+  width: 100%;
+  margin: 4px;
+  background-color: #1B1D20;
+  color: #fff;
+`
 
 export const Heading3 = styled(Typography)`
     display:flex;
     align-items:center;
     font-weight: 600;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     color: ${colors.white};
     margin: 1em 0 1.3em 0;
 `
@@ -75,14 +94,14 @@ export const Heading4 = styled(Typography)`
     display:flex;
     align-items:center;
     font-weight: 600;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     color: ${colors.white};
     margin: 1em 0 0.3em 0;
 `
 
 
 export const Paragraph = styled(Typography)`
-    font-size: 0.75rem;
+    font-size: 0.75em;
     color: ${colors.gray1};
     margin-bottom: 2em;
     font-weight: 300;

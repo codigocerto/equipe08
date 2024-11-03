@@ -1,9 +1,13 @@
 import { useContext, useState } from "react";
 import { UserRegister } from "../../@types/UserRegister";
 import UserContext from "../../contexts/userContext";
-import Input from "../Input";
 import { FormErrors } from "./interface";
 import * as S from './styles';
+
+import { FaUserEdit } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdAlternateEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const SecondTab = () => {
 
@@ -61,13 +65,33 @@ const SecondTab = () => {
       <S.Heading4 as="h3"><S.DivRed>&nbsp;</S.DivRed>Crie sua conta</S.Heading4>
       <form method="post" onSubmit={handlesubmit}>
         <S.Paragraph as="p">Crie sua conta de modo gratuito!</S.Paragraph>
-        <Input value={formData.name} onChange={handleChange} type={'text'} name="name" title={'Nome Completo'} required aria-label="Insira seu nome completo" />
+        <S.InputComIcone>
+          <S.Icone>
+            <FaUserEdit size="1.2rem" />
+          </S.Icone>
+          <S.Input value={formData.name} onChange={handleChange} type={'text'} name="name" title={'Nome Completo'} required aria-label="Insira seu nome completo" />
+        </S.InputComIcone>
         {errors.name && <p>{errors.name}</p>}
-        <Input value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={'Telefone para contato'} required aria-label="Telefone para contato" />
+        <S.InputComIcone>
+          <S.Icone>
+            <FaPhoneAlt size="1.2rem" />
+          </S.Icone>
+          <S.Input value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={'Telefone para contato'} required aria-label="Telefone para contato" />
+        </S.InputComIcone>
         {errors.phone && <p>{errors.phone}</p>}
-        <Input value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
+        <S.InputComIcone>
+          <S.Icone>
+            <MdAlternateEmail size="1.2rem" />
+          </S.Icone>
+          <S.Input value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
+        </S.InputComIcone>
         {errors.email && <p>{errors.email}</p>}
-        <Input value={formData.password} onChange={handleChange} type={'password'} name="password" title={'Senha'} required aria-label="Senha" />
+        <S.InputComIcone>
+          <S.Icone>
+            <RiLockPasswordFill size="1.2rem" />
+          </S.Icone>
+          <S.Input value={formData.password} onChange={handleChange} type={'password'} name="password" title={'Senha'} required aria-label="Senha" />
+        </S.InputComIcone>
         {errors.password && <p>{errors.password}</p>}
         <S.ButtonFirstTab textbutton="Acessar Conta" />
       </form>

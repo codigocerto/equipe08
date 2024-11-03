@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import UserContext from "../../contexts/userContext";
-import Input from "../Input";
 import * as S from './styles';
 import { FormErrors } from "./interface";
 import { UserLogin } from "../../@types/UserLogin";
+
+import { FaUser } from "react-icons/fa";
+import { RiLockPasswordFill } from "react-icons/ri";
 
 const FirstTab = () => {
 
@@ -47,9 +49,19 @@ const FirstTab = () => {
     <S.FirstTab>
 
       <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>Entre em sua Conta</S.Heading3>
-      <Input type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
+      <S.InputComIcone>
+        <S.Icone>
+          <FaUser size="1.2rem" />
+        </S.Icone>
+        <S.Input type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
+      </S.InputComIcone>
       {errors.email && <p>{errors.email}</p>}
-      <Input type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
+      <S.InputComIcone>
+        <S.Icone>
+          <RiLockPasswordFill size="1.2rem" />
+        </S.Icone>
+        <S.Input type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
+      </S.InputComIcone>
       {errors.password && <p>{errors.password}</p>}
       <S.Box>
         <S.Checkbox type="checkbox" id="rememberme" aria-label="Lembre-me" />
