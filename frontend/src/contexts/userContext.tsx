@@ -60,10 +60,10 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
             const response = await api.post('/login', userLogin);
             setUserLogin(response.data);
             api.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
-            localStorage.setItem('@Auth:userToken', JSON.stringify(response.data.token));
             toast.success("Login efetuado com sucesso");
             setInterval(() => {
                 window.location.href = "/";
+                localStorage.setItem('@Auth:userToken', JSON.stringify(response.data.token));
             }, 2000);
         } catch (error) {
             toast.error("Email ou senha inválido");
@@ -74,6 +74,7 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
     const handleLogout = () => {
         localStorage.clear();
         api.defaults.headers.Authorization = null;
+        window.location.href = "/";
     }
 
     return (
