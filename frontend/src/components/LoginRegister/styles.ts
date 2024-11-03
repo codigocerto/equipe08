@@ -58,8 +58,8 @@ export const InputComIcone = styled.div`
 
 export const Icone = styled.div`
   position: absolute;
-  top: 1.000em;
-  left: 0.5125em;
+  top: 1.100em;
+  left: 0.6125em;
   cursor: pointer;
 `;
 
@@ -72,7 +72,6 @@ export const DivRed = styled.div`
 export const Input = styled.input`
   padding: 10px 30px 10px 35px;
   font-size: 16px;
-  /* border: 1px solid #ccc; */
   border: 1px solid #000000;
   border-radius: 4px;
   width: 100%;

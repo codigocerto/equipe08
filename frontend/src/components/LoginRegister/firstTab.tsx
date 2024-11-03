@@ -47,20 +47,19 @@ const FirstTab = () => {
   return (
 
     <S.FirstTab>
-
       <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>Entre em sua Conta</S.Heading3>
       <S.InputComIcone>
         <S.Icone>
           <FaUser size="1.2rem" />
         </S.Icone>
-        <S.Input type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
+        <S.Input placeholder="contato@email.com" type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
       </S.InputComIcone>
       {errors.email && <p>{errors.email}</p>}
       <S.InputComIcone>
         <S.Icone>
           <RiLockPasswordFill size="1.2rem" />
         </S.Icone>
-        <S.Input type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
+        <S.Input placeholder="Senha" type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
       </S.InputComIcone>
       {errors.password && <p>{errors.password}</p>}
       <S.Box>
