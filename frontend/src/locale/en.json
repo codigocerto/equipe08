@@ -1,0 +1,81 @@
+{
+    "translation": {
+        "header": {
+            "contact-button": "Contact",
+            "trails-button": "Trails"
+        },
+        "hero": {
+            "title": "Welcome to Código Certo Coders.",
+            "body": "Join our community of passionate developers",
+            "button": "Join Now"
+        },
+        "infosSection": {
+            "title": "What we offer",
+            "body": "At Código Certo Coders, we offer a wide range of resources and opportunities to boost your personal and professional development in the technology field. We are committed to providing an environment that fosters learning, collaboration, and innovation."
+        },
+        "trails": [
+            {
+                "title": "Our Trails"
+            },
+            {
+                "id": 1,
+                "title": "FrontEnd Jr",
+                "subtitle": "This project aims to create a web page where candidates can present themselves, share their personal interests, and explain why they want to join the Codigo Certo Coders community and participate in volunteer projects.",
+                "$isDark": false
+            },
+            {
+                "id": 2,
+                "title": "BackEnd Jr",
+                "subtitle": "This project aims to develop a RESTful API for task management, providing CRUD functionalities (Create, Read, Update, Delete) for tasks, user authentication, and data storage in a database.",
+                "$isDark": true
+            },
+            {
+                "id": 3,
+                "title": "FullStack Jr",
+                "subtitle": "This project aims to develop a complete web application for project management, along with a back-end server. The web application will allow users to list, register, edit, and delete projects, each containing a title and description.",
+                "$isDark": false
+            },
+            {
+                "id": 4,
+                "title": "Quality Assurance Jr",
+                "subtitle": "The main goal of this project is to develop a simple test plan for the Codigo Certo Coders community website, assessing basic software testing knowledge, including planning, execution, and reporting.",
+                "$isDark": true
+            },
+            {
+                "id": 5,
+                "title": "Data Science Jr",
+                "subtitle": "This project aims to perform a basic data analysis using Python, exploring a predefined dataset to extract simple insights through descriptive statistics and graphical visualizations.",
+                "$isDark": false
+            },
+            {
+                "id": 6,
+                "title": "UX/UI Designer Jr",
+                "subtitle": "This project aims to develop the user interface (UI) and user experience (UX) for a homepage for the Codigo Certo Coders community.",
+                "$isDark": true
+            },
+            {
+                "id": 7,
+                "title": "DevOps Jr",
+                "subtitle": "The main goal of this project is to introduce and practice fundamental DevOps concepts by implementing a CI/CD pipeline for a simple web application.",
+                "$isDark": false
+            }
+        ],
+        "trailCard": {
+            "button": "MORE ABOUT"
+        },
+        "phraseSection": "Building tomorrow, today.",
+        "contactForm": {
+            "title": "Our Contact",
+            "inputName": "Name",
+            "inputPhone": "Phone",
+            "inputMessage": "Message",
+            "placeholderName": "Your name",
+            "placeholderEmail": "contact@email.com",
+            "placeholderMessage": "What do you need?",
+            "submitButton": "Send Message"
+        },
+        "footer": {
+            "text": "2024 Código Certo Coders. All rights reserved."
+        }
+    }
+}
