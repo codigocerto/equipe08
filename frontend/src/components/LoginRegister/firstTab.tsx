@@ -37,10 +37,10 @@ const FirstTab = () => {
       setErrors(validationErrors);
       return;
     } else {
-      handleLogin(formLogin)
-      setFormLogin({ email: '', password: '' })
+      handleLogin(formLogin);
     }
   }
+
 
   return (
     <S.FirstTab>
