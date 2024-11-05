@@ -81,7 +81,7 @@ export const ButtonMobile = styled.button`
   @media (min-width: ${breakpoints.tablet}) {
     display: none;
   }
-` 
+`
 
 export const Button = styled.button`
   display: inline-flex;
@@ -182,6 +182,10 @@ export const Hamburguer = styled.div`
       background-color: ${colors.white};
       border-radius: ${remCalc(8)};
       margin-bottom: ${remCalc(6)};
+
+      &:last-child {
+        margin-bottom: ${remCalc(0)};
+      }
     }
   }
 `
