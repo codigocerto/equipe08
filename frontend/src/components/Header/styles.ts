@@ -187,6 +187,7 @@ export const ImgLogin = styled.img`
     width: ${remCalc(14)};
     margin-top: ${remCalc(24)};
     margin-left: ${remCalc(-24)};
+`
     
 export const LoginDivContextUsers = styled.div`
     width: ${remCalc(160)};
@@ -259,14 +260,6 @@ export const Logout = styled.button`
       fill: ${colors.red}
     }
   }
-`
-
-export const ImgLogin = styled.img`
-    width: ${remCalc(14)};
-    height: ${remCalc(7)};
-    position: absolute;
-    top: ${remCalc(28)};
-    right: ${remCalc(28)};
 `
 
 export const Hamburguer = styled.div`
