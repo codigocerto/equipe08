@@ -36,6 +36,7 @@ export const Phrase = styled(Typography)`
   font-size: ${remCalc(48)};
   font-weight: 600;
   line-height: ${remCalc(72)};
+  white-space: pre-line;
 
   span {
     display: block;
