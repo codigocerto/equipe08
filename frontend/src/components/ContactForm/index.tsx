@@ -1,6 +1,7 @@
 import * as S from './styles'
 import { FormData, FormErrors } from './interfaces';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
 
@@ -54,28 +55,30 @@ const ContactForm = () => {
     setFormData({ ...formData, phone: input.value });
   }
 
+  const { t } = useTranslation();
+
   return (
     <S.Section id="contact">
       <S.Container>
         <S.Content>
-          <S.Title as="h4"><span />Nosso contato</S.Title>
+          <S.Title as="h4"><span />{t('contactForm.title')}</S.Title>
           <S.FormContainer>
             <S.Form onSubmit={onSubmit}>
               <S.InputContainer>
                 <S.InfoContainer>
-                  <S.Label htmlFor="name">Nome</S.Label>
+                  <S.Label htmlFor="name">{t('contactForm.inputName')}</S.Label>
                   <S.Input
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Seu nome"
+                    placeholder={t('contactForm.placeholderName')}
                     value={formData.name}
                     onChange={onChange}
                   />
                   {errors.name && <p>{errors.name}</p>}
                 </S.InfoContainer>
                 <S.InfoContainer>
-                  <S.Label htmlFor="phone">Telefone</S.Label>
+                  <S.Label htmlFor="phone">{t('contactForm.inputPhone')}</S.Label>
                   <S.Input
                     type="tel"
                     id="phone"
@@ -94,24 +97,24 @@ const ContactForm = () => {
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="contato@email.com"
+                  placeholder={t('contactForm.placeholderEmail')}
                   value={formData.email}
                   onChange={onChange}
                 />
                 {errors.email && <p>{errors.email}</p>}
               </S.InfoContainer>
               <S.InfoContainer>
-                <S.Label htmlFor="message">Mensagem</S.Label>
+                <S.Label htmlFor="message">{t('contactForm.inputMessage')}</S.Label>
                 <S.TextArea
                   id="message"
                   name="message"
-                  placeholder="O que você precisa?"
+                  placeholder={t('contactForm.placeholderMessage')}
                   value={formData.message}
                   onChange={onChange}
                 />
                 {errors.message && <p>{errors.message}</p>}
               </S.InfoContainer>
-              <S.Button type="submit">Enviar Mensagem</S.Button>
+              <S.Button type="submit">{t('contactForm.submitButton')}</S.Button>
             </S.Form>
           </S.FormContainer>
         </S.Content>
