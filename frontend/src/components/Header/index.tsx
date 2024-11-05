@@ -8,6 +8,7 @@ import closeButton from "../../assets/images/close-button.png";
 import Modal from './../Modal/index'
 
 import * as S from "./styles";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,6 +26,8 @@ const Header = () => {
     setOpenModal(false);
   };
 
+  const { t } = useTranslation();
+
   return (
     <S.Header>
       <S.ContentContainer>
@@ -32,8 +35,8 @@ const Header = () => {
           <S.Logo src={logo} alt="Codigo Certo Logo" />
         </Link>
         <S.NavBar>
-          <Link href="#contact">Contato</Link>
-          <Link href="#trails">Trilhas</Link>
+          <Link href="#contact">{t('header.contact-button')}</Link>
+          <Link href="#trails">{t('header.trails-button')}</Link>
           {/* <Link href="#login">
             <S.LoginIcon />
             Login
