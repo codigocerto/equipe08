@@ -1,6 +1,7 @@
 import * as S from './styles'
 import { FormData, FormErrors } from './interfaces';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { FaUser } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -25,10 +26,10 @@ const ContactForm = () => {
 
   function validate(): FormErrors {
     const newErrors: FormErrors = {};
-    if (!formData.name) newErrors.name = "Nome é obrigatório";
-    if (!formData.email) newErrors.email = "Email é obrigatório";
-    if (!formData.phone) newErrors.phone = "Telefone é obrigatório";
-    if (!formData.message) newErrors.message = "Mensagem é obrigatória";
+    if (!formData.name) newErrors.name = t('contactFormValidation.name');
+    if (!formData.email) newErrors.email = t('contactFormValidation.email');
+    if (!formData.phone) newErrors.phone = t('contactFormValidation.phone');
+    if (!formData.message) newErrors.message = t('contactFormValidation.message');
 
     return newErrors;
   }
@@ -59,16 +60,19 @@ const ContactForm = () => {
     setFormData({ ...formData, phone: input.value });
   }
 
+  const { t } = useTranslation();
+
   return (
     <S.Section id="contact">
       <S.Container>
         <S.Content>
-          <S.Title as="h4"><span />Nosso contato</S.Title>
+          <S.Title as="h4"><span />{t('contactForm.title')}</S.Title>
           <S.FormContainer>
             <S.Form onSubmit={onSubmit}>
               <S.InputContainer>
                 <S.InfoContainer>
-                  <S.Label htmlFor="name">Nome</S.Label>
+
+                  <S.Label htmlFor="name">{t('contactForm.inputName')}</S.Label>
                   <S.InputComIcone>
                     <S.Icone>
                       <FaUser size="1.2rem" />
@@ -77,7 +81,7 @@ const ContactForm = () => {
                       type="text"
                       id="name"
                       name="name"
-                      placeholder="Seu nome"
+                      placeholder={t('contactForm.placeholderName')}
                       value={formData.name}
                       onChange={onChange}
                     />
@@ -85,7 +89,7 @@ const ContactForm = () => {
                   {errors.name && <p>{errors.name}</p>}
                 </S.InfoContainer>
                 <S.InfoContainer>
-                  <S.Label htmlFor="phone">Telefone</S.Label>
+                  <S.Label htmlFor="phone">{t('contactForm.inputPhone')}</S.Label>
                   <S.InputComIcone>
                     <S.Icone>
                       <FaPhoneAlt size="1.2rem" />
@@ -113,7 +117,7 @@ const ContactForm = () => {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="contato@email.com"
+                    placeholder={t('contactForm.placeholderEmail')}
                     value={formData.email}
                     onChange={onChange}
                   />
@@ -121,7 +125,7 @@ const ContactForm = () => {
                 {errors.email && <p>{errors.email}</p>}
               </S.InfoContainer>
               <S.InfoContainer>
-                <S.Label htmlFor="message">Mensagem</S.Label>
+                <S.Label htmlFor="message">{t('contactForm.inputMessage')}</S.Label>
                 <S.InputComIcone>
                   <S.Icone>
                     <FaMessage size="1.2rem" />
@@ -129,14 +133,14 @@ const ContactForm = () => {
                   <S.TextArea
                     id="message"
                     name="message"
-                    placeholder="O que você precisa?"
+                    placeholder={t('contactForm.placeholderMessage')}
                     value={formData.message}
                     onChange={onChange}
                   />
                 </S.InputComIcone>
                 {errors.message && <p>{errors.message}</p>}
               </S.InfoContainer>
-              <S.Button type="submit">Enviar Mensagem</S.Button>
+              <S.Button type="submit">{t('contactForm.submitButton')}</S.Button>
             </S.Form>
           </S.FormContainer>
         </S.Content>

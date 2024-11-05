@@ -1,15 +1,20 @@
 import * as S from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { FreeMode, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
-import { FreeMode, Pagination } from "swiper/modules";
-import { trailsData } from "../../pages/Trails/data/trailsData";
 import TrailCard from "../TrailCard";
 
+import { Item } from "../../pages/Trails/Item.interface";
+
+import { useTranslation } from "react-i18next";
+
 const TrailCarrosel = () => {
+
+  const { t } = useTranslation();
+
   return (
     <S.Main>
       <S.Container>
@@ -26,7 +31,7 @@ const TrailCarrosel = () => {
           }}
           modules={[FreeMode, Pagination]}
         >
-          {trailsData.map((item) => (
+          {(t('trails', { returnObjects: true }) as Item[]).map((item) => (
             <SwiperSlide>
               <S.Content key={item.id}>
                 <TrailCard img={`/src/assets/trails/trilha-${item.id}.svg`} $isDark={item.$isDark} subtitle={item.subtitle} title={item.title} key={item.id} showBtn={false} />

@@ -1,13 +1,17 @@
+import { useTranslation } from "react-i18next";
 import * as S from "./styles"
 
 const Hero = () => {
+
+  const { t } = useTranslation();
+
   return (
     <S.Hero>
       <S.Title as="h1">
-        Bem-vindo à <span>Código Certo Coders.</span>
+        {t('hero.title')}
       </S.Title>
-      <S.SubTitle as="h2">Junte-se à nossa comunidade de <span>desenvolvedores apaixonados</span></S.SubTitle>
-      <S.Btn textbutton="Participe Agora" />
+      <S.SubTitle as="h2">{t('hero.body')}</S.SubTitle>
+      <S.Btn textbutton={t('hero.button')} />
     </S.Hero>
   )
 }

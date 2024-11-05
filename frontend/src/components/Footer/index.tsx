@@ -3,8 +3,12 @@ import Link from '../Link'
 import logo from '../../assets/images/logo.png'
 
 import * as S from './styles'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+
+  const { t } = useTranslation();
+  
   return (
     <S.Footer>
       <S.MainContainer>
@@ -18,7 +22,7 @@ const Footer = () => {
             </S.SocialMedia>
         </S.ContentContainer>
         <S.Copyright as="p">
-          &copy; 2024 Código Certo Coders. Todos os direitos reservados.
+          &copy; {t('footer.text')}
         </S.Copyright>
       </S.MainContainer>
     </S.Footer>

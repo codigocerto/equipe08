@@ -4,6 +4,7 @@ import UserContext from "../../contexts/userContext";
 import Input from '../Input'
 import { FormErrors } from "./interface";
 import * as S from './styles';
+import { useTranslation } from "react-i18next";
 
 import { FaUserEdit } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -37,12 +38,14 @@ const SecondTab = () => {
     setFormData({ ...formData, [name]: maskedValue });
   }
 
+  const { t } = useTranslation();
+
   function validate(): FormErrors {
     const newErrors: FormErrors = {};
-    if (!formData.name) newErrors.name = "Nome é obrigatório";
-    if (!formData.email) newErrors.email = "Email é obrigatório";
-    if (!formData.phone) newErrors.phone = "Telefone é obrigatório";
-    if (!formData.password) newErrors.password = "Senha é obrigatória";
+    if (!formData.name) newErrors.name = t('validationLoginRegister.name');
+    if (!formData.email) newErrors.email = t('validationLoginRegister.email');
+    if (!formData.phone) newErrors.phone = t('validationLoginRegister.phone');
+    if (!formData.password || formData.password.length < 3) newErrors.password = t('validationLoginRegister.password');
     return newErrors;
   }
 
@@ -63,38 +66,38 @@ const SecondTab = () => {
   return (
 
     <S.SecondTab>
-      <S.Heading4 as="h3"><S.DivRed>&nbsp;</S.DivRed>Crie sua conta</S.Heading4>
+      <S.Heading4 as="h3"><S.DivRed>&nbsp;</S.DivRed>{t('register.title')}</S.Heading4>
       <form method="post" onSubmit={handlesubmit}>
-        <S.Paragraph as="p">Crie sua conta de modo gratuito!</S.Paragraph>
+        <S.Paragraph as="p">{t('register.text')}</S.Paragraph>
         <S.InputComIcone>
           <S.Icone>
             <FaUserEdit size="1.2rem" />
           </S.Icone>
-          <Input placeholder="Nome Completo" value={formData.name} onChange={handleChange} type={'text'} name="name" title={'Nome Completo'} required aria-label="Insira seu nome completo" />
+           <Input value={formData.name} onChange={handleChange} type={'text'} name="name" title={t('register.nameInput')} required aria-label="Insira seu nome completo" />
         </S.InputComIcone>
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <S.P>{errors.name}</S.P>}
         <S.InputComIcone>
           <S.Icone>
             <FaPhoneAlt size="1.2rem" />
           </S.Icone>
-          <Input placeholder="(24) 99999-9999" value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={'Telefone para contato'} required aria-label="Telefone para contato" />
+          <Input value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={t('register.phoneInput')} required aria-label="Telefone para contato" />
         </S.InputComIcone>
-        {errors.phone && <p>{errors.phone}</p>}
+        {errors.phone && <S.P>{errors.phone}</S.P>}
         <S.InputComIcone>
           <S.Icone>
             <MdAlternateEmail size="1.2rem" />
           </S.Icone>
-          <Input placeholder="contato@email.com" value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
+          <Input value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
         </S.InputComIcone>
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <S.P>{errors.email}</S.P>}
         <S.InputComIcone>
           <S.Icone>
             <RiLockPasswordFill size="1.2rem" />
           </S.Icone>
-          <Input placeholder="Senha" value={formData.password} onChange={handleChange} type={'password'} name="password" title={'Senha'} required aria-label="Senha" />
+          <Input value={formData.password} onChange={handleChange} type={'password'} name="password" title={t('register.passwordInput')} required aria-label="Senha" />
         </S.InputComIcone>
-        {errors.password && <p>{errors.password}</p>}
-        <S.ButtonFirstTab textbutton="Acessar Conta" />
+        {errors.password && <S.P>{errors.password}</S.P>}
+        <S.ButtonFirstTab textbutton={t('register.submitButton')}/>
       </form>
     </S.SecondTab>
 

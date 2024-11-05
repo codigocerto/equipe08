@@ -4,6 +4,8 @@ import Input from '../Input'
 import * as S from './styles';
 import { FormErrors } from "./interface";
 import { UserLogin } from "../../@types/UserLogin";
+import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from "react-i18next";
 
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -22,17 +24,19 @@ const FirstTab = () => {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target as HTMLInputElement;
     setFormLogin({ ...formLogin, [name]: value });
-    console.log(formLogin);
   }
+
+  const { t } = useTranslation();
 
   function validate(): FormErrors {
     const newErrors: FormErrors = {};
-    if (!formLogin.email) newErrors.email = "Email é obrigatório";
-    if (!formLogin.password) newErrors.password = "Senha é obrigatória";
+    if (!formLogin.email) newErrors.email = t('validationLoginRegister.email');
+    if (!formLogin.password || (formLogin.password.length < 3)) newErrors.password = t('validationLoginRegister.password');
     return newErrors;
   }
 
-  const handlesubmit = () => {
+  const handlesubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
     const validationErrors = validate();
 
     if (Object.keys(validationErrors).length > 0) {
@@ -42,34 +46,33 @@ const FirstTab = () => {
       handleLogin(formLogin)
       setFormLogin({ email: '', password: '' })
     }
-    console.log(formLogin);
   }
 
   return (
-
     <S.FirstTab>
-      <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>Entre em sua Conta</S.Heading3>
+      <form method="post" onSubmit={handlesubmit}>
+        <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>{t('login.title')}</S.Heading3>
       <S.InputComIcone>
         <S.Icone>
           <FaUser size="1.2rem" />
         </S.Icone>
-        <Input placeholder="contato@email.com" type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
+       <Input value={formLogin.email} type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" />
       </S.InputComIcone>
-      {errors.email && <p>{errors.email}</p>}
+      {errors.email && <S.P>{errors.email}</S.P>}
       <S.InputComIcone>
         <S.Icone>
           <RiLockPasswordFill size="1.2rem" />
         </S.Icone>
-        <Input placeholder="Senha" type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
+        <Input value={formLogin.password} type={'password'} title={t('login.passwordInput')} required arial-label="Senha" onChange={handleChange} name="password" />
       </S.InputComIcone>
-      {errors.password && <p>{errors.password}</p>}
+      {errors.password && <S.P>{errors.password}</S.P>}
       <S.Box>
         <S.Checkbox type="checkbox" id="rememberme" aria-label="Lembre-me" />
-        <S.RememberMe>Lembre-me</S.RememberMe>
+        <S.RememberMe>{t('login.rememberInput')}</S.RememberMe>
       </S.Box>
-      <S.ButtonFirstTab type="submit" textbutton="Acessar Conta" onClick={() => handlesubmit()} />
+              <S.ButtonFirstTab textbutton={t('login.submitButton')} />
+      </form>
     </S.FirstTab>
-
   );
 };
 export default FirstTab;

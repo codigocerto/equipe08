@@ -2,6 +2,8 @@ import axios from 'axios';
 import { createContext, useState } from "react";
 import { UserRegister } from "../@types/UserRegister";
 import { UserLogin } from '../@types/UserLogin';
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 type UserContextType = {
     handleRegister: (userRegister: UserRegister) => void;
@@ -39,22 +41,32 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
     // Register userRegister
     const handleRegister = async (userRegister: UserRegister) => {
         const response = await api.post('/register', userRegister);
-        setUserRegister(response.data);
-        setUserLogin(userRegister);
-        handleLogin(userLogin);
-
+        try {
+            await setUserRegister(response.data);
+            await setUserLogin(userRegister);
+            toast.success("Usuario cadastrado com sucesso");
+            handleLogin({ email: userRegister.email, password: userRegister.password });
+            setInterval(() => {
+                window.location.href = "/";
+            }, 2000);
+        } catch (error) {
+            toast.error("Email já cadastrado");
+        }
     }
 
     // SignIn userRegister
     const handleLogin = async (userLogin: UserLogin) => {
-        const response = await api.post('/login', userLogin);
-
-        if (response.data.error) {
-            return alert(response.data.error);
-        } else {
+        try {
+            const response = await api.post('/login', userLogin);
             setUserLogin(response.data);
             api.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
-            localStorage.setItem('@Auth:userToken', JSON.stringify(response.data.token));
+            toast.success("Login efetuado com sucesso");
+            setInterval(() => {
+                window.location.href = "/";
+                localStorage.setItem('@Auth:userToken', JSON.stringify(response.data.token));
+            }, 2000);
+        } catch (error) {
+            toast.error("Email ou senha inválido");
         }
     }
 
@@ -62,6 +74,7 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
     const handleLogout = () => {
         localStorage.clear();
         api.defaults.headers.Authorization = null;
+        window.location.href = "/";
     }
 
     return (
