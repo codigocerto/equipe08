@@ -5,6 +5,7 @@ import * as S from './styles';
 import { FormErrors } from "./interface";
 import { UserLogin } from "../../@types/UserLogin";
 import 'react-toastify/dist/ReactToastify.css';
+import { useTranslation } from "react-i18next";
 
 const FirstTab = () => {
 
@@ -22,10 +23,12 @@ const FirstTab = () => {
     setFormLogin({ ...formLogin, [name]: value });
   }
 
+  const { t } = useTranslation();
+
   function validate(): FormErrors {
     const newErrors: FormErrors = {};
-    if (!formLogin.email) newErrors.email = "Email é obrigatório";
-    if (!formLogin.password || (formLogin.password.length < 3)) newErrors.password = "Senha é obrigatória e deve possuir no mínimo 3 caracteres";
+    if (!formLogin.email) newErrors.email = t('validationLoginRegister.email');
+    if (!formLogin.password || (formLogin.password.length < 3)) newErrors.password = t('validationLoginRegister.password');
     return newErrors;
   }
 
@@ -45,16 +48,16 @@ const FirstTab = () => {
   return (
     <S.FirstTab>
       <form method="post" onSubmit={handlesubmit}>
-        <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>Entre em sua Conta</S.Heading3>
+        <S.Heading3 as="h3"><S.DivRed>&nbsp;</S.DivRed>{t('login.title')}</S.Heading3>
         <Input value={formLogin.email} type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" />
         {errors.email && <S.P>{errors.email}</S.P>}
-        <Input value={formLogin.password} type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" />
+        <Input value={formLogin.password} type={'password'} title={t('login.passwordInput')} required arial-label="Senha" onChange={handleChange} name="password" />
         {errors.password && <S.P>{errors.password}</S.P>}
         <S.Box>
           <S.Checkbox type="checkbox" id="rememberme" aria-label="Lembre-me" />
-          <S.RememberMe>Lembre-me</S.RememberMe>
+          <S.RememberMe>{t('login.rememberInput')}</S.RememberMe>
         </S.Box>
-        <S.ButtonFirstTab textbutton="Acessar Conta" />
+        <S.ButtonFirstTab textbutton={t('login.submitButton')} />
       </form>
     </S.FirstTab>
   );

@@ -63,7 +63,7 @@ export const Header = styled.header`
 export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
@@ -198,12 +198,12 @@ export const UserLi = styled.li`
 
 export const Span = styled.span`
     display: flex;
-    justify-content: center;
     align-items: center;
     color: white;
     font-size: 1rem;
     line-height: 1.3rem ;
     letter-spacing: -0.05rem;
+    white-space: pre-line;
 `
 
 export const Span2 = styled.span`
@@ -273,6 +273,10 @@ export const Hamburguer = styled.div`
       background-color: ${colors.white};
       border-radius: ${remCalc(8)};
       margin-bottom: ${remCalc(6)};
+
+      &:last-child {
+        margin-bottom: ${remCalc(0)};
+      }
     }
   }
 `

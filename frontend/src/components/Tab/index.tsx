@@ -2,6 +2,7 @@ import { useState } from 'react';
 import * as S from './styles';
 import FirstTab from './../LoginRegister/firstTab'
 import SecondTab from './../LoginRegister/secondTab';
+import { useTranslation } from 'react-i18next';
 
 const Tabs = () => {
   const [tabLogin, setTabLogin] = useState('login');
@@ -13,6 +14,8 @@ const Tabs = () => {
   const handleSignUp = () => {
     setTabLogin("cadastro");
   };
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -44,7 +47,7 @@ const Tabs = () => {
                 id="cadastro-button"
                 onClick={handleSignUp}
               >
-                Cadastro
+                {t('register.register')}
               </S.ButtonTab>
             </S.LiNavbar>
           </S.UlNavbar>
