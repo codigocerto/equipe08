@@ -9,6 +9,7 @@ import Modal from './../Modal/index'
 
 import * as S from "./styles";
 import { useTranslation } from "react-i18next";
+import TranslationButton from "../TranslationButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,8 +42,11 @@ const Header = () => {
             <S.LoginIcon />
             Login
           </Link> */}
-        </S.NavBar>
 
+        </S.NavBar>
+        
+        <TranslationButton />
+        
         {isMenuOpen ? (
           <S.CloseButton src={closeButton} onClick={handleMenuToggle} />
         ) : (
