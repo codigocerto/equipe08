@@ -13,10 +13,8 @@
             "title": "O que oferecemos",
             "body": "Na Código Certo Coders, oferecemos uma ampla gama de recursos e oportunidades para impulsionar seu desenvolvimento pessoal e profissional na área de tecnologia. Nosso compromisso é fornecer um ambiente que favoreça o aprendizado, a colaboração e a inovação."
         },
+        "trailsTitle": "Nossas Trilhas",
         "trails": [
-            {
-                "title": "Nossas Trilhas"
-            },
             {
                 "id": 1,
                 "title": "FrontEnd Jr",

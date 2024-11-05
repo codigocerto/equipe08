@@ -13,10 +13,8 @@
             "title": "What we offer",
             "body": "At Código Certo Coders, we offer a wide range of resources and opportunities to boost your personal and professional development in the technology field. We are committed to providing an environment that fosters learning, collaboration, and innovation."
         },
+        "trailsTitle": "Our Trails",
         "trails": [
-            {
-                "title": "Our Trails"
-            },
             {
                 "id": 1,
                 "title": "FrontEnd Jr",
