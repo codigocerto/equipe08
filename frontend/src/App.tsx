@@ -6,17 +6,25 @@ import AppRoutes from './routes'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Modal from './components/Modal'
+import { UserContextProvider } from './contexts/userContext'
+import { ToastContainer, Slide } from 'react-toastify'
 
 function App() {
   return (
-    <BrowserRouter>
-      <GlobalStyle />
-      {/* <Modal /> */}
-        <Header />
-        <AppRoutes />
-        <Footer />
-    </BrowserRouter>
+    <UserContextProvider>
+      <BrowserRouter>
+        <GlobalStyle />
+          <Header />
+          <AppRoutes />
+          <Footer />
+      </BrowserRouter>
+      <ToastContainer
+        autoClose={2000}
+        position="top-right"
+        transition={Slide}  // Define o tipo de transição de animação
+        style={{ width: "auto", height: "auto", position: "absolute", top: "0", right: "0" }}
+      />
+    </UserContextProvider>
   );
 }
 

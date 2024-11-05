@@ -3,11 +3,36 @@ import styled from 'styled-components'
 import Typography from '../Typography'
 
 import { colors } from '../../styles'
+import Button from '../Button'
 
 
-export const FirstTab = styled.section``
+export const FirstTab = styled.section`
+`
 
-export const SecondTab = styled.section``
+export const ButtonFirstTab = styled(Button)`
+    margin-top: 1.5em;
+    width: 100%;
+    height: 3.125rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: ${colors.red};
+    color: ${colors.white};
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: ${colors.red2};
+    }
+`
+
+export const P = styled.p`
+    color: ${colors.red};
+    padding-bottom: 1em;
+`
+
+export const SecondTab = styled.section`
+`
 
 export const Box = styled.div`
     align-items: center;

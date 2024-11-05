@@ -4,6 +4,7 @@ import { remCalc } from "./utils/remCalc"
 
 export const colors = {
   red: "#E53939",
+  red2: "#b11010",
   white: "#FFF",
   black: "#000",
   black2: "#1B1D20",

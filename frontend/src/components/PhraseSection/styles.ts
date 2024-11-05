@@ -13,6 +13,7 @@ export const Container = styled.section`
   width: 100%;
   padding: ${remCalc(40)} 0 ${remCalc(100)};
   margin: 0 auto;
+  margin-top: -2.75rem;
   
   img {
     height: ${remCalc(128)};
@@ -22,6 +23,14 @@ export const Container = styled.section`
       margin-top: ${remCalc(32)};
       text-align: right;
       align-self: flex-end;
+    }
+
+    @media (max-width: ${breakpoints.tablet}) {
+      margin-right: ${remCalc(18)};
+    }
+
+    @media (max-width: ${breakpoints.mobile}) {
+      margin-right: ${remCalc(30)};
     }
   }
 
@@ -46,5 +55,22 @@ export const Phrase = styled(Typography)`
     font-size: ${remCalc(40)};
     line-height: ${remCalc(42)};
     align-self: flex-start;
+    margin: ${remCalc(80)};
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: ${remCalc(45)};
+    line-height: ${remCalc(42)};
+    align-self: flex-start;
+    margin-left: ${remCalc(40)};
+  }
+  
+  @media (min-width: ${breakpoints.mobile}) {
+    font-size: ${remCalc(31)};
+    line-height: ${remCalc(42)};
+    align-self: flex-start;
+    margin-left: ${remCalc(40)};
+    margin: ${remCalc(20)};
+    margin-top: ${remCalc(64)};
   }
 `

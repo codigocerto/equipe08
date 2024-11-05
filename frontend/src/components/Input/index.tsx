@@ -1,24 +1,20 @@
 import * as S from './styles';
 
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
+    title?: string;
 };
 
-
-const Input = (props: Props) => {
+const Input = ({ title, required, ...props }: Props) => {
     return (
-        <>
-            <label>
-                {props.title &&
-                    <S.Label>
-                        {props.title} {props.required}
-                    </S.Label>
-                }
-                
-                <S.Input {...props}/>
-            </label>
-        </>
-
-    )
-}
+        <label>
+            {title && (
+                <S.Label>
+                    {title} {required && '*'}
+                </S.Label>
+            )}
+            <S.Input required={required} {...props} />
+        </label>
+    );
+};
 
 export default Input;

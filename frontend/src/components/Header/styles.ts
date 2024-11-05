@@ -6,9 +6,13 @@ import { remCalc } from "../../utils/remCalc"
 import { colors } from "../../styles"
 import { breakpoints } from "../../styles"
 
+interface DropdownProps {
+  isOpen: boolean;
+}
+
 export const LoginIcon = styled.div`
   width: 26px;
-  height: 25px;
+  height: 26px;
   border: 2px solid ${colors.red};
   border-radius: 50%;
   position: relative;
@@ -20,8 +24,8 @@ export const LoginIcon = styled.div`
 
   &::before {
     content: "";
-    width: 8px;
-    height: 8px;
+    width: calc(26px - 80%);
+    height: calc(26px - 80%);
     border: 2px solid ${colors.red};
     border-radius: 50%;
     position: absolute;
@@ -31,7 +35,7 @@ export const LoginIcon = styled.div`
 
   &::after {
     content: "";
-    width: 14px;
+    width: calc(26px - 60%);
     height: 5px;
     border: 2px solid ${colors.red};
     border-top: none;
@@ -59,7 +63,7 @@ export const Header = styled.header`
 export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
@@ -132,11 +136,12 @@ export const NavBar = styled.nav`
     font-weight: 400;
     line-height: ${remCalc(32)};
     position: relative;
-    padding: 0 10px;
+    /* padding: 0 10px; */
     transition: color 0.6s ease-out;
 
     &:nth-of-type(1),
-    &:nth-of-type(2) {
+    &:nth-of-type(2),
+    &:nth-of-type(3){
       &:after {
         content: "";
         position: absolute;
@@ -156,7 +161,7 @@ export const NavBar = styled.nav`
       &:hover:after {
         width: 100%;
       }
-    }    
+    }
   }
 
   @media (min-width: ${breakpoints.tablet}) and (max-width: ${breakpoints.desktop}) {
@@ -166,6 +171,92 @@ export const NavBar = styled.nav`
   @media (max-width: ${breakpoints.tablet}) {
     display: none;
   }
+`
+
+export const DivLogin = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const LoginDivContextUsers = styled.div`
+    width: ${remCalc(160)};
+    display: flex;
+    flex-direction: column;
+`
+
+export const UserUl = styled.ul`
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+`;
+
+export const UserLi = styled.li`
+    color: white;
+`
+
+export const Span = styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.3rem ;
+    letter-spacing: -0.05rem;
+`
+
+export const Span2 = styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.3rem ;
+    letter-spacing: -0.05rem;
+    white-space: nowrap;
+`
+
+export const Dropdown = styled.li<DropdownProps>`
+  position: absolute;
+  top: 3.5rem;
+  right: 1.3rem;
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-10px)')};
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  background-color: #333;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: auto;
+`;
+
+export const Logout = styled.button`
+    background: none;
+    border: none;
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: white;
+
+  svg {
+    fill: white;
+  }
+
+  &:hover {
+    &:nth-child(1), svg, span {
+      color: ${colors.red};
+      fill: ${colors.red}
+    }
+  }
+`
+
+export const ImgLogin = styled.img`
+    width: ${remCalc(14)};
+    height: ${remCalc(7)};
+    position: absolute;
+    top: ${remCalc(28)};
+    right: ${remCalc(28)};
 `
 
 export const Hamburguer = styled.div`
@@ -212,8 +303,8 @@ export const NavMobile = styled.nav`
     font-weight: 400;
     line-height: ${remCalc(18)};
     text-align: center;
-    display: block;
-    opacity: 0;
+    display: none;
+    /* opacity: 0; */
     transition: all 0.3s ease;
     transform: translateY(${remCalc(-30)});
     transition: 0.3s ease-in;
@@ -238,7 +329,8 @@ export const NavMobile = styled.nav`
     pointer-events: auto;
 
     ${Link} {
-      opacity: 1;
+      display: block;
+      /* opacity: 1; */
       transform: translateY(0);
       transition-delay: calc(0.15s * var(--i));
     }
