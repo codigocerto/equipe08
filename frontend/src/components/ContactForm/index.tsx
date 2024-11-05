@@ -21,10 +21,10 @@ const ContactForm = () => {
 
   function validate(): FormErrors {
     const newErrors: FormErrors = {};
-    if (!formData.name) newErrors.name = "Nome é obrigatório";
-    if (!formData.email) newErrors.email = "Email é obrigatório";
-    if (!formData.phone) newErrors.phone = "Telefone é obrigatório";
-    if (!formData.message) newErrors.message = "Mensagem é obrigatória";
+    if (!formData.name) newErrors.name = t('contactFormValidation.name');
+    if (!formData.email) newErrors.email = t('contactFormValidation.email');
+    if (!formData.phone) newErrors.phone = t('contactFormValidation.phone');
+    if (!formData.message) newErrors.message = t('contactFormValidation.message');
 
     return newErrors;
   }
