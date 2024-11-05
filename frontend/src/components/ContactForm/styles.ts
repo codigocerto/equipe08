@@ -125,8 +125,27 @@ export const InputContainer = styled.div`
 
 `
 
+export const InputComIcone = styled.div`
+  position: relative;
+`
+
+export const Icone = styled.div`
+  position: absolute;
+  top: ${remCalc(10)};
+  left: ${remCalc(5)};
+  cursor: pointer;
+`;
+
+
 export const Input = styled.input`
+  padding: ${remCalc(10)} ${remCalc(30)} ${remCalc(10)} ${remCalc(35)};
+  font-size: ${remCalc(16)};
+  border: ${remCalc(1)} solid #ccc;
+  border-radius: ${remCalc(4)};
   width: 100%;
+
+
+  /* width: 100%;
   padding: ${remCalc(12)};
   margin: ${remCalc(10)} 0 ${remCalc(30)} 0;
   border: none;
@@ -139,17 +158,18 @@ export const Input = styled.input`
 
   @media (max-width: ${breakpoints.tablet}) {
       flex-direction: column;
-    }
+    } */
 `
 
 export const TextArea = styled.textarea`
+  width: ${remCalc(570)};
   height: ${remCalc(170)};
-  padding: ${remCalc(10)};
-  margin: ${remCalc(10)} 0 ${remCalc(30)} 0;
+  padding: ${remCalc(10)} ${remCalc(30)} ${remCalc(10)} ${remCalc(35)};
+  /* margin: ${remCalc(10)} 0 ${remCalc(30)} 0; */
   border: none;
   border-radius: ${remCalc(8)};
   font-size: ${remCalc(16)};
-  resize: vertical;
+  resize: auto;
   
   &:focus {
     outline: none;
