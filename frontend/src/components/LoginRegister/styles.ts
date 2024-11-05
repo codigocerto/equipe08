@@ -35,10 +35,10 @@ export const SecondTab = styled.section`
 `
 
 export const Box = styled.div`
-    align-items: center;
     display: flex;
+    align-items: center;
     color: ${colors.white};
-    margin-bottom: 1em;
+    margin-top: .5em;
 `
 
 export const RememberMe = styled.label`
@@ -46,19 +46,33 @@ export const RememberMe = styled.label`
 `
 
 export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
-    background-color: ${colors.black2};
+    /* background-color: ${colors.black2}; */
     appearance: none;
-    margin: 0;
+    background-color: transparent;
     font: inherit;
     color: red;
     width: 1.15em;
     height: 1.15em;
     border: 0.15em solid black;
     border-radius: 0.15em;
-    transform: translateY(-0.075em);
+
+&:checked {
+    background-color: ${colors.red}; /* Cor do fundo quando está marcado */
+}
+
+&:checked::after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    left: 0.2em;
+    top: -0.23em;
+    width: 0.35em;
+    height: 0.7em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
 `
-
-
 
 export const DivRed = styled.div`
     height: 1.875rem;
