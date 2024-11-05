@@ -1,8 +1,33 @@
 {
     "translation": {
         "header": {
-            "contact-button": "Contato",
-            "trails-button": "Trilhas"
+            "contactButton": "Contato",
+            "trailsButton": "Trilhas",
+            "loginButton": "Olá, faça seu login ou cadastre-se"
+        },
+        "login": {
+            "title": "Entre em sua Conta",
+            "passwordInput": "Senha",
+            "rememberInput": "Lembre-me",
+            "submitButton": "Acessar Conta",
+            "welcome": "Olá {{userToken}} minha conta",
+            "logout": "Sair da Conta"
+        },
+        "register": {
+            "register": "Cadastro",
+            "title": "Crie sua Conta",
+            "text": "Crie sua conta de modo gratuito!",
+            "nameInput": "Nome Completo",
+            "phoneInput": "Telefone para Contato",
+            "passwordInput": "Senha",
+            "rememberInput": "Lembre-me",
+            "submitButton": "Criar Conta"
+        },
+        "validationLoginRegister": {
+            "name": "Nome é obrigatório",
+            "email": "Email é obrigatório",
+            "phone": "Telefone é obrigatório",
+            "password": "Senha é obrigatória e deve possuir no mínimo 3 caracteres"
         },
         "hero": {
             "title": "Bem-vindo à Código Certo Coders.",
@@ -71,6 +96,12 @@
             "placeholderEmail": "contato@email.com",
             "placeholderMessage": "O que você precisa?",
             "submitButton": "Enviar Mensagem"
+        },
+        "contactFormValidation": {
+            "name": "Nome é obrigatório",
+            "phone": "Telefone é obrigatório",
+            "email": "Email é obrigatório",
+            "message": "Mensagem é obrigatória"
         },
         "footer": {
             "text": "2024 Código Certo Coders. Todos os direitos reservados."

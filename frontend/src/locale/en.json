@@ -1,8 +1,33 @@
 {
     "translation": {
         "header": {
-            "contact-button": "Contact",
-            "trails-button": "Trails"
+            "contactButton": "Contact",
+            "trailsButton": "Trails",
+            "loginButton": "Hello, log in or\nregister\n"
+        },
+        "login": {
+            "title": "Log into your Account",
+            "passwordInput": "Password",
+            "rememberInput": "Remember Me",
+            "submitButton": "Access Account",
+            "welcome": "Hello {{userToken}} my account",
+            "logout": "Logout"
+        },
+        "register": {
+            "register": "Register",
+            "title": "Create your Account",
+            "text": "Create your account for free!",
+            "nameInput": "Full Name",
+            "phoneInput": "Contact Phone",
+            "passwordInput": "Password",
+            "rememberInput": "Remember Me",
+            "submitButton": "Create Account"
+        },
+        "validationLoginRegister": {
+            "name": "Name is required",
+            "email": "Email is required",
+            "phone": "Phone is required",
+            "password": "Password is mandatory and must have at least 3 characters"
         },
         "hero": {
             "title": "Welcome to Código Certo Coders.",
@@ -71,6 +96,12 @@
             "placeholderEmail": "contact@email.com",
             "placeholderMessage": "What do you need?",
             "submitButton": "Send Message"
+        },
+        "contactFormValidation": {
+            "name": "Name is required",
+            "email": "Email is required",
+            "phone": "Phone is required",
+            "message": "Message is required"
         },
         "footer": {
             "text": "2024 Código Certo Coders. All rights reserved."
