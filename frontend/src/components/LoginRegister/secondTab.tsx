@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { UserRegister } from "../../@types/UserRegister";
 import UserContext from "../../contexts/userContext";
+import Input from '../Input'
 import { FormErrors } from "./interface";
 import * as S from './styles';
 
@@ -69,28 +70,28 @@ const SecondTab = () => {
           <S.Icone>
             <FaUserEdit size="1.2rem" />
           </S.Icone>
-          <S.Input placeholder="Nome Completo" value={formData.name} onChange={handleChange} type={'text'} name="name" title={'Nome Completo'} required aria-label="Insira seu nome completo" />
+          <Input placeholder="Nome Completo" value={formData.name} onChange={handleChange} type={'text'} name="name" title={'Nome Completo'} required aria-label="Insira seu nome completo" />
         </S.InputComIcone>
         {errors.name && <p>{errors.name}</p>}
         <S.InputComIcone>
           <S.Icone>
             <FaPhoneAlt size="1.2rem" />
           </S.Icone>
-          <S.Input placeholder="(24) 99999-9999" value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={'Telefone para contato'} required aria-label="Telefone para contato" />
+          <Input placeholder="(24) 99999-9999" value={formData.phone} onChange={handleChange} type={'text'} name="phone" title={'Telefone para contato'} required aria-label="Telefone para contato" />
         </S.InputComIcone>
         {errors.phone && <p>{errors.phone}</p>}
         <S.InputComIcone>
           <S.Icone>
             <MdAlternateEmail size="1.2rem" />
           </S.Icone>
-          <S.Input placeholder="contato@email.com" value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
+          <Input placeholder="contato@email.com" value={formData.email} onChange={handleChange} type={'email'} name="email" title={'E-mail'} required aria-label="Insira o endereço de e-mail" />
         </S.InputComIcone>
         {errors.email && <p>{errors.email}</p>}
         <S.InputComIcone>
           <S.Icone>
             <RiLockPasswordFill size="1.2rem" />
           </S.Icone>
-          <S.Input placeholder="Senha" value={formData.password} onChange={handleChange} type={'password'} name="password" title={'Senha'} required aria-label="Senha" />
+          <Input placeholder="Senha" value={formData.password} onChange={handleChange} type={'password'} name="password" title={'Senha'} required aria-label="Senha" />
         </S.InputComIcone>
         {errors.password && <p>{errors.password}</p>}
         <S.ButtonFirstTab textbutton="Acessar Conta" />

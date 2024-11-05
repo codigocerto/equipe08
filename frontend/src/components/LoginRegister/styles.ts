@@ -54,11 +54,17 @@ export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
 
 export const InputComIcone = styled.div`
   position: relative;
+
+  input {
+    font-size: 16px;
+    padding-left: 2.5rem;
+    color: #fff;
+  }
 `
 
 export const Icone = styled.div`
   position: absolute;
-  top: 1.100em;
+  top: 2.300em;
   left: 0.6125em;
   cursor: pointer;
 `;
@@ -67,17 +73,6 @@ export const DivRed = styled.div`
     height: 1.875em;
     background: ${colors.red};
     margin-right: 5px;
-`
-
-export const Input = styled.input`
-  padding: 10px 30px 10px 35px;
-  font-size: 16px;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  width: 100%;
-  margin: 4px;
-  background-color: #1B1D20;
-  color: #fff;
 `
 
 export const Heading3 = styled(Typography)`

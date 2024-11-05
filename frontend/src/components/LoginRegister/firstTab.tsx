@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import UserContext from "../../contexts/userContext";
+import Input from '../Input'
 import * as S from './styles';
 import { FormErrors } from "./interface";
 import { UserLogin } from "../../@types/UserLogin";
@@ -52,14 +53,14 @@ const FirstTab = () => {
         <S.Icone>
           <FaUser size="1.2rem" />
         </S.Icone>
-        <S.Input placeholder="contato@email.com" type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
+        <Input placeholder="contato@email.com" type={'email'} title={'E-mail'} required aria-label="Endereço de e-mail" onChange={handleChange} name="email" value={formLogin.email} />
       </S.InputComIcone>
       {errors.email && <p>{errors.email}</p>}
       <S.InputComIcone>
         <S.Icone>
           <RiLockPasswordFill size="1.2rem" />
         </S.Icone>
-        <S.Input placeholder="Senha" type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
+        <Input placeholder="Senha" type={'password'} title={'Senha'} required arial-label="Senha" onChange={handleChange} name="password" value={formLogin.password} />
       </S.InputComIcone>
       {errors.password && <p>{errors.password}</p>}
       <S.Box>
