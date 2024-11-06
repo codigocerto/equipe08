@@ -1,25 +1,43 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Flag, SwitchContainer, SwitchInput, SwitchLabel } from './styles';
+import { FlagIcon, LanguageMenu, LanguageOption, SwitchButton, SwitchContainer } from './styles';
 import brazilFlag from '../../assets/images/brasil.jpg'
 import unitedStatesFlag from '../../assets/images/estados-unidos.png'
 
 function TranslationButton() {
   const { i18n } = useTranslation();
 
-  const toggleLanguage = () => {
-    const newLanguage = i18n.language === 'en' ? 'pt' : 'en';
-    i18n.changeLanguage(newLanguage);
-    localStorage.setItem('language', newLanguage);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
+
+  const changeLanguage = (lng:string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
+    setMenuOpen(false);
+  };
+
 
   return (
     <SwitchContainer>
-      <SwitchInput type="checkbox" checked={i18n.language === 'en'} onChange={toggleLanguage} />
-      <SwitchLabel>
-        <Flag src={brazilFlag} alt="Bandeira do Brasil" title="Bandeira do Brasil" />
-        <Flag src={unitedStatesFlag} alt="Bandeira dos Estados Unidos" title="Bandeira dos Estados Unidos" />
-      </SwitchLabel>
-    </SwitchContainer>
+    <SwitchButton onClick={toggleMenu} menuOpen={menuOpen}>
+      <i className="fa fa-globe"></i>
+    </SwitchButton>
+    {menuOpen && (
+      <LanguageMenu>
+        <LanguageOption onClick={() => changeLanguage('en')}>
+          <FlagIcon src={unitedStatesFlag} alt="English" title="English"/>
+          English
+        </LanguageOption>
+        <LanguageOption onClick={() => changeLanguage('pt')}>
+          <FlagIcon src={brazilFlag} alt="Português" title="Português"/>
+          Português
+        </LanguageOption>
+      </LanguageMenu>
+    )}
+  </SwitchContainer>
   );
 }
 
