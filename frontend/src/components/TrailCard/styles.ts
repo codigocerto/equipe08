@@ -157,7 +157,7 @@ export const ContentSubTitle = styled(Typography)`
 `;
 
 export const Btn = styled(Button)<{ showBtn: boolean }>`
-  width: ${remCalc(208)};
+  width: ${remCalc(220)};
   align-self: flex-end;
 
   visibility: ${(props) => (props.showBtn ? `visible` : `hidden`)};

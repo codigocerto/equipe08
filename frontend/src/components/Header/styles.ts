@@ -63,7 +63,7 @@ export const Header = styled.header`
 export const ContentContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: ${remCalc(1160)};
   width: 100%;
   margin: 0 auto;
@@ -178,6 +178,17 @@ export const DivLogin = styled.div`
     align-items: center;
 `
 
+export const LoginP = styled.div`
+    width: ${remCalc(144)};
+    font-size: ${remCalc(15)};
+    line-height: ${remCalc(18)};
+`
+export const ImgLogin = styled.img`
+    width: ${remCalc(14)};
+    margin-top: ${remCalc(24)};
+    margin-left: ${remCalc(-24)};
+`
+    
 export const LoginDivContextUsers = styled.div`
     width: ${remCalc(160)};
     display: flex;
@@ -198,12 +209,12 @@ export const UserLi = styled.li`
 
 export const Span = styled.span`
     display: flex;
-    justify-content: center;
     align-items: center;
     color: white;
     font-size: 1rem;
     line-height: 1.3rem ;
     letter-spacing: -0.05rem;
+    white-space: pre-line;
 `
 
 export const Span2 = styled.span`
@@ -251,14 +262,6 @@ export const Logout = styled.button`
   }
 `
 
-export const ImgLogin = styled.img`
-    width: ${remCalc(14)};
-    height: ${remCalc(7)};
-    position: absolute;
-    top: ${remCalc(28)};
-    right: ${remCalc(28)};
-`
-
 export const Hamburguer = styled.div`
   display: none;
 
@@ -273,6 +276,10 @@ export const Hamburguer = styled.div`
       background-color: ${colors.white};
       border-radius: ${remCalc(8)};
       margin-bottom: ${remCalc(6)};
+
+      &:last-child {
+        margin-bottom: ${remCalc(0)};
+      }
     }
   }
 `

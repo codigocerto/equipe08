@@ -12,13 +12,13 @@ export const FirstTab = styled.section`
 export const ButtonFirstTab = styled(Button)`
     margin-top: 1.5em;
     width: 100%;
-    height: 3.125rem;
-    font-size: 1.125rem;
+    height: 3.125em;
+    font-size: 1.125em;
     font-weight: 600;
     background-color: ${colors.red};
     color: ${colors.white};
     border: none;
-    border-radius: 0.3125rem;
+    border-radius: 0.3125em;
     cursor: pointer;
     transition: background-color 0.3s;
     &:hover {
@@ -34,59 +34,51 @@ export const P = styled.p`
 export const SecondTab = styled.section`
 `
 
-export const Box = styled.div`
-    display: flex;
-    align-items: center;
-    color: ${colors.white};
-    margin-top: .5em;
-`
-
-export const RememberMe = styled.label`
-    margin-left: .5em;
-`
-
-export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
-    /* background-color: ${colors.black2}; */
-    appearance: none;
-    background-color: transparent;
-    font: inherit;
-    color: red;
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.15em solid black;
-    border-radius: 0.15em;
-
-&:checked {
-    background-color: ${colors.red}; /* Cor do fundo quando está marcado */
-}
-
-&:checked::after {
-    content: '';
-    display: inline-block;
+export const InputComIcone = styled.div`
     position: relative;
-    left: 0.2em;
-    top: -0.23em;
-    width: 0.35em;
-    height: 0.7em;
-    border: solid white;
-    border-width: 0 0.15em 0.15em 0;
-    transform: rotate(45deg);
+
+input {
+    font-size: 16px;
+    padding-left: 2.5rem;
+    color: #fff;
 }
 `
+
+// Estilo para o wrapper do input
+export const InputWrapper = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+`;
+
+export const VisibilityToggle = styled.span`
+    position: absolute;
+    right: 23px;
+    top: 73.5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+`;
+
+export const Icone = styled.div`
+    position: absolute;
+    top: 2.300em;
+    left: 0.6125em;
+    cursor: pointer;
+`;
 
 export const DivRed = styled.div`
-    height: 1.875rem;
+    height: 1.875em;
     background: ${colors.red};
     margin-right: 5px;
-    
 `
-
 
 export const Heading3 = styled(Typography)`
     display:flex;
     align-items:center;
     font-weight: 600;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     color: ${colors.white};
     margin: 1em 0 1.3em 0;
 `
@@ -95,14 +87,14 @@ export const Heading4 = styled(Typography)`
     display:flex;
     align-items:center;
     font-weight: 600;
-    font-size: 1.875rem;
+    font-size: 1.875em;
     color: ${colors.white};
     margin: 1em 0 0.3em 0;
 `
 
 
 export const Paragraph = styled(Typography)`
-    font-size: 0.75rem;
+    font-size: 0.75em;
     color: ${colors.gray1};
     margin-bottom: 2em;
     font-weight: 300;
