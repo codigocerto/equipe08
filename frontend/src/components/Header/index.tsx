@@ -89,9 +89,6 @@ const Header = () => {
           </Link>
           <Modal isOpen={openModal} onClose={handleCloseModal} />
         </S.NavBar>
-
-        <TranslationButton />
-
         {isMenuOpen ? (
           <S.CloseButton src={closeButton} onClick={handleMenuToggle} />
         ) : (
