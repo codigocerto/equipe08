@@ -34,46 +34,36 @@ export const P = styled.p`
 export const SecondTab = styled.section`
 `
 
-export const Box = styled.div`
-    align-items: center;
-    display: flex;
-    color: ${colors.white};
-    margin: 5px 5px;
-`
-
-export const RememberMe = styled.label`
-    margin-left: .5em;
-`
-
-export const Checkbox = styled.input.attrs({ type: 'checkbox' })`
-    background-color: ${colors.black2};
-    appearance: none;
-    margin: 0;
-    font: inherit;
-    color: red;
-    width: 1.15em;
-    height: 1.15em;
-    border: 0.15em solid black;
-    border-radius: 0.15em;
-    transform: translateY(-0.075em);
-`
-
 export const InputComIcone = styled.div`
-  position: relative;
+    position: relative;
 
-  input {
+input {
     font-size: 16px;
     padding-left: 2.5rem;
     color: #fff;
-  }
+}
 `
 
-export const Icone = styled.div`
-  position: absolute;
-  top: 2.300em;
-  left: 0.6125em;
-  cursor: pointer;
+export const VisibilityToggle = styled.span`
+    color: ${colors.gray1};
+    position: absolute;
+    right: 23px;
+    top: 73.9%;
+    transform: translateY(-50%);
+    cursor: pointer;
 `;
+
+export const Icone = styled.div`
+    position: absolute;
+    top: 2.15em;
+    left: 0.6125em;
+    color: ${colors.gray1};
+`;
+
+export const IconeVisiblitity = styled(Icone)`
+    margin: auto;
+    left: calc(100% - 2rem);
+`
 
 export const DivRed = styled.div`
     height: 1.875em;

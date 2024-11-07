@@ -10,10 +10,12 @@ import { FaUserEdit } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 const SecondTab = () => {
 
   const { handleRegister } = useContext(UserContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const [formData, setFormData] = useState<UserRegister>({
     name: '',
@@ -31,6 +33,10 @@ const SecondTab = () => {
     value = value.replace(/(\d)(\d{4})$/, "$1-$2")
     return value
   }
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target as HTMLInputElement;
@@ -64,7 +70,6 @@ const SecondTab = () => {
   }
 
   return (
-
     <S.SecondTab>
       <S.Heading4 as="h3"><S.DivRed>&nbsp;</S.DivRed>{t('register.title')}</S.Heading4>
       <form method="post" onSubmit={handlesubmit}>
@@ -73,7 +78,7 @@ const SecondTab = () => {
           <S.Icone>
             <FaUserEdit size="1.2rem" />
           </S.Icone>
-           <Input value={formData.name} onChange={handleChange} type={'text'} name="name" title={t('register.nameInput')} required aria-label="Insira seu nome completo" />
+          <Input value={formData.name} onChange={handleChange} type={'text'} name="name" title={t('register.nameInput')} required aria-label="Insira seu nome completo" />
         </S.InputComIcone>
         {errors.name && <S.P>{errors.name}</S.P>}
         <S.InputComIcone>
@@ -94,10 +99,13 @@ const SecondTab = () => {
           <S.Icone>
             <RiLockPasswordFill size="1.2rem" />
           </S.Icone>
-          <Input value={formData.password} onChange={handleChange} type={'password'} name="password" title={t('register.passwordInput')} required aria-label="Senha" />
+          <Input value={formData.password} onChange={handleChange} type={showPassword ? 'text' : 'password'} name="password" title={t('register.passwordInput')} required aria-label="Senha" />
+          <S.IconeVisiblitity onClick={() => togglePasswordVisibility()}>
+            {showPassword ? <AiOutlineEyeInvisible size="1.3rem" /> : <AiOutlineEye size="1.3rem" />}
+          </S.IconeVisiblitity>
         </S.InputComIcone>
         {errors.password && <S.P>{errors.password}</S.P>}
-        <S.ButtonFirstTab textbutton={t('register.submitButton')}/>
+        <S.ButtonFirstTab textbutton={t('register.submitButton')} />
       </form>
     </S.SecondTab>
 

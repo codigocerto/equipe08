@@ -296,6 +296,7 @@ export const NavMobile = styled.nav`
   z-index: 2;
   border-bottom-left-radius: ${remCalc(8)};
   border-bottom-right-radius: ${remCalc(8)};
+  display: none;
 
   ${Link} {
     color: ${colors.white};
@@ -330,6 +331,8 @@ export const NavMobile = styled.nav`
     height: auto;
     padding: ${remCalc(12)} 0 ${remCalc(8)};
     pointer-events: auto;
+    display: block;
+    transition: height 0.3s ease-in, padding 0.3s ease-in;
 
     ${Link} {
       display: block;

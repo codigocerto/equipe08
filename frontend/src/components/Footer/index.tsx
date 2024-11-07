@@ -13,7 +13,7 @@ const Footer = () => {
     <S.Footer>
       <S.MainContainer>
         <S.ContentContainer>
-          <img src={logo}/>
+          <img src={logo} alt="Company Logo"/>
             <S.SocialMedia>
               <li><Link href=""><i className="fa-brands fa-whatsapp"></i></Link></li>
               <li><Link href=""><i className="fa-brands fa-discord"></i></Link></li>
