@@ -68,12 +68,12 @@ const FirstTab = () => {
           <S.Icone>
             <RiLockPasswordFill size="1.2rem" />
           </S.Icone>
-          <Input value={formLogin.password} type={showPassword ? 'text' : 'password'} title={t('login.passwordInput')} required arial-label="Senha" onChange={handleChange} name="password"/>
+          <S.IconeVisiblitity onClick={() => togglePasswordVisibility()}>
+            {showPassword ? <AiOutlineEyeInvisible size="1.3rem" /> : <AiOutlineEye size="1.3rem" />}
+          </S.IconeVisiblitity>
+          <Input value={formLogin.password} type={showPassword ? 'text' : 'password'} title={t('login.passwordInput')} required arial-label="Senha" onChange={handleChange} name="password" />
         </S.InputComIcone>
         {errors.password && <S.P>{errors.password}</S.P>}
-        <S.VisibilityToggle onClick={() => togglePasswordVisibility()}>
-          {showPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
-        </S.VisibilityToggle>
         <S.ButtonFirstTab textbutton={t('login.submitButton')} />
       </form>
     </S.FirstTab>

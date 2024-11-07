@@ -86,7 +86,7 @@ export const FormContainer = styled.div`
   align-items: center;
   width: 75%;
   margin: ${remCalc(60)} auto;
-  padding: ${remCalc(80)} ${remCalc(150)};
+  padding: ${remCalc(80)} ${remCalc(60)};
   border-radius: ${remCalc(30)};
   background-color: ${colors.gray4};
 
@@ -131,8 +131,8 @@ export const InputComIcone = styled.div`
 
 export const Icone = styled.div`
   position: absolute;
-  top: ${remCalc(10)};
-  left: ${remCalc(5)};
+  top: ${remCalc(11)};
+  left: ${remCalc(6)};
   cursor: pointer;
 `;
 
@@ -162,7 +162,7 @@ export const Input = styled.input`
 `
 
 export const TextArea = styled.textarea`
-  width: ${remCalc(570)};
+  width: 100%;
   height: ${remCalc(170)};
   padding: ${remCalc(10)} ${remCalc(30)} ${remCalc(10)} ${remCalc(35)};
   /* margin: ${remCalc(10)} 0 ${remCalc(30)} 0; */
@@ -182,14 +182,14 @@ export const Label = styled.label`
 `
 
 export const Button = styled.button`
-  width: ${remCalc(300)};
+  width: 70%;
   height: ${remCalc(70)};
   background-color: ${colors.red};
   color: #fff;
   border: none;
   border-radius: ${remCalc(8)};
   cursor: pointer;
-  font-size: ${remCalc(18)};
+  font-size: ${remCalc(16)};
   font-weight: 700;
   text-transform: uppercase;
   transition: 0.3s ease-in-out;
@@ -203,7 +203,7 @@ export const Button = styled.button`
 
   @media (max-width: ${breakpoints.tablet}) {
     font-size: ${remCalc(14)};
-    width: ${remCalc(200)};
+    width: 60%;
     height: ${remCalc(60)};
   }
 

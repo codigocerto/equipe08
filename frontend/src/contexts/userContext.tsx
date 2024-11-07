@@ -30,14 +30,6 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
         baseURL: 'http://localhost:3000'
     });
 
-
-    // useEffect(() => {
-    //     const token = localStorage.getItem('token');
-    //     if (token) {
-    //         api.defaults.headers.Authorization = `Bearer ${token}`;
-    //     }
-    // }, [])
-
     // Register userRegister
     const handleRegister = async (userRegister: UserRegister) => {
         const response = await api.post('/register', userRegister);

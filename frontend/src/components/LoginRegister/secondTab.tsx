@@ -10,10 +10,12 @@ import { FaUserEdit } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdAlternateEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 
 const SecondTab = () => {
 
   const { handleRegister } = useContext(UserContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const [formData, setFormData] = useState<UserRegister>({
     name: '',
@@ -31,6 +33,10 @@ const SecondTab = () => {
     value = value.replace(/(\d)(\d{4})$/, "$1-$2")
     return value
   }
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target as HTMLInputElement;
@@ -93,7 +99,10 @@ const SecondTab = () => {
           <S.Icone>
             <RiLockPasswordFill size="1.2rem" />
           </S.Icone>
-          <Input value={formData.password} onChange={handleChange} type={'password'} name="password" title={t('register.passwordInput')} required aria-label="Senha" />
+          <Input value={formData.password} onChange={handleChange} type={showPassword ? 'text' : 'password'} name="password" title={t('register.passwordInput')} required aria-label="Senha" />
+          <S.IconeVisiblitity onClick={() => togglePasswordVisibility()}>
+            {showPassword ? <AiOutlineEyeInvisible size="1.3rem" /> : <AiOutlineEye size="1.3rem" />}
+          </S.IconeVisiblitity>
         </S.InputComIcone>
         {errors.password && <S.P>{errors.password}</S.P>}
         <S.ButtonFirstTab textbutton={t('register.submitButton')} />

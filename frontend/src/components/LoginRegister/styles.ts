@@ -44,29 +44,26 @@ input {
 }
 `
 
-// Estilo para o wrapper do input
-export const InputWrapper = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-`;
-
 export const VisibilityToggle = styled.span`
+    color: ${colors.gray1};
     position: absolute;
     right: 23px;
-    top: 73.5%;
+    top: 73.9%;
     transform: translateY(-50%);
     cursor: pointer;
 `;
 
 export const Icone = styled.div`
     position: absolute;
-    top: 2.300em;
+    top: 2.15em;
     left: 0.6125em;
-    cursor: pointer;
+    color: ${colors.gray1};
 `;
+
+export const IconeVisiblitity = styled(Icone)`
+    margin: auto;
+    left: calc(100% - 2rem);
+`
 
 export const DivRed = styled.div`
     height: 1.875em;
