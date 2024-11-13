@@ -88,7 +88,7 @@ export const FormContainer = styled.div`
   margin: ${remCalc(60)} auto;
   padding: ${remCalc(80)} ${remCalc(60)};
   border-radius: ${remCalc(30)};
-  background-color: ${colors.gray4};
+  background-color: #282A2D;
 
   @media (max-width: ${breakpoints.tablet}) {
     padding: ${remCalc(20)};
@@ -133,6 +133,7 @@ export const Icone = styled.div`
   position: absolute;
   top: ${remCalc(11)};
   left: ${remCalc(6)};
+  color: ${colors.white};
   cursor: pointer;
 `;
 
@@ -143,6 +144,8 @@ export const Input = styled.input`
   border: ${remCalc(1)} solid #ccc;
   border-radius: ${remCalc(4)};
   width: 100%;
+  background-color: ${colors.black2};
+  color: ${colors.white};
 
 
   /* width: 100%;
@@ -170,6 +173,7 @@ export const TextArea = styled.textarea`
   border-radius: ${remCalc(8)};
   font-size: ${remCalc(16)};
   resize: auto;
+  background-color: ${colors.black2};
   
   &:focus {
     outline: none;
@@ -185,7 +189,7 @@ export const Button = styled.button`
   width: 70%;
   height: ${remCalc(70)};
   background-color: ${colors.red};
-  color: #fff;
+  color: ${colors.white};
   border: none;
   border-radius: ${remCalc(8)};
   cursor: pointer;
