@@ -22,7 +22,7 @@ function App() {
         autoClose={2000}
         position="top-right"
         transition={Slide}  // Define o tipo de transição de animação
-        style={{ width: "auto", height: "auto", position: "absolute", top: "0", right: "0" }}
+        style={{ width: "auto", height: "auto"}}
       />
     </UserContextProvider>
   );
