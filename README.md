@@ -44,7 +44,7 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 |---|---|---|---|
 | Claudio Oliveira | Fullstack | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Claudi0-Oliveira) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Claudi0-Oliveira) |
 
-## ✔️ **Equipe de UX** 
+## ✔️ **UI/UX Design** 
 
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
 |---|---|---|---|
