@@ -65,7 +65,7 @@ export const ContentContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: ${remCalc(1160)};
-  width: 100%;
+  width: 67%;
   margin: 0 auto;
 `;
 
@@ -113,9 +113,6 @@ export const Button = styled.button`
   &:hover {
     color: ${colors.white};
     border-color: ${colors.white};
-
-    &::before {
-    }
   }
   
   @media (max-width: ${breakpoints.tablet}) {
@@ -183,10 +180,17 @@ export const LoginP = styled.div`
     font-size: ${remCalc(15)};
     line-height: ${remCalc(18)};
 `
-export const ImgLogin = styled.img`
+export const ImgLogin1 = styled.img`
     width: ${remCalc(14)};
-    margin-top: ${remCalc(24)};
-    margin-left: ${remCalc(-24)};
+    position: absolute;
+    top: ${remCalc(30)};
+    left: ${remCalc(105)};
+`
+export const ImgLogin2 = styled.img`
+    width: ${remCalc(14)};
+    position: absolute;
+    top: ${remCalc(30)};
+    left: ${remCalc(157)};
 `
     
 export const LoginDivContextUsers = styled.div`
@@ -213,7 +217,7 @@ export const Span = styled.span`
     color: white;
     font-size: 1rem;
     line-height: 1.3rem ;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.005rem;
     white-space: pre-line;
 `
 

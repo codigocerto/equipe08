@@ -55,7 +55,7 @@ export const VisibilityToggle = styled.span`
 
 export const Icone = styled.div`
     position: absolute;
-    top: calc(100% - 49%);
+    top: calc(100% - 46.5%);
     left: 2%;
     transform: translate(-10%, -10%);
     color: ${colors.gray1};

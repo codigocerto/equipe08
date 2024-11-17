@@ -141,7 +141,7 @@ export const Icone = styled.div`
 export const Input = styled.input`
   padding: ${remCalc(10)} ${remCalc(30)} ${remCalc(10)} ${remCalc(35)};
   font-size: ${remCalc(16)};
-  border: ${remCalc(1)} solid #ccc;
+  border: ${remCalc(2)} solid ${colors.black};
   border-radius: ${remCalc(4)};
   width: 100%;
   background-color: ${colors.black2};
@@ -169,10 +169,11 @@ export const TextArea = styled.textarea`
   height: ${remCalc(170)};
   padding: ${remCalc(10)} ${remCalc(30)} ${remCalc(10)} ${remCalc(35)};
   /* margin: ${remCalc(10)} 0 ${remCalc(30)} 0; */
-  border: none;
+  border: ${remCalc(2)} solid ${colors.black};
   border-radius: ${remCalc(8)};
   font-size: ${remCalc(16)};
   resize: auto;
+  color: ${colors.white};
   background-color: ${colors.black2};
   
   &:focus {

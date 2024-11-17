@@ -64,13 +64,13 @@ const Header = () => {
                   <S.LoginIcon />
                 </div>
                 <S.LoginDivContextUsers>
-                  {!token && <S.Span>{t('header.loginButton')}<S.ImgLogin src={vectorWhite} alt="vectorWhite" /></S.Span>}
+                  {!token && <S.Span>{t('header.loginButton')}<S.ImgLogin2 src={vectorWhite} alt="vectorWhite" /></S.Span>}
                   {token &&
                     <S.UserUl>
                       <S.UserLi onClick={toggleDropdown}>
                         <S.Span>{t('login.welcome', {
                           userToken: userToken,
-                        })}<S.ImgLogin src={vectorWhite} alt="vectorWhite" /></S.Span>
+                        })}<S.ImgLogin1 src={vectorWhite} alt="vectorWhite" /></S.Span>
                       </S.UserLi>
                       <S.Dropdown isOpen={isDropdownOpen}>
                         <S.Logout onClick={() => handleLogout()}>
