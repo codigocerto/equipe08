@@ -24,3 +24,4 @@ dist-ssr
 *.sln
 *.sw?
 id_ed25519
+.env

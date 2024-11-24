@@ -1,0 +1,23 @@
+// src/models/user.ts
+
+import { hashPassword } from '../services/userService';
+
+export interface User {
+  id: number;
+  username: string;
+  password: string; // Normalmente o hash da senha será armazenado aqui
+}
+
+// Exemplo de criação de usuário
+export async function createUser(username: string, password: string): Promise<User> {
+  const hashedPassword = await hashPassword(password);
+
+  // Aqui você salvaria o usuário no banco de dados, armazenando `hashedPassword` como a senha do usuário
+  const newUser: User = {
+    id: 1, // Suponha que você gerou um ID aqui
+    username,
+    password: hashedPassword,
+  };
+
+  return newUser;
+}

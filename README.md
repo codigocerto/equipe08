@@ -26,9 +26,9 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
 |---|---|---|---|
-| Camila Cirne | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/camila-cirne/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/milacirne) |
-| Vinicius Santos | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vsantus/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/vsantus) |
-| Catarine Gonçalves | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/catarinegoncalves/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CatarineGoncalves) |
+| Daniel Sampaio | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/daniel-sampaio-fs/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/XDanielSampaioX) |
+| Matheus Araujo | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-araujo-nascimento/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/MatheusAraujo110) |
+| Lucas Alves | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucasalnascimento/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LucasAlNascimento) |
 | Thomas Edson | Frontend | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thomas-edson-dev/) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/developer-thomas) |
 
 ## 💻 **Backend** 
@@ -44,7 +44,7 @@ Bem-vindo ao repositório da Equipe de Desenvolvimento Código Certo Coders [08]
 |---|---|---|---|
 | Claudio Oliveira | Fullstack | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/Claudi0-Oliveira) | [![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Claudi0-Oliveira) |
 
-## ✔️ **Equipe de UX** 
+## ✔️ **UI/UX Design** 
 
 | **Nome** | **Posição** | **LinkedIn** | **GitHub** |
 |---|---|---|---|
