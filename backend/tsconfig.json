@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "es6",                     /* Versão do ECMAScript para compilar */
+      "module": "commonjs",                /* Sistema de módulos a ser utilizado (Node.js) */
+      "strict": true,                      /* Habilita todas as verificações rigorosas de tipos */
+      "esModuleInterop": true,             /* Melhora a interoperabilidade entre CommonJS e ES6 */
+      "skipLibCheck": true,                /* Não verifica arquivos de definição de biblioteca (arquivos .d.ts) */
+      "forceConsistentCasingInFileNames": true, /* Força consistência nos nomes de arquivo (para Windows) */
+      "outDir": "./dist",                  /* Diretório de saída para arquivos compilados */
+      "baseUrl": "./src",                  /* Base URL para resolver módulos */
+      "paths": {
+        "*": [
+          "node_modules/*",
+          "src/types/*"
+        ]
+      }
+    },
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  
