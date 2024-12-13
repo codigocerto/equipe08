@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import logo from '../../../public/assets/images/logo.png';
+import logo from '/assets/images/logo.png';
 
 import * as S from './styles';
 

@@ -18,7 +18,7 @@ const Trails = () => {
       </S.CarrouselContainer>
       <S.CardContainer>
         {(t('trails', { returnObjects: true }) as Item[]).map((item: Item) => (
-          <TrailCard key={item.id} img={`../../../public/assets/trails/trilha-${item.id}.svg`} title={item.title} subtitle={item.subtitle} $isDark={item.$isDark} showBtn={true} />
+          <TrailCard key={item.id} img={`/assets/trails/trilha-${item.id}.svg`} title={item.title} subtitle={item.subtitle} $isDark={item.$isDark} showBtn={true} />
         ))}
       </S.CardContainer>
     </S.Container>
