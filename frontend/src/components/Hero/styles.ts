@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import hero from "../../../public/assets/images/hero.png"
+import hero from "/assets/images/hero.png"
 
 import Button from "../Button"
 import Typography from '../Typography'
