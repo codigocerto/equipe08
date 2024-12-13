@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import brazilFlag from '../../../public/assets/images/brasil.jpg';
-import unitedStatesFlag from '../../../public/assets/images/estados-unidos.png';
 import { FlagIcon, LanguageMenu, LanguageOption, SwitchButton, SwitchContainer } from './styles';
+import brazilFlag from '/assets/images/brasil.jpg';
+import unitedStatesFlag from '/assets/images/estados-unidos.png';
 
 function TranslationButton() {
   const { i18n } = useTranslation();
