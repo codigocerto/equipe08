@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
-import logo from '../../assets/images/logo.png'
+import { useTranslation } from 'react-i18next';
+import logo from '/assets/images/logo.png';
 
-import * as S from './styles'
+import * as S from './styles';
 
 const PhraseSection = () => {
 

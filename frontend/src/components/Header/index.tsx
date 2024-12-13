@@ -2,14 +2,14 @@ import { useContext, useEffect, useState } from "react";
 
 import Link from "../Link";
 
-import closeButton from "../../assets/images/close-button.png";
-import logo from "../../assets/images/logo.png";
-import vectorWhite from "../../assets/images/Vector 9.png";
 import Modal from './../Modal/index';
+import closeButton from "/assets/images/close-button.png";
+import logo from "/assets/images/logo.png";
+import vectorWhite from "/assets/images/Vector 9.png";
 
+import { useTranslation } from "react-i18next";
 import UserContext from "../../contexts/userContext";
 import * as S from "./styles";
-import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

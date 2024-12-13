@@ -1,9 +1,9 @@
 import Link from '../Link'
 
-import logo from '../../assets/images/logo.png'
+import logo from '/assets/images/logo.png'
 
-import * as S from './styles'
 import { useTranslation } from 'react-i18next'
+import * as S from './styles'
 
 const Footer = () => {
 

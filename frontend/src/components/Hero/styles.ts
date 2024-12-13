@@ -1,13 +1,12 @@
 import styled from "styled-components"
 
-import hero from "../../assets/images/hero.png"
+import hero from "/assets/images/hero.png"
 
 import Button from "../Button"
 import Typography from '../Typography'
 
+import { breakpoints, colors } from "../../styles"
 import { remCalc } from "../../utils/remCalc"
-import { colors } from "../../styles"
-import { breakpoints } from "../../styles"
 
 export const Hero = styled.section`
   background-image: url(${hero});

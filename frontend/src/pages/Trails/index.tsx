@@ -1,8 +1,8 @@
-import TrailCard from "../../components/TrailCard";
-import * as S from "./styles";
-import { Item } from "./Item.interface";
-import TrailCarrosel from "../../components/TrailCarrosel";
 import { useTranslation } from "react-i18next";
+import TrailCard from "../../components/TrailCard";
+import TrailCarrosel from "../../components/TrailCarrosel";
+import { Item } from "./Item.interface";
+import * as S from "./styles";
 
 const Trails = () => {
 
@@ -18,7 +18,7 @@ const Trails = () => {
       </S.CarrouselContainer>
       <S.CardContainer>
         {(t('trails', { returnObjects: true }) as Item[]).map((item: Item) => (
-          <TrailCard key={item.id} img={`/src/assets/trails/trilha-${item.id}.svg`} title={item.title} subtitle={item.subtitle} $isDark={item.$isDark} showBtn={true} />
+          <TrailCard key={item.id} img={`/assets/trails/trilha-${item.id}.svg`} title={item.title} subtitle={item.subtitle} $isDark={item.$isDark} showBtn={true} />
         ))}
       </S.CardContainer>
     </S.Container>
