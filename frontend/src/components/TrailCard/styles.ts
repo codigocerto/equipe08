@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Button from "../Button";
 import Typography from "../Typography";
 
-import { colors, breakpoints } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 import { remCalc } from "../../utils/remCalc";
 
 export const Main = styled.div<{ $isDark: boolean | undefined }>`
@@ -54,10 +54,10 @@ export const Container = styled.div`
 
   @media (min-width: ${breakpoints.desktop}) {
     width: 100%;
-
+    
     img {
+      object-fit: contain;
       height: ${remCalc(340)};
-      object-fit: cover;
     }
   }
 `;

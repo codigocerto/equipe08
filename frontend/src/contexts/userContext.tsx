@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { createContext, useState } from "react";
-import { UserRegister } from "../@types/UserRegister";
-import { UserLogin } from '../@types/UserLogin';
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { UserLogin } from '../@types/UserLogin';
+import { UserRegister } from "../@types/UserRegister";
 
 type UserContextType = {
     handleRegister: (userRegister: UserRegister) => void;
@@ -27,7 +27,7 @@ export const UserContextProvider = ({ children }: { children: React.ReactNode })
     const [userLogin, setUserLogin] = useState({} as UserRegister);
 
     const api = axios.create({
-        baseURL: 'http://localhost:3000'
+        baseURL: 'https://codigocerto-lmfe.onrender.com/'
     });
 
     // Register userRegister

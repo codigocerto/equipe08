@@ -7,8 +7,13 @@ import { FaUser } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6";
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
+  const service = import.meta.env.VITE_API_SERVICE_ID;
+  const template = import.meta.env.VITE_API_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_API_PUBLIC_KEY;
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -40,9 +45,24 @@ const ContactForm = () => {
 
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
+      toast.error("Problema ao enviar o e-mail, verifique os campos obrigatórios");
     } else {
-      alert(`Nome: ${formData.name}, Email: ${formData.email}, Telefone: ${formData.phone}, Mensagem: ${formData.message}`);
-      //ENVIAR DADOS AQUI!
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        from_phone: formData.phone,
+        message: formData.message
+      }
+
+      emailjs.send(service, template, templateParams, publicKey)
+        .then((response) => {
+          toast.success(`E-mail enviado com sucesso!`);
+          console.log(response.status, response.text);
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        })
+        .catch((error) => {
+          toast.error('Erro ao enviar o e-mail:', error);
+        });
     }
   }
 
@@ -71,7 +91,6 @@ const ContactForm = () => {
             <S.Form onSubmit={onSubmit}>
               <S.InputContainer>
                 <S.InfoContainer>
-
                   <S.Label htmlFor="name">{t('contactForm.inputName')}</S.Label>
                   <S.InputComIcone>
                     <S.Icone>
@@ -84,6 +103,7 @@ const ContactForm = () => {
                       placeholder={t('contactForm.placeholderName')}
                       value={formData.name}
                       onChange={onChange}
+                      required
                     />
                   </S.InputComIcone>
                   {errors.name && <p>{errors.name}</p>}
@@ -102,6 +122,7 @@ const ContactForm = () => {
                       maxLength={15}
                       value={formData.phone}
                       onChange={onPhone}
+                      required
                     />
                   </S.InputComIcone>
                   {errors.phone && <p>{errors.phone}</p>}
@@ -120,6 +141,7 @@ const ContactForm = () => {
                     placeholder={t('contactForm.placeholderEmail')}
                     value={formData.email}
                     onChange={onChange}
+                    required
                   />
                 </S.InputComIcone>
                 {errors.email && <p>{errors.email}</p>}
@@ -136,6 +158,7 @@ const ContactForm = () => {
                     placeholder={t('contactForm.placeholderMessage')}
                     value={formData.message}
                     onChange={onChange}
+                    required
                   />
                 </S.InputComIcone>
                 {errors.message && <p>{errors.message}</p>}

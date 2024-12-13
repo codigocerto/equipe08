@@ -40,7 +40,7 @@ export const InputComIcone = styled.div`
 input {
     font-size: 16px;
     padding-left: 2.5rem;
-    color: #fff;
+    color: ${colors.white};
 }
 `
 
@@ -55,8 +55,9 @@ export const VisibilityToggle = styled.span`
 
 export const Icone = styled.div`
     position: absolute;
-    top: 2.15em;
-    left: 0.6125em;
+    top: calc(100% - 46.5%);
+    left: 2%;
+    transform: translate(-10%, -10%);
     color: ${colors.gray1};
 `;
 

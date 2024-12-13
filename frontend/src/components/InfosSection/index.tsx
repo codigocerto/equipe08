@@ -1,7 +1,7 @@
-import { useTranslation } from 'react-i18next'
-import computer from '../../assets/images/computer.png'
+import { useTranslation } from 'react-i18next';
+import computer from '../../../public/assets/images/computer.png';
 
-import * as S from './styles'
+import * as S from './styles';
 
 const InfoSection = () => {
 
