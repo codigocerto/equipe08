@@ -289,63 +289,55 @@ export const Hamburguer = styled.div`
 `
 
 export const NavMobile = styled.nav`
-  position: absolute;
-  background-color: ${colors.gray4};
-  top: 100%;
-  right: 0;
-  width: 100%;
-  height: 0;
+position: absolute;
+background-color: ${colors.gray4};
+top: 100%;
+right: 0;
+width: 100%;
+height: 0;
+transition: height 0.3s ease-in, padding 0.3s ease-in;
+pointer-events: none;
+z-index: 2;
+border-bottom-left-radius: ${remCalc(8)};
+border-bottom-right-radius: ${remCalc(8)};
+display: none;
+flex-direction: column; /* Disposição em coluna */
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Estilo vertical para os itens */
+  gap: ${remCalc(16)}; /* Espaçamento entre os itens */
+}
+
+li {
+  text-align: center; /* Centraliza o texto */
+}
+
+&.is-open {
+  height: auto;
+  padding: ${remCalc(12)} 0 ${remCalc(8)};
+  pointer-events: auto;
+  display: flex; /* Torna visível como flex container */
   transition: height 0.3s ease-in, padding 0.3s ease-in;
-  pointer-events: none;
-  z-index: 2;
-  border-bottom-left-radius: ${remCalc(8)};
-  border-bottom-right-radius: ${remCalc(8)};
-  display: none;
+}
+`;
 
-  ${Link} {
-    color: ${colors.white};
-    background-color: ${colors.gray3};
-    padding: ${remCalc(12)} 0;
-    margin: ${remCalc(8)} ${remCalc(12)};
-    font-size: ${remCalc(14)};
-    font-weight: 400;
-    line-height: ${remCalc(18)};
-    text-align: center;
-    display: none;
-    /* opacity: 0; */
-    transition: all 0.3s ease;
-    transform: translateY(${remCalc(-30)});
-    transition: 0.3s ease-in;
-    cursor: auto;
+export const LinkMobile = styled.a`
+color: ${colors.white};
+text-decoration: none; /* Remove sublinhado */
+font-size: ${remCalc(18)};
+font-weight: 400;
+padding: ${remCalc(12)} 0;
+transition: color 0.3s ease;
 
-    &:nth-of-type(1) {
-      margin: ${remCalc(0)} ${remCalc(12)} ${remCalc(8)};
-      border-top-left-radius: ${remCalc(8)};
-      border-top-right-radius: ${remCalc(8)};
-    }
+&:hover {
+  color: ${colors.red}; /* Cor de hover */
+}
+`;
 
-    &:last-child {
-      margin: ${remCalc(8)} ${remCalc(12)} ${remCalc(0)};
-      border-bottom-left-radius: ${remCalc(8)};
-      border-bottom-right-radius: ${remCalc(8)};
-    }
-  }
-
-  &.is-open {
-    height: auto;
-    padding: ${remCalc(12)} 0 ${remCalc(8)};
-    pointer-events: auto;
-    display: block;
-    transition: height 0.3s ease-in, padding 0.3s ease-in;
-
-    ${Link} {
-      display: block;
-      /* opacity: 1; */
-      transform: translateY(0);
-      transition-delay: calc(0.15s * var(--i));
-    }
-  }
-`
 
 export const CloseButton = styled.img`
   height: ${remCalc(36)};

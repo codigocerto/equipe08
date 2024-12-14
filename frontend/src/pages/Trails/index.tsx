@@ -9,7 +9,7 @@ const Trails = () => {
   const { t } = useTranslation();
 
   return (
-    <S.Container id="trails">
+    <S.Container id="trilhas">
       <S.TitleDiv>
         <S.Title as="h1">{t('trailsTitle')}</S.Title>
       </S.TitleDiv>
