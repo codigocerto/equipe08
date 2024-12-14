@@ -21,7 +21,7 @@ function App() {
       <ToastContainer
         autoClose={2000}
         position="top-right"
-        transition={Slide}  // Define o tipo de transição de animação
+        transition={Slide}  
         style={{ width: "auto", height: "auto"}}
       />
     </UserContextProvider>
