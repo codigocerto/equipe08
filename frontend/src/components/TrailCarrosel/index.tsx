@@ -34,7 +34,7 @@ const TrailCarrosel = () => {
           {(t('trails', { returnObjects: true }) as Item[]).map((item) => (
             <SwiperSlide>
               <S.Content key={item.id}>
-                <TrailCard img={`/src/assets/trails/trilha-${item.id}.svg`} $isDark={item.$isDark} subtitle={item.subtitle} title={item.title} key={item.id} showBtn={false} />
+              <TrailCard img={`/assets/trails/trilha-${item.id}.svg`} $isDark={item.$isDark} subtitle={item.subtitle} title={item.title} key={item.id} showBtn={false} />
               </S.Content>
             </SwiperSlide>
           ))}

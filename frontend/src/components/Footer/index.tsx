@@ -1,6 +1,6 @@
 import Link from '../Link'
 
-import logo from '../../../public/assets/images/logo.png'
+import logo from '/assets/images/logo.png'
 
 import { useTranslation } from 'react-i18next'
 import * as S from './styles'
