@@ -180,13 +180,13 @@ export const LoginP = styled.div`
     font-size: ${remCalc(15)};
     line-height: ${remCalc(18)};
 `
-export const ImgLogin1 = styled.img`
+export const VectorLogged = styled.img`
     width: ${remCalc(14)};
     position: absolute;
     top: ${remCalc(30)};
     left: ${remCalc(105)};
 `
-export const ImgLogin2 = styled.img`
+export const VectorDisLogged = styled.img`
     width: ${remCalc(14)};
     position: absolute;
     top: ${remCalc(30)};
@@ -211,7 +211,7 @@ export const UserLi = styled.li`
     color: white;
 `
 
-export const Span = styled.span`
+export const SpanLogin = styled.span`
     display: flex;
     align-items: center;
     color: white;
@@ -221,7 +221,7 @@ export const Span = styled.span`
     white-space: pre-line;
 `
 
-export const Span2 = styled.span`
+export const SpanLogout = styled.span`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,6 +247,7 @@ export const Dropdown = styled.li<DropdownProps>`
 `;
 
 export const Logout = styled.button`
+    justify-content: center;
     background: none;
     border: none;
     display: flex;
@@ -304,6 +305,7 @@ display: none;
 flex-direction: column; /* Disposição em coluna */
 
 ul {
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -332,6 +334,7 @@ font-size: ${remCalc(18)};
 font-weight: 400;
 padding: ${remCalc(12)} 0;
 transition: color 0.3s ease;
+cursor: pointer;
 
 &:hover {
   color: ${colors.red}; /* Cor de hover */

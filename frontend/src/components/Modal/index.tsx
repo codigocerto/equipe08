@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import * as S from "./styles";
 import Tabs from "./../Tab/index";
 
@@ -8,7 +8,7 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen = false, onClose }: ModalProps) {
-  const modalRef = useRef<HTMLDivElement | null>(null);
+  // const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleCloseModal = () => {
     if (onClose) {
@@ -16,30 +16,31 @@ export default function Modal({ isOpen = false, onClose }: ModalProps) {
     }
   };
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
-      handleCloseModal();
-    }
-  };
+  // const handleClickOutside = (event: MouseEvent) => {
+  //   if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+  //     handleCloseModal();
+  //   }
+  // };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   } else {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen]);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isOpen]);
 
   if (isOpen) {
     return (
       <>
         {!window.localStorage.getItem("@Auth:userToken") && (
           <S.Modal>
-            <div ref={modalRef}>
+            {/* <div ref={modalRef}> */}
+            <div>
               <S.flexContainer>
                 <S.ButtonModal textbutton="X" onClick={handleCloseModal} />
                 <Tabs />
