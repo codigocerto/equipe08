@@ -1,31 +1,56 @@
-import * as S from './styles'; // Certifique-se de que o caminho está correto
-import Tabs from './../Tab/index';
+// import { useEffect, useRef } from "react";
+import * as S from "./styles";
+import Tabs from "./../Tab/index";
 
 interface ModalProps {
-    isOpen?: boolean;
-    onClose?: () => void;
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
 export default function Modal({ isOpen = false, onClose }: ModalProps) {
-    const handleCloseModal = () => {
-        if (onClose) {
-            onClose();
-        }
-    };
+  // const modalRef = useRef<HTMLDivElement | null>(null);
 
-    if (isOpen) {
-        return (
-            <>
-                {!window.localStorage.getItem("@Auth:userToken") &&
-                    <S.Modal>
-                        <S.flexContainer>
-                            <S.ButtonModal textbutton='X' onClick={handleCloseModal} />
-                            <Tabs />
-                        </S.flexContainer>
-                    </S.Modal>}
-            </>
-        );
+  const handleCloseModal = () => {
+    if (onClose) {
+      onClose();
     }
+  };
 
-    return null;
+  // const handleClickOutside = (event: MouseEvent) => {
+  //   if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+  //     handleCloseModal();
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.addEventListener("mousedown", handleClickOutside);
+  //   } else {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   }
+
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [isOpen]);
+
+  if (isOpen) {
+    return (
+      <>
+        {!window.localStorage.getItem("@Auth:userToken") && (
+          <S.Modal>
+            {/* <div ref={modalRef}> */}
+            <div>
+              <S.flexContainer>
+                <S.ButtonModal textbutton="X" onClick={handleCloseModal} />
+                <Tabs />
+              </S.flexContainer>
+            </div>
+          </S.Modal>
+        )}
+      </>
+    );
+  }
+
+  return null;
 }
